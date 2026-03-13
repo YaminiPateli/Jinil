@@ -1,3 +1,18 @@
+header.sticky-header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 9999;
+  transition: all 0.3s ease;
+}
+
+/* scroll ke baad style change */
+header.sticky-active {
+  padding-top: 0;
+  box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+}
+
+
 header {
   position: fixed;
   top: 0;

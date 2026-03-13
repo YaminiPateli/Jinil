@@ -22,7 +22,7 @@
 
 .hero_text {
   position: absolute;
-  top: 12em;
+  top: 10em;
   text-align: center;
   width: 100%;
 }
@@ -172,6 +172,7 @@
   background-repeat: no-repeat;
   height: 100%;
   width: 100%;
+  background-size: contain;
   mix-blend-mode: lighten;
   position: relative;
 

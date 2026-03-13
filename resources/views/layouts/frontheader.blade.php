@@ -91,8 +91,8 @@
                                 </span>
                             </a>
                         </li>
-                        <li><a href="#" data-text="Case Studies">
-                                <span>Case Studies</span></a></li>
+                        <!-- <li><a href="#" data-text="Case Studies">
+                                <span>Case Studies</span></a></li> -->
                         <li>
                             <a href="#" data-text="Resources">
                                 <span>Resources</span>

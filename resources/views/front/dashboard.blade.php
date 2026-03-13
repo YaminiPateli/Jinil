@@ -1,15 +1,7 @@
 @include('layouts.frontheader')
-<div class="sequence_wrapper">
-    <div class="sequence_section">
-        <img id="image_sequence" src="{{ asset('public/front/images/hero/parallax_0001.jpg')}}">
-        <div class="hero_text">
-            <div class="hero_text_content">
-                <h1 class="title_80" id="hero-title">PRECISION. POWER. PERFORMANCE.</h1>
-                <p class="subtitle" id="hero-subtitle">Surface Perfection</p>
-            </div>
-        </div>
-    </div>
-</div>
+ <section>
+    <img class=" img-fluid" src="{{ asset('public/front/images/jinl-banner.png')}}">
+ </section>
 
 <section class="after_sequence d-none">
     <!-- <img class="hero_3d_image img-fluid" src="{{ asset('public/front/images/hero-3d.png')}}" alt="images"> -->
@@ -2569,7 +2561,7 @@
                             </svg>
 
                             <h4 class="title_24">Built-to-Last Engineering</h4>
-                            <p>Heavy-duty construction, industrial-grade components, proven designs.</p>
+                            <p class="mb-0">Heavy-duty construction, industrial-grade components, proven designs.</p>
 
                         </div>
                     </div>
@@ -2625,7 +2617,7 @@
                             </svg>
 
                             <h4 class="title_24">Process-Driven Solutions</h4>
-                            <p>Every system is tailored to your production workflow, not off-the-shelf.</p>
+                            <p class="mb-0">Every system is tailored to your production workflow, not off-the-shelf.</p>
 
                         </div>
                     </div>
@@ -2658,7 +2650,7 @@
 
 
                             <h4 class="title_24">End-to-End Support</h4>
-                            <p>From design and installation to service and upgrades.</p>
+                            <p class="mb-0">From design and installation to service and upgrades.</p>
                         </div>
                     </div>
                 </div>
@@ -2728,7 +2720,9 @@
             <div class="col-md-4">
                 <div class="fea_mac">
                     <div class="fea_mac_img">
-                        <img class="img-fluid" src="{{ asset('public/front/images/fea_mac1.png')}}" alt="Featured Machine 1">
+                        <img class="img-fluid" src="{{ asset('public/front/images/fea_mac1.png')}}"
+                            alt="Featured Machine 1">
+
                         <!-- <a href="#" class="fea_mac_icon">
                             <svg width="19" height="19" viewBox="0 0 19 19" fill="none"
                                 xmlns="http://www.w3.org/2000/svg">
@@ -2752,7 +2746,8 @@
             <div class="col-md-4">
                 <div class="fea_mac">
                     <div class="fea_mac_img">
-                        <img class="img-fluid" src="{{ asset('public/front/images/fea_mac2.png')}}" alt="Featured Machine 1">
+                        <img class="img-fluid" src="{{ asset('public/front/images/fea_mac2.png')}}"
+                            alt="Featured Machine 1">
                         <!-- <a href="#" class="fea_mac_icon">
                             <svg width="19" height="19" viewBox="0 0 19 19" fill="none"
                                 xmlns="http://www.w3.org/2000/svg">
@@ -2776,7 +2771,8 @@
             <div class="col-md-4">
                 <div class="fea_mac">
                     <div class="fea_mac_img">
-                        <img class="img-fluid" src="{{ asset('public/front/images/fea_mac3.png')}}" alt="Featured Machine 1">
+                        <img class="img-fluid" src="{{ asset('public/front/images/fea_mac3.png')}}"
+                            alt="Featured Machine 1">
                         <!-- <a href="#" class="fea_mac_icon">
                             <svg width="19" height="19" viewBox="0 0 19 19" fill="none"
                                 xmlns="http://www.w3.org/2000/svg">
@@ -2800,7 +2796,8 @@
             <div class="col-md-4">
                 <div class="fea_mac">
                     <div class="fea_mac_img">
-                        <img class="img-fluid" src="{{ asset('public/front/images/fea_mac3.png')}}" alt="Featured Machine 1">
+                        <img class="img-fluid" src="{{ asset('public/front/images/fea_mac3.png')}}"
+                            alt="Featured Machine 1">
                         <!-- <a href="#" class="fea_mac_icon">
                             <svg width="19" height="19" viewBox="0 0 19 19" fill="none"
                                 xmlns="http://www.w3.org/2000/svg">
@@ -2824,7 +2821,8 @@
             <div class="col-md-4">
                 <div class="fea_mac">
                     <div class="fea_mac_img">
-                        <img class="img-fluid" src="{{ asset('public/front/images/fea_mac2.png')}}" alt="Featured Machine 1">
+                        <img class="img-fluid" src="{{ asset('public/front/images/fea_mac2.png')}}"
+                            alt="Featured Machine 1">
                         <!-- <a href="#" class="fea_mac_icon">
                             <svg width="19" height="19" viewBox="0 0 19 19" fill="none"
                                 xmlns="http://www.w3.org/2000/svg">
@@ -2848,7 +2846,8 @@
             <div class="col-md-4">
                 <div class="fea_mac">
                     <div class="fea_mac_img">
-                        <img class="img-fluid" src="{{ asset('public/front/images/fea_mac1.png')}}" alt="Featured Machine 1">
+                        <img class="img-fluid" src="{{ asset('public/front/images/fea_mac1.png')}}"
+                            alt="Featured Machine 1">
                         <!-- <a href="#" class="fea_mac_icon">
                             <svg width="19" height="19" viewBox="0 0 19 19" fill="none"
                                 xmlns="http://www.w3.org/2000/svg">
@@ -2911,54 +2910,60 @@
             <div class="industry_grid">
 
                 <div class="industry_item_wrapper">
-                    <div class="industry_item" style="background-image: url('./images/industries1.jpg')"> </div>
+                    <div class="industry_item" style="background-image: url('./public/front/images/industries1.jpg')"> </div>
 
                     <h3 class="title_24">Automotive</h3>
                 </div>
 
                 <div class="industry_item_wrapper">
-                    <div class="industry_item" style="background-image: url('./images/industries2.jpg')"> </div>
+                    <div class="industry_item" style="background-image: url('./public/front/images/industries2.jpg')"> </div>
 
                     <h3 class="title_24">Fabrication</h3>
                 </div>
 
                 <div class="industry_item_wrapper">
-                    <div class="industry_item" style="background-image: url('./images/industries3.jpg')"> </div>
+                    <div class="industry_item" style="background-image: url('./public/front/images/industries3.jpg')"> </div>
 
                     <h3 class="title_24">Foundry</h3>
                 </div>
 
                 <div class="industry_item_wrapper">
-                    <div class="industry_item" style="background-image: url('./images/industries4.jpg')"> </div>
-
+                    <div class="industry_item" style="background-image: url('./public/front/images/industries4.jpg')"> </div>
                     <h3 class="title_24">Steel Plants</h3>
                 </div>
 
                 <div class="industry_item_wrapper">
-                    <div class="industry_item" style="background-image: url('./images/industries5.jpg')"> </div>
+                    <div class="industry_item" style="background-image: url('./public/front/images/industries5.jpg')"> </div>
+                 
 
                     <h3 class="title_24">Wire coil</h3>
                 </div>
 
                 <div class="industry_item_wrapper">
-                    <div class="industry_item" style="background-image: url('./images/industries6.jpg')"> </div>
+                    <div class="industry_item" style="background-image: url('./public/front/images/industries6.jpg')"> </div>
+                  
 
                     <h3 class="title_24">Workshops</h3>
                 </div>
 
                 <div class="industry_item_wrapper">
+                    <div class="industry_item" style="background-image: url('./public/front/images/industries7.jpg')"> </div>
                     <div class="industry_item" style="background-image: url('./images/industries7.jpg')"> </div>
+
 
                     <h3 class="title_24">Defense</h3>
                 </div>
 
                 <div class="industry_item_wrapper">
+
+                    <div class="industry_item" style="background-image: url('./public/front/images/industries8.jpg')"> </div>
                     <div class="industry_item" style="background-image: url('./images/industries8.jpg')"> </div>
 
                     <h3 class="title_24">Oil & gas</h3>
                 </div>
 
                 <div class="industry_item_wrapper">
+                    <div class="industry_item" style="background-image: url('./public/front/images/industries8.jpg')"> </div>
                     <div class="industry_item" style="background-image: url('./images/industries1.jpg')"> </div>
 
                     <h3 class="title_24">Rail & Heavy Equipment</h3>
@@ -2981,7 +2986,7 @@
 
 <section class="mt_100">
     <div class="container">
-        <div class="sec_hed_top mb_60">
+        <div class="sec_hed_top mb_80">
             <p class="mb-0">From inquiry to ongoing support — we've streamlined the process</p>
             <h2 class="title_60">Our Process in 4 Steps</h2>
         </div>

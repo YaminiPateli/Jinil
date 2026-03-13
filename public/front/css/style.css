@@ -115,6 +115,7 @@ a {
   color: var(--grey-585);
   border: 1px solid var(--grey-585);
   font-size: 18px;
+  line-height: 18px;
   font-weight: 400;
   overflow: hidden;
   background: transparent;
