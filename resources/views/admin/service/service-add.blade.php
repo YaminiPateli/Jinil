@@ -10,137 +10,269 @@
             <div
                 class="card-header py-3 no-bg bg-transparent d-flex align-items-center px-0 justify-content-between border-bottom flex-wrap">
                 <h3 class="fw-bold mb-0">service Add</h3>
-                <!--<button type="submit"-->
-                <!--    class="btn btn-primary py-2 px-5 text-uppercase btn-set-task w-sm-100">Save</button>-->
             </div>
         </div>
     </div>
+
     <div class="card-body">
         <form method="post" enctype="multipart/form-data" action="{{ route('service.store') }}">
             @csrf
+
             <div class="row g-3 mb-3">
                 <div class="col-lg-12Industries">
                     <div class="card mb-3">
+
                         <div class="card-header py-3 d-flex justify-content-between bg-transparent border-bottom-0">
                             <h6 class="mb-0 fw-bold ">service Details</h6>
                         </div>
+
                         <div class="card-body">
                             <div class="row g-3 align-items-center">
+
                                 <div class="col-md-6">
                                     <label class="form-label">Category</label>
                                     <select name="category_id" class="form-control">
                                         <option value="">Select Category</option>
                                         @foreach($categories as $cat)
-                                            <option value="{{ $cat->id }}">
-                                                {{ $cat->category }}
-                                            </option>
+                                        <option value="{{ $cat->id }}">{{ $cat->category }}</option>
                                         @endforeach
                                     </select>
                                 </div>
+
                                 <div class="col-md-6">
                                     <label class="form-label">Title</label>
-                                    <input type="text" id="title" name="title" class="form-control"
-                                        placeholder="service Title">
-                                    @if ($errors->has('title'))
-                                    <span class="text-danger">{{ $errors->first('title') }}</span>
-                                    @endif
+                                    <input type="text" id="title" name="title" class="form-control">
                                 </div>
 
                                 <div class="col-md-6">
                                     <label class="form-label">Url</label>
-                                    <input type="text" id="url" name="url" class="form-control"
-                                        placeholder="service Url">
+                                    <input type="text" id="url" name="url" class="form-control">
                                 </div>
 
                                 <div class="col-md-6">
                                     <label class="form-label">Name</label>
-                                    <input type="text" id="name" name="name" class="form-control"
-                                        placeholder="service Name">
-                                </div>                                
+                                    <input type="text" id="name" name="name" class="form-control">
+                                </div>
 
                                 <div class="col-md-12">
-                                    <label for="file" class="form-label">Images</label>
-                                    <input type="file" class="form-control" name="front_image" id="front_image">
-                                    @if ($errors->has('front_image'))
-                                    <span class="text-danger">{{ $errors->first('front_image') }}</span>
-                                    @endif
+                                    <label class="form-label">Images</label>
+                                    <input type="file" class="form-control" name="front_image">
                                 </div>
+
                                 <div class="col-md-12">
-                                    <label for="short_description" class="form-label">Short Description</label>
+                                    <label class="form-label">Short Description</label>
                                     <textarea id="short_description" name="short_description" class="form-control"></textarea>
                                 </div>
-                                
-                                 <div class="col-md-6">
+
+                                <div class="col-md-6">
                                     <label class="form-label">Meta Title</label>
-                                    <input type="text" id="meta_title" name="meta_title" class="form-control"
-                                        placeholder="service Meta Title">
+                                    <input type="text" id="meta_title" name="meta_title" class="form-control">
                                 </div>
 
                                 <div class="col-md-12">
-                                    <label for="meta_description" class="form-label">Meta Description</label>
-                                    <textarea id="meta_description" name="meta_description" class="form-control" ></textarea>
+                                    <label class="form-label">Meta Description</label>
+                                    <textarea id="meta_description" name="meta_description" class="form-control"></textarea>
                                 </div>
+
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-            <button type="submit" class="btn btn-primary py-2 px-5 text-uppercase btn-set-task w-sm-100">Save</button>
+
+
+            {{-- ================= SCOPE SECTION ================= --}}
+
+            <div class="card mb-3">
+                <div class="card-header">
+                    <h6 class="fw-bold">Scope Section</h6>
+                </div>
+
+                <div class="card-body" id="scope_wrapper">
+
+                    <div class="row mb-2 scope_row">
+
+                        <div class="col-md-5">
+                            <input type="text" name="scope_section[0][title]" class="form-control" placeholder="Title">
+                        </div>
+
+                        <div class="col-md-5">
+                            <input type="text" name="scope_section[0][description]" class="form-control"
+                                placeholder="Description">
+                        </div>
+
+                        <div class="col-md-2">
+                            <button type="button" class="btn btn-success add_scope">Add</button>
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+
+
+            {{-- ================= WHY CHOOSE SECTION ================= --}}
+
+            <div class="card mb-3">
+                <div class="card-header">
+                    <h6 class="fw-bold">Why Choose Section</h6>
+                </div>
+
+                <div class="card-body" id="why_wrapper">
+
+                    <div class="row mb-2 why_row">
+
+                        <div class="col-md-5">
+                            <input type="text" name="whychoose_section[0][title]" class="form-control"
+                                placeholder="Title">
+                        </div>
+
+                        <div class="col-md-5">
+                            <input type="text" name="whychoose_section[0][description]" class="form-control"
+                                placeholder="Description">
+                        </div>
+
+                        <div class="col-md-2">
+                            <button type="button" class="btn btn-success add_why">Add</button>
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+
+
+            {{-- ================= PROCESS SECTION ================= --}}
+
+            <div class="card mb-3">
+                <div class="card-header">
+                    <h6 class="fw-bold">Process Section</h6>
+                </div>
+
+                <div class="card-body" id="process_wrapper">
+
+                    <div class="row mb-2 process_row">
+
+                        <div class="col-md-5">
+                            <input type="text" name="process_section[0][title]" class="form-control"
+                                placeholder="Title">
+                        </div>
+
+                        <div class="col-md-5">
+                            <input type="text" name="process_section[0][description]" class="form-control"
+                                placeholder="Description">
+                        </div>
+
+                        <div class="col-md-2">
+                            <button type="button" class="btn btn-success add_process">Add</button>
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+
+
+            <button type="submit"
+                class="btn btn-primary py-2 px-5 text-uppercase btn-set-task w-sm-100">Save</button>
+
         </form>
     </div>
 </div>
 @endsection
-
-@push('styles')
-<!-- Summernote CSS -->
-<link href="https://cdnjs.cloudflare.com/ajax/libs/summernote/0.8.18/summernote-bs4.min.css" rel="stylesheet">
-
-<!-- Cropper CSS -->
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/cropperjs/1.5.12/cropper.min.css">
-
-<!--plugin css file -->
-<link rel="stylesheet" href="{!! asset('public/admin_public/dist/assets/plugin/multi-select/css/multi-select.css') !!}">
-<link rel="stylesheet"
-    href="{!! asset('public/admin_public/dist/assets/plugin/bootstrap-tagsinput/bootstrap-tagsinput.css') !!}">
-<link rel="stylesheet" href="{!! asset('public/admin_public/dist/assets/plugin/dropify/dist/css/dropify.min.css') !!}">
-<link rel="stylesheet"
-    href="{!! asset('public/admin_public/dist/assets/plugin/datatables/responsive.dataTables.min.css') !!}">
-<link rel="stylesheet"
-    href="{!! asset('public/admin_public/dist/assets/plugin/datatables/dataTables.bootstrap5.min.css') !!}">
-@endpush
-
-@push('scripts')
-<!-- Summernote JS -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/summernote/0.8.18/summernote-bs4.min.js"></script>
-<!-- Cropper JS -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/cropperjs/1.5.12/cropper.min.js"></script>
-<script src="{!! asset('public/admin_public/dist/assets/plugin/multi-select/js/jquery.multi-select.js') !!}"></script>
-<script src="{!! asset('public/admin_public/dist/assets/plugin/bootstrap-tagsinput/bootstrap-tagsinput.js') !!}">
-</script>
-<script src="{!! asset('public/admin_public/dist/assets/bundles/dropify.bundle.js') !!}"></script>
-<script src="{!! asset('public/admin_public/dist/assets/bundles/dataTables.bundle.js') !!}"></script>
-
-
-
 <script>
-$(document).ready(function() {
-    $('#meta_description,#short_description').summernote({
-        placeholder: 'Enter here...',
-        height: 300,
-        toolbar: [
-            ['style', ['style']],
-            ['font', ['bold', 'italic', 'underline', 'clear']],
-            ['fontname', ['fontname']],
-            ['color', ['color']],
-            ['para', ['ul', 'ol', 'paragraph']],
-            ['height', ['height']],
-            ['insert', ['link', 'picture', 'hr']],
-            ['view', ['fullscreen', 'codeview']],
-            ['help', ['help']]
-        ]
-    });
+
+let scopeIndex = 1;
+
+$('.add_scope').click(function(){
+
+$('#scope_wrapper').append(
+
+`<div class="row mb-2 scope_row">
+
+<div class="col-md-5">
+<input type="text" name="scope_section[${scopeIndex}][title]" class="form-control">
+</div>
+
+<div class="col-md-5">
+<input type="text" name="scope_section[${scopeIndex}][description]" class="form-control">
+</div>
+
+<div class="col-md-2">
+<button type="button" class="btn btn-danger remove">Remove</button>
+</div>
+
+</div>`
+
+);
+
+scopeIndex++;
+
 });
 
 
+
+let whyIndex = 1;
+
+$('.add_why').click(function(){
+
+$('#why_wrapper').append(
+
+`<div class="row mb-2 why_row">
+
+<div class="col-md-5">
+<input type="text" name="whychoose_section[${whyIndex}][title]" class="form-control">
+</div>
+
+<div class="col-md-5">
+<input type="text" name="whychoose_section[${whyIndex}][description]" class="form-control">
+</div>
+
+<div class="col-md-2">
+<button type="button" class="btn btn-danger remove">Remove</button>
+</div>
+
+</div>`
+
+);
+
+whyIndex++;
+
+});
+
+
+
+let processIndex = 1;
+
+$('.add_process').click(function(){
+
+$('#process_wrapper').append(
+
+`<div class="row mb-2 process_row">
+
+<div class="col-md-5">
+<input type="text" name="process_section[${processIndex}][title]" class="form-control">
+</div>
+
+<div class="col-md-5">
+<input type="text" name="process_section[${processIndex}][description]" class="form-control">
+</div>
+
+<div class="col-md-2">
+<button type="button" class="btn btn-danger remove">Remove</button>
+</div>
+
+</div>`
+
+);
+
+processIndex++;
+
+});
+
+
+$(document).on('click','.remove',function(){
+$(this).closest('.row').remove();
+});
+
 </script>
-@endpush

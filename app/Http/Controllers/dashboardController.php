@@ -9,6 +9,8 @@ use Illuminate\Support\Facades\Log;
 use DB;
 use Illuminate\Support\Facades\Mail;
 use App\Models\Contact;
+use App\Models\Product;
+use App\Models\Category;
 use App\Models\Blog;
 use App\Models\Faq;
 use App\Mail\SendContactMailToUser;
@@ -71,6 +73,53 @@ class dashboardController extends Controller
          $faqs = Faq::whereNull('deleted_at')->get();
         return view('front.faqs',compact('metatitle', 'metadescription', 'faqs'));
     } 
+    public function installation()
+    {
+        $metatitle = "";
+        $metadescription = "";
+         $faqs = Faq::whereNull('deleted_at')->get();
+        return view('front.installation',compact('metatitle', 'metadescription', 'faqs'));
+    } 
+    public function industry($url)
+    {
+        $category = IndCategory::whereNull('deleted_at')
+                    ->where('url', $url)
+                    ->firstOrFail();
+    
+        $industries = Industry::whereNull('deleted_at')
+                        ->where('category_id', $category->id)
+                        ->get();
+    
+        $metatitle = $category->indcategory;
+        $metadescription = $category->cat_description;
+    
+        return view('front.industries', compact(
+            'category',
+            'industries',
+            'metatitle',
+            'metadescription'
+        ));
+    }
+    public function product($url)
+    {
+        $category = Category::whereNull('deleted_at')
+                    ->where('url', $url)
+                    ->firstOrFail();
+    
+        $productlist = Product::whereNull('deleted_at')
+                        ->where('category_id', $category->id)
+                        ->get();
+    
+        $metatitle = $category->indcategory;
+        $metadescription = $category->cat_description;
+    
+        return view('front.productlisting', compact(
+            'category',
+            'productlist',
+            'metatitle',
+            'metadescription'
+        ));
+    }
  
     public function contactstore(Request $request)
     {

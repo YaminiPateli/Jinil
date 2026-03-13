@@ -39,8 +39,10 @@ use App\Http\Controllers\CaptchaController;
     Route::post('contact-us-store', [dashboardController::class, 'contactstore'])->name('contact.store');
     Route::get('blogs', [dashboardController::class,'blogs'])->name('blogs');
     Route::get('blogs/{url}', [dashboardController::class, 'blogsdetail'])->name('blogdetail');
+    Route::get('products/{url}', [dashboardController::class, 'product'])->name('productlist');
     Route::get('downloads', [dashboardController::class,'download'])->name('downloads');
     Route::get('/faqs', [dashboardController::class, 'faq'])->name('faqs');
+    Route::get('/installation', [dashboardController::class, 'installation'])->name('installation');
 
 Route::get('login', [dashboardController::class, 'login'])->name('login');
 Auth::routes();

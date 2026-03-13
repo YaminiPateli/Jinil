@@ -25,4 +25,8 @@ class Service extends Model
         'whychoose_section' => 'array',
         'process_section' => 'array',
     ];
+    public function category()
+    {   
+        return $this->belongsTo(ServiceCategory::class,'category_id');
+    }
 }

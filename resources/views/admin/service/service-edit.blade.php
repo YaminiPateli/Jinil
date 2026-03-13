@@ -18,7 +18,7 @@
     <div class="card-body">
         <form method="post" enctype="multipart/form-data" action="{{ route('service.update',$service->id) }}">
             @csrf
-            @method('PATCH')
+            @method('PATCH')    
             <div class="row g-3 mb-3">
                 <div class="col-lg-12">
                     <div class="card mb-3">
