@@ -1,16 +1,4 @@
 @include('layouts.frontheader')
-<div class="sequence_wrapper d-none">
-    <div class="sequence_section">
-        <img id="image_sequence" src="{{ asset('public/front/images/hero/parallax_0001.jpg')}}">
-        <div class="hero_text">
-            <div class="hero_text_content">
-                <h1 class="title_80" id="hero-title">PRECISION. POWER. PERFORMANCE.</h1>
-                <p class="subtitle" id="hero-subtitle">Surface Perfection</p>
-            </div>
-        </div>
-    </div>
-</div>
-
  <section>
     <img class=" img-fluid" src="{{ asset('public/front/images/jinl-banner.png')}}">
  </section>
@@ -2734,6 +2722,7 @@
                     <div class="fea_mac_img">
                         <img class="img-fluid" src="{{ asset('public/front/images/fea_mac1.png')}}"
                             alt="Featured Machine 1">
+
                         <!-- <a href="#" class="fea_mac_icon">
                             <svg width="19" height="19" viewBox="0 0 19 19" fill="none"
                                 xmlns="http://www.w3.org/2000/svg">
@@ -2940,36 +2929,42 @@
 
                 <div class="industry_item_wrapper">
                     <div class="industry_item" style="background-image: url('./public/front/images/industries4.jpg')"> </div>
-
                     <h3 class="title_24">Steel Plants</h3>
                 </div>
 
                 <div class="industry_item_wrapper">
                     <div class="industry_item" style="background-image: url('./public/front/images/industries5.jpg')"> </div>
+                 
 
                     <h3 class="title_24">Wire coil</h3>
                 </div>
 
                 <div class="industry_item_wrapper">
                     <div class="industry_item" style="background-image: url('./public/front/images/industries6.jpg')"> </div>
+                  
 
                     <h3 class="title_24">Workshops</h3>
                 </div>
 
                 <div class="industry_item_wrapper">
                     <div class="industry_item" style="background-image: url('./public/front/images/industries7.jpg')"> </div>
+                    <div class="industry_item" style="background-image: url('./images/industries7.jpg')"> </div>
+
 
                     <h3 class="title_24">Defense</h3>
                 </div>
 
                 <div class="industry_item_wrapper">
+
                     <div class="industry_item" style="background-image: url('./public/front/images/industries8.jpg')"> </div>
+                    <div class="industry_item" style="background-image: url('./images/industries8.jpg')"> </div>
 
                     <h3 class="title_24">Oil & gas</h3>
                 </div>
 
                 <div class="industry_item_wrapper">
                     <div class="industry_item" style="background-image: url('./public/front/images/industries8.jpg')"> </div>
+                    <div class="industry_item" style="background-image: url('./images/industries1.jpg')"> </div>
 
                     <h3 class="title_24">Rail & Heavy Equipment</h3>
                 </div>
