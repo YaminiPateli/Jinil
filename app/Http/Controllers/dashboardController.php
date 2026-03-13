@@ -13,6 +13,8 @@ use App\Models\Product;
 use App\Models\Category;
 use App\Models\Blog;
 use App\Models\Faq;
+use App\Models\IndCategory;
+use App\Models\Industry;
 use App\Models\Certificate;
 use App\Mail\SendContactMailToUser;
 use App\Mail\SendContactMailToAdmin; 
@@ -100,6 +102,13 @@ class dashboardController extends Controller
          $faqs = Faq::whereNull('deleted_at')->get();
         return view('front.installation',compact('metatitle', 'metadescription', 'faqs'));
     } 
+    public function service()
+    {
+        $metatitle = "";
+        $metadescription = "";
+         $faqs = Faq::whereNull('deleted_at')->get();
+        return view('front.service',compact('metatitle', 'metadescription', 'faqs'));
+    } 
     public function industry($url)
     {
         $category = IndCategory::whereNull('deleted_at')
@@ -140,87 +149,85 @@ class dashboardController extends Controller
             'metadescription'
         ));
     }
-    
-    
     public function contactstore(Request $request)
     {
-    // Validation
-    $validated = $request->validate([
-        'name'          => 'required|string|max:255',
-        'company_name'  => 'required|string|max:255',
-        'contact' => 'required|numeric|digits_between:10,15',
-        'email'         => 'required|email|max:255',
-        'message'       => 'nullable|string|max:1000',
-    ]);
+        // Validation
+        $validated = $request->validate([
+            'name'          => 'required|string|max:255',
+            'company_name'  => 'required|string|max:255',
+            'contact' => 'required|numeric|digits_between:10,15',
+            'email'         => 'required|email|max:255',
+            'message'       => 'nullable|string|max:1000',
+        ]);
 
-    // Phone format validation
-    if (!preg_match('/^\+\d{7,15}$/', $contact)) {
-        return back()
-            ->withErrors(['contactnumber' => 'Please enter a valid phone number.'])
-            ->withInput();
-    }
-
-    // Save contact to DB (optional)
-    $contact = Contact::create([
-        'name'         => $validated['name'],
-        'company_name' => $validated['company_name'],
-        'contact'      => $validated['contact'],
-        'email'        => $validated['email'],
-        'message'      => $validated['message'] ?? null,
-    ]);
-
-    // Prepare data for Google Sheets
-    $contactData = [
-        'form_type'    => 'Contact Form',
-        'name'         => $validated['name'],
-        'company_name' => $validated['company_name'],
-        'contact'      => $validated['contact'],
-        'email'        => $validated['email'],
-        'message'      => $validated['message'] ?? '',
-        'date'         => now()->format('Y-m-d H:i:s'),
-    ];
-
-    // Google Apps Script URL
-    $sheetUrl = 'https://script.google.com/macros/s/AKfycbx2vKHdWFK0b-rhRBRHg_80Sd5j3atmdbQpwyPipR_g-TahDHT3XxOD2J3lbaGlzkuN/exec'; // <--- Replace with your deployed script URL
-
-    try {
-        // Send POST request to Google Sheets
-        $response = Http::timeout(30)
-            ->withHeaders(['Content-Type' => 'application/json'])
-            ->post($sheetUrl, $contactData);
-
-        if ($response->successful()) {
-            $responseData = $response->json();
-            if (isset($responseData['status']) && $responseData['status'] === 'success') {
-                Log::info('Data successfully sent to Google Sheets', [
-                    'email' => $validated['email'],
-                    'response' => $responseData
-                ]);
-            } else {
-                Log::warning('Google Sheets returned an error', [
-                    'response' => $responseData,
-                    'email' => $validated['email']
-                ]);
-            }
-        } else {
-            Log::error('Google Sheets API request failed', [
-                'status' => $response->status(),
-                'body'   => $response->body(),
-                'email'  => $validated['email']
-            ]);
+        // Phone format validation
+        if (!preg_match('/^\+\d{7,15}$/', $contact)) {
+            return back()
+                ->withErrors(['contactnumber' => 'Please enter a valid phone number.'])
+                ->withInput();
         }
 
-        // Send Mail (optional)
-        Mail::to($validated['email'])->send(new SendContactMailToUser($contactData));
-        Mail::to('webdeveloper10.intelliworkz@gmail.com')->send(new SendContactMailToAdmin($contactData));
+        // Save contact to DB (optional)
+        $contact = Contact::create([
+            'name'         => $validated['name'],
+            'company_name' => $validated['company_name'],
+            'contact'      => $validated['contact'],
+            'email'        => $validated['email'],
+            'message'      => $validated['message'] ?? null,
+        ]);
 
-        return redirect()->route('thankyou')->with('success', 'Your message has been sent successfully.');
+        // Prepare data for Google Sheets
+        $contactData = [
+            'form_type'    => 'Contact Form',
+            'name'         => $validated['name'],
+            'company_name' => $validated['company_name'],
+            'contact'      => $validated['contact'],
+            'email'        => $validated['email'],
+            'message'      => $validated['message'] ?? '',
+            'date'         => now()->format('Y-m-d H:i:s'),
+        ];
 
-    } catch (\Exception $e) {
-        Log::error('Error sending data to Google Sheets or email: ' . $e->getMessage());
-        return back()->with('error', 'Something went wrong. Please try again later.');
+        // Google Apps Script URL
+        $sheetUrl = 'https://script.google.com/macros/s/AKfycbx2vKHdWFK0b-rhRBRHg_80Sd5j3atmdbQpwyPipR_g-TahDHT3XxOD2J3lbaGlzkuN/exec'; // <--- Replace with your deployed script URL
+
+        try {
+            // Send POST request to Google Sheets
+            $response = Http::timeout(30)
+                ->withHeaders(['Content-Type' => 'application/json'])
+                ->post($sheetUrl, $contactData);
+
+            if ($response->successful()) {
+                $responseData = $response->json();
+                if (isset($responseData['status']) && $responseData['status'] === 'success') {
+                    Log::info('Data successfully sent to Google Sheets', [
+                        'email' => $validated['email'],
+                        'response' => $responseData
+                    ]);
+                } else {
+                    Log::warning('Google Sheets returned an error', [
+                        'response' => $responseData,
+                        'email' => $validated['email']
+                    ]);
+                }
+            } else {
+                Log::error('Google Sheets API request failed', [
+                    'status' => $response->status(),
+                    'body'   => $response->body(),
+                    'email'  => $validated['email']
+                ]);
+            }
+
+            // Send Mail (optional)
+            Mail::to($validated['email'])->send(new SendContactMailToUser($contactData));
+            Mail::to('webdeveloper10.intelliworkz@gmail.com')->send(new SendContactMailToAdmin($contactData));
+
+            return redirect()->route('thankyou')->with('success', 'Your message has been sent successfully.');
+
+        } catch (\Exception $e) {
+            Log::error('Error sending data to Google Sheets or email: ' . $e->getMessage());
+            return back()->with('error', 'Something went wrong. Please try again later.');
+        }
     }
-}
    
     /**
      * Show the form for creating a new resource.
