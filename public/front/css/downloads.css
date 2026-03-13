@@ -1,0 +1,70 @@
+.search_filter_wrapper {
+  display: flex;
+  gap: 50px;
+  align-items: center;
+}
+
+.search_box {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  border: 1px solid var(--grey-585);
+  padding: 16px 17px;
+  gap: 10px;
+  font-size: 18px;
+}
+
+.search_box input {
+  background: transparent;
+  border: none;
+  outline: none;
+  width: 100%;
+}
+
+.filter_box {
+  display: flex;
+  gap: 40px;
+}
+
+.filter_box select {
+  background: transparent;
+  border: 1px solid var(--grey-585);
+  padding: 17px 24px;
+  min-width: 200px;
+  cursor: pointer;
+  font-size: 18px;
+  color: var(--grey-585);
+}
+
+.filter_box select:focus {
+  outline: none;
+}
+
+.download_cards {
+  border: 1px solid #a2b9cf;
+  padding: 35px 40px;
+}
+
+.download_cards hr {
+  border-color: #7a8f9b;
+  margin: 20px 0;
+}
+
+.download_cards .com_btn {
+  margin-top: 20px;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.download_cards .com_btn {
+  margin-top: 20px;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+}
+
+
+.download_cards .com_btn:hover svg path {
+ stroke: var(--white);
+}

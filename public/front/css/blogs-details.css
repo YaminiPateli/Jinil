@@ -1,0 +1,80 @@
+
+/* Insights Section Styles */
+
+.insight_item_content hr {
+  margin: 24px 0;
+  transition: border-color 0.3s ease;
+}
+
+.insight_item {
+  overflow: hidden;
+  transition: transform 0.25s ease;
+}
+
+.insight_item:hover {
+  transform: translateY(-10px);
+}
+
+.insight_item_img img {
+  transition: transform 0.35s ease;
+}
+
+.insight_item:hover .insight_item_img img {
+  transform: scale(1.06);
+}
+
+.insight_item:hover hr {
+  border-color: var(--blue);
+}
+
+.insight_item:hover .title_24 {
+  color: var(--blue);
+}
+
+.blog_det_consu {
+  display: flex;
+  padding: 60px 30px;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 10px;
+  align-self: stretch;
+  background: radial-gradient(
+    561.33% 75.38% at 56.26% 52.09%,
+    #1f3566 0%,
+    #243f7a 50%,
+    #1c2f5a 100%
+  );
+  position: relative;
+}
+
+.blog_det_consu::before {
+  content: "";
+  background: url(../images/blogs-details-fabe.png);
+  height: 300px;
+  width: 300px;
+  background-repeat: no-repeat;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+mix-blend-mode: luminosity;
+}
+
+.blog_det_consu p,
+.blog_det_consu .title_80 {
+  color: var(--white);
+}
+
+.blog_det_consu .title_80 {
+  mix-blend-mode: normal;
+}
+
+.blog_det_consu p {
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 24px;
+  margin-bottom: 0px;
+}
+
+.blog_det_consu .com_btn {
+  margin-top: 30px;
+}

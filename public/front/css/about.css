@@ -1,0 +1,101 @@
+/* WRAPPER */
+
+.md_wrapper {
+  display: flex;
+  align-items: end;
+}
+
+/* IMAGE */
+
+.md_img {
+  z-index: 2;
+}
+
+.md_img img {
+  width: 254px;
+  display: block;
+}
+
+/* QUOTE BOX */
+
+.md_quote {
+  background: linear-gradient(
+    90deg,
+    #253a6d -17.48%,
+    #105293 0.15%,
+    #253a6d 100%
+  );
+  color: var(--white);
+  display: flex;
+  gap: 20px;
+  margin-bottom: -20px;
+  margin-left: -20px;
+  padding: 50px 24px;
+  padding-bottom: 20px;
+}
+
+.md_quote SVG {
+  width: 80px;
+  height: 80px;
+  margin-top: -20px;
+}
+
+/* QUOTE ICON */
+
+.md_quote p {
+  margin: 0;
+}
+
+/* INFO */
+
+.md_info {
+  margin-top: 24px;
+}
+
+.md_info h2 {
+  font-size: 34px;
+  color: var(--black-111);
+  margin: 0;
+}
+
+.md_info p {
+  font-size: 20px;
+}
+
+.engineered_about {
+  padding: 60px 30px;
+  background: radial-gradient(
+    561.33% 75.38% at 56.26% 52.09%,
+    #1f3566 0%,
+    #243f7a 50%,
+    #1c2f5a 100%
+  );
+  position: relative;
+}
+
+.engineered_about::after
+{
+    content: "";
+    position: absolute;
+   background: url(../images/blogs-details-fabe.png);
+    height: 270px;
+    width: 270px;
+    background-repeat: no-repeat;
+    left: 0px;
+    bottom: 0;
+     mix-blend-mode: luminosity;
+}
+
+.engineered_right {
+  display: flex;
+  gap: 80px;
+ align-items: end;
+}
+
+.engineered_right_child {
+  display: flex;
+  flex-direction: column;
+  gap: 80px;
+}
+
+
