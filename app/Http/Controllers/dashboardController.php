@@ -35,13 +35,17 @@ class dashboardController extends Controller
         return view('front.dashboard');
     }
     public function about()
-    {  
-        return view('front.about');
+    {   
+        $metatitle = "";
+        $metadescription = "";
+        return view('front.about', compact('metatitle', 'metadescription'));
     }
 
     public function contact()
-    {
-        return view('front.contact');
+    {   
+        $metatitle = "";
+        $metadescription = "";
+        return view('front.contact', compact('metatitle', 'metadescription'));
     }
     public function blogs()
     {
@@ -120,7 +124,8 @@ class dashboardController extends Controller
             'metadescription'
         ));
     }
- 
+    
+    
     public function contactstore(Request $request)
     {
     // Validation
