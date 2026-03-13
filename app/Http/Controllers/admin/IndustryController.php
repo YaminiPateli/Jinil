@@ -8,6 +8,7 @@ use Illuminate\Support\Facades\Validator;
 use DB;
 use Illuminate\Support\Facades\Mail;
 use App\Models\Industry;
+use App\Models\IndCategory;
 
 class IndustryController extends Controller
 {
@@ -37,9 +38,9 @@ class IndustryController extends Controller
      */
     public function create()
     {
-        return view('admin.industry.industry-add');
+        $categories = IndCategory::whereNull('deleted_at')->get();
+        return view('admin.industry.industry-add', compact('categories'));
     }
-
     /**
      * Store a newly created resource in storage.
      *
@@ -63,8 +64,7 @@ class IndustryController extends Controller
                 $fileName = $file->getClientOriginalName();
                 $file->move(public_path('industryImage'), $fileName);
                 $industry = [
-                    'category' => $request->category, 
-                    'cat_description' => $request->cat_description, 
+                    'category_id' => $request->category_id,
                     'title' => $request->title, 
                     'description' => $request->description, 
                     'url' => $request->url,
@@ -98,7 +98,9 @@ class IndustryController extends Controller
     public function edit($id)
     {
         $industry = Industry::find($id);
-        return view('admin.industry.industry-edit',compact('industry'));
+        $categories = IndCategory::whereNull('deleted_at')->get();
+
+        return view('admin.industry.industry-edit', compact('industry','categories'));
     }
 
     /**
@@ -124,8 +126,7 @@ class IndustryController extends Controller
             $file->move(public_path('industryImage'), $fileName);
             $industry = Industry::find($id);
             $industry->title = $request->title;
-            $industry->category = $request->category;
-            $industry->cat_description = $request->cat_description;
+            $industry->category_id = $request->category_id;
             $industry->description = $request->description;
             $industry->url = $request->url;
             $industry->image = $fileName;
@@ -133,8 +134,7 @@ class IndustryController extends Controller
         }else{
             $industry = Industry::find($id);
             $industry->title = $request->title;
-            $industry->category = $request->category;
-            $industry->cat_description = $request->cat_description;
+            $industry->category_id = $request->category_id;
             $industry->description = $request->description;
             $industry->url = $request->url;
             $industry->save();

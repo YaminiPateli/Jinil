@@ -10,7 +10,9 @@ use App\Http\Controllers\RegistationController;
 use App\Http\Controllers\superAdminController;
 use App\Http\Controllers\admin\IndustryController;
 use App\Http\Controllers\admin\CategoryController;
+use App\Http\Controllers\admin\IndCategoryController;
 use App\Http\Controllers\admin\ProductController;
+use App\Http\Controllers\admin\ServiceController;
 use App\Http\Controllers\admin\BlogController;
 use App\Http\Controllers\admin\ClientelController;
 use App\Http\Controllers\admin\CaseStudyController;
@@ -53,12 +55,15 @@ Route::get('/superAdmin', [superAdminController::class, 'superAdmin'])->name('su
 Route::get('/admin/dashboard', [adminController::class, 'admin'])->name('admin/dashboard');
 Route::resource('industry', IndustryController::class);
 Route::resource('category', CategoryController::class);
+Route::resource('indcategory', IndCategoryController::class);
 Route::resource('product', ProductController::class);
 Route::resource('blog', BlogController::class);
 Route::resource('clientel', ClientelController::class);
 Route::resource('casestudy', CaseStudyController::class); 
 Route::resource('certificate', CertificateController::class); 
 Route::resource('faq', FaqController::class); 
+Route::resource('service', ServiceController::class);
+Route::resource('servicecategory', ServiceCategoryController::class);
 
 Route::prefix('backend')->group(function () {
 	// Route::get('home', [adminController::class, 'index'])->name('home');

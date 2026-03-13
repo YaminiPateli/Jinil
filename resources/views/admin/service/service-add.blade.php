@@ -1,6 +1,6 @@
 @extends('admin.layouts.app')
 
-@section('title', 'Industry Edit')
+@section('title', 'service Add')
 
 @section('content')
 <div class="container-xxl">
@@ -9,21 +9,20 @@
         <div class="border-0 mb-4">
             <div
                 class="card-header py-3 no-bg bg-transparent d-flex align-items-center px-0 justify-content-between border-bottom flex-wrap">
-                <h3 class="fw-bold mb-0">Industry Edit</h3>
+                <h3 class="fw-bold mb-0">service Add</h3>
                 <!--<button type="submit"-->
                 <!--    class="btn btn-primary py-2 px-5 text-uppercase btn-set-task w-sm-100">Save</button>-->
             </div>
         </div>
-    </div> <!-- Row end  -->
+    </div>
     <div class="card-body">
-        <form method="post" enctype="multipart/form-data" action="{{ route('industry.update',$industry->id) }}">
+        <form method="post" enctype="multipart/form-data" action="{{ route('service.store') }}">
             @csrf
-            @method('PATCH')
             <div class="row g-3 mb-3">
-                <div class="col-lg-12">
+                <div class="col-lg-12Industries">
                     <div class="card mb-3">
                         <div class="card-header py-3 d-flex justify-content-between bg-transparent border-bottom-0">
-                            <h6 class="mb-0 fw-bold ">Industry Details</h6>
+                            <h6 class="mb-0 fw-bold ">service Details</h6>
                         </div>
                         <div class="card-body">
                             <div class="row g-3 align-items-center">
@@ -32,18 +31,16 @@
                                     <select name="category_id" class="form-control">
                                         <option value="">Select Category</option>
                                         @foreach($categories as $cat)
-                                            <option value="{{ $cat->id }}" 
-                                                {{ $industry->category_id == $cat->id ? 'selected' : '' }}>
-                                                {{ $cat->indcategory }}
+                                            <option value="{{ $cat->id }}">
+                                                {{ $cat->category }}
                                             </option>
                                         @endforeach
                                     </select>
                                 </div>
-                
                                 <div class="col-md-6">
                                     <label class="form-label">Title</label>
                                     <input type="text" id="title" name="title" class="form-control"
-                                        value="{{ $industry->title }}" placeholder="Industry Title">
+                                        placeholder="service Title">
                                     @if ($errors->has('title'))
                                     <span class="text-danger">{{ $errors->first('title') }}</span>
                                     @endif
@@ -52,37 +49,38 @@
                                 <div class="col-md-6">
                                     <label class="form-label">Url</label>
                                     <input type="text" id="url" name="url" class="form-control"
-                                        value="{{ $industry->url }}" placeholder="Industry Url">
-                                    @if ($errors->has('url'))
-                                    <span class="text-danger">{{ $errors->first('url') }}</span>
+                                        placeholder="service Url">
+                                </div>
+
+                                <div class="col-md-6">
+                                    <label class="form-label">Name</label>
+                                    <input type="text" id="name" name="name" class="form-control"
+                                        placeholder="service Name">
+                                </div>                                
+
+                                <div class="col-md-12">
+                                    <label for="file" class="form-label">Images</label>
+                                    <input type="file" class="form-control" name="front_image" id="front_image">
+                                    @if ($errors->has('front_image'))
+                                    <span class="text-danger">{{ $errors->first('front_image') }}</span>
                                     @endif
                                 </div>
                                 <div class="col-md-12">
-                                    <label class="form-label">Description</label>
-                                    <textarea class="form-control" name="description" id="description" rows="3"
-                                        placeholder="Enter description here...">{{ $industry->description }}</textarea>
-                                    @if ($errors->has('description'))
-                                    <span class="text-danger">{{ $errors->first('description') }}</span>
-                                    @endif
-                                </div>
-
-                                <div class="col-md-6">
-                                    <label for="file" class="form-label">Images</label>
-                                    <input type="file" class="form-control" name="image" id="image">
-                                    @if ($errors->has('image'))
-                                    <span class="text-danger">{{ $errors->first('image') }}</span>
-                                    @endif
-                                </div>
-                                <div class="col-md-6">
-                                    @if($industry->image)
-                                        <img 
-                                            src="{{ asset('public/industryImage/' . $industry->image) }}" 
-                                            alt="Industry Image"
-                                            style="width:120px; height:auto; border:1px solid #ddd; padding:5px;">
-                                    @endif
-
+                                    <label for="short_description" class="form-label">Short Description</label>
+                                    <textarea id="short_description" name="short_description" class="form-control"></textarea>
                                 </div>
                                 
+                                 <div class="col-md-6">
+                                    <label class="form-label">Meta Title</label>
+                                    <input type="text" id="meta_title" name="meta_title" class="form-control"
+                                        placeholder="service Meta Title">
+                                </div>
+
+                                <div class="col-md-12">
+                                    <label for="meta_description" class="form-label">Meta Description</label>
+                                    <textarea id="meta_description" name="meta_description" class="form-control" ></textarea>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -96,6 +94,7 @@
 @push('styles')
 <!-- Summernote CSS -->
 <link href="https://cdnjs.cloudflare.com/ajax/libs/summernote/0.8.18/summernote-bs4.min.css" rel="stylesheet">
+
 <!-- Cropper CSS -->
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/cropperjs/1.5.12/cropper.min.css">
 
@@ -121,28 +120,12 @@
 <script src="{!! asset('public/admin_public/dist/assets/bundles/dropify.bundle.js') !!}"></script>
 <script src="{!! asset('public/admin_public/dist/assets/bundles/dataTables.bundle.js') !!}"></script>
 
-@endpush
 
-@push('custom_scripts')
+
 <script>
 $(document).ready(function() {
-    $('#description').summernote({
-        placeholder: 'Enter Description here...',
-        height: 300,
-        toolbar: [
-            ['style', ['style']],
-            ['font', ['bold', 'italic', 'underline', 'clear']],
-            ['fontname', ['fontname']],
-            ['color', ['color']],
-            ['para', ['ul', 'ol', 'paragraph']],
-            ['height', ['height']],
-            ['insert', ['link', 'picture', 'hr']],
-            ['view', ['fullscreen', 'codeview']],
-            ['help', ['help']]
-        ]
-    });
-    $('#cat_description').summernote({
-        placeholder: 'Enter Category Description here...',
+    $('#meta_description,#short_description').summernote({
+        placeholder: 'Enter here...',
         height: 300,
         toolbar: [
             ['style', ['style']],
@@ -157,5 +140,7 @@ $(document).ready(function() {
         ]
     });
 });
+
+
 </script>
 @endpush

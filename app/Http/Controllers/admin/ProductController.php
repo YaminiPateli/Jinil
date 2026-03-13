@@ -3,8 +3,10 @@ namespace App\Http\Controllers\admin;
 
 use App\Http\Controllers\Controller;
 use App\Models\Product;
+use App\Models\Category;
 use DB;
 use Illuminate\Http\Request;
+
 
 class ProductController extends Controller
 {
@@ -23,7 +25,8 @@ class ProductController extends Controller
 
     public function create()
     {
-        return view('admin.product.product-add');
+        $categories = Category::whereNull('deleted_at')->get();
+        return view('admin.product.product-add', compact('categories'));
     }
 
     public function store(Request $request)
@@ -35,7 +38,7 @@ class ProductController extends Controller
         ]);
         
         $post = new Product;
-        
+        $post->category_id = $request->category_id;
         $post->title = $request->get('title');
         $post->name = $request->get('name');
         $post->short_description = $request->get('short_description');
@@ -59,13 +62,15 @@ class ProductController extends Controller
     public function edit($id)
     {
         $product = Product::find($id);
-        return view('admin.product.product-edit', compact('product'));
-    }
+        $categories = Category::whereNull('deleted_at')->get();
 
+        return view('admin.product.product-edit', compact('product','categories'));
+    }
     public function update(Request $request, $id)
     {
         $post = Product::find($id);
         
+        $post->category_id = $request->category_id;
         $post->title = $request->get('title');
         $post->name = $request->get('name');
         $post->short_description = $request->get('short_description');

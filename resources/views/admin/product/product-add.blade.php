@@ -26,7 +26,17 @@
                         </div>
                         <div class="card-body">
                             <div class="row g-3 align-items-center">
-                                
+                                <div class="col-md-6">
+                                    <label class="form-label">Category</label>
+                                    <select name="category_id" class="form-control">
+                                        <option value="">Select Category</option>
+                                        @foreach($categories as $cat)
+                                            <option value="{{ $cat->id }}">
+                                                {{ $cat->category }}
+                                            </option>
+                                        @endforeach
+                                    </select>
+                                </div>
                                 <div class="col-md-6">
                                     <label class="form-label">Title</label>
                                     <input type="text" id="title" name="title" class="form-control"
