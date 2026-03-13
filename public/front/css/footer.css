@@ -1,0 +1,168 @@
+
+.site_footer_child
+{
+  border: 1px solid #A2B9CF;
+
+}
+
+/* TOP */
+
+.footer_top {
+  display: flex;
+  align-items: center;
+  padding: 24px;
+}
+
+.footer_logo {
+  width: 330px;
+}
+
+.footer_logo_area {
+  display: flex;
+  align-items: center;
+  gap: 28px;
+}
+
+.footer_logo_area p {
+  font-size: 18px;
+  color: #7a8f9b;
+}
+
+/* QUICK LINKS */
+
+.footer_quick {
+  border-left: 1px solid #a2b9cf;
+  padding-left: 160px;
+  margin-left: 160px;
+}
+
+.footer_quick h4 {
+  margin-bottom: 24px;
+}
+
+.footer_quick ul {
+  display: flex;
+  gap: 60px;
+  list-style: none;
+}
+
+.footer_quick ul li {
+  position: relative;
+}
+
+.footer_quick ul li::after {
+  content: "";
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: #a2b9cf;
+  top: 50%;
+  transform: translateY(-50%);
+  left: -20px;
+}
+
+.footer_quick a {
+  text-decoration: none;
+}
+
+.footer_grid {
+  display: grid;
+  grid-template-columns: 30% 30% 20% 20%;
+  padding: 24px;
+}
+
+.footer_col {
+  padding:0 70px;
+  border-right: 1px solid #A2B9CF;
+}
+
+.footer_col:first-child
+{
+  padding-left: 0;
+}
+
+.footer_col:last-child
+{
+  padding-right: 0;
+}
+
+.footer_col:last-child {
+  border-right: none;
+}
+
+.footer_col h4 {
+  margin-bottom: 20px;
+}
+
+.footer_col ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer_col li {
+  margin-bottom: 10px;
+}
+
+/* DIVIDER */
+
+.footer_divider {
+  border: none;
+  border-top: 1px solid #a2b9cf;
+  margin: 0;
+}
+
+/* BOTTOM */
+
+.footer_bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 20px;
+  padding: 24px;
+}
+
+.footer_social a {
+  color: #3b82f6;
+  font-size: 18px;
+  margin: 0 8px;
+}
+
+.footer_policy a {
+  text-decoration: none;
+}
+
+.footer_policy a:hover {
+}
+
+/* MOBILE */
+
+@media (max-width: 900px) {
+  .footer_top {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .footer_quick ul {
+    flex-wrap: wrap;
+    gap: 15px;
+  }
+
+  .footer_grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 600px) {
+  .footer_grid {
+    grid-template-columns: 1fr;
+  }
+
+  .footer_col {
+    border-right: none;
+    border-bottom: 1px solid #333;
+    padding-bottom: 20px;
+  }
+}

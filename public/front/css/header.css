@@ -1,0 +1,148 @@
+header.sticky-header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 9999;
+  transition: all 0.3s ease;
+}
+
+/* scroll ke baad style change */
+header.sticky-active {
+  padding-top: 0;
+  box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+}
+
+
+header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1030;
+  padding-top: 30px; /* removed extra gap so content can be positioned using --header-height */
+}
+
+header .navbar {
+  padding: 18px 30px;
+  background-color: var(--white);
+}
+
+.header_logo
+{
+  width: 170px;
+}
+
+.inner_body .sticky-header {
+  position: static;
+}
+
+.theme-white .navbar {
+  background: #f5f8fb;
+}
+
+.hamburger {
+  width: 36px;
+  height: 30px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+}
+
+.hamburger > span {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 6px;
+  width: 100%;
+  height: 100%;
+}
+
+.hamburger > span span {
+  display: block;
+  height: 3px;
+  background: var(--white-color);
+  transition: 0.3s ease;
+}
+
+/* Size difference */
+.hamburger > span span:nth-child(1) {
+  width: 100%;
+}
+
+.hamburger > span span:nth-child(2) {
+  width: 70%;
+}
+
+.hamburger > span span:nth-child(3) {
+  width: 50%;
+}
+
+.nav_links {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  overflow: hidden;
+}
+
+.nav_links li {
+  display: inline-block;
+  margin: 0 20px;
+}
+
+.nav_links li a {
+  color: var(--grey-585);
+  font-size: 18px;
+  font-weight: 400;
+  position: relative;
+  display: flex;
+  gap: 12px;
+  align-items: center;
+}
+
+/* original text */
+.nav_links li a span {
+  display: inline-block;
+  transition:
+    transform 0.35s ease,
+    color 0.35s ease;
+}
+
+/* duplicate text */
+.nav_links li a::after {
+  content: attr(data-text);
+  position: absolute;
+  left: 0;
+  top: 100%;
+  width: 100%;
+  color: var(--blue);
+  transition: transform 0.35s ease;
+}
+
+/* hover effect */
+.nav_links li a:hover span:first-child {
+  transform: translateY(-100%);
+  color: var(--blue);
+}
+
+/* keep icon/svg in place and animate if needed */
+.nav_links li a span:last-child {
+  transition: transform 0.35s ease;
+}
+
+/* svg path stroke transition and hover color */
+.nav_links li a span:last-child svg path {
+  transition:
+    stroke 0.35s ease,
+    transform 0.35s ease;
+}
+/* ensure SVG stroke color is overridden on hover */
+.nav_links li a:hover span:last-child svg path {
+  stroke: var(--blue) !important;
+}
+/* optional slight move of the svg on hover for a polished effect */
+.nav_links li a:hover span:last-child svg {
+  transform: translateY(-2px);
+}
+
+.nav_links li a:hover::after {
+  transform: translateY(-100%);
+}

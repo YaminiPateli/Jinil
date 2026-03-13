@@ -1,0 +1,328 @@
+@media (min-width: 1900px) {
+    .container-fluid {
+        padding: 0 30px !important;
+    }
+
+    .container {
+        max-width: 1600px !important;
+    }
+}
+
+/*=========================                  =========================
+===========================                  =========================
+===========================      1710        ===========================
+===========================                  ===========================*/
+
+@media (max-width: 1710px) {
+}
+
+/*=========================                  =========================
+===========================                  =========================
+===========================      1601        ===========================
+===========================                  ===========================*/
+@media (max-width: 1601px) {
+    .mt_100 {
+        margin-top: 70px;
+    }
+
+    .mb_100 {
+        margin-bottom: 70px;
+    }
+
+    .title_80 {
+        font-size: 70px;
+    }
+
+    .title_60 {
+        font-size: 42px;
+    }
+
+    .title_42 {
+        font-size: 38px;
+    }
+
+    header .navbar {
+        padding: 12px 24px;
+    }
+
+    .sec_hed_top p {
+        margin-bottom: 6px;
+    }
+
+    .title_24 {
+        font-size: 20px;
+        line-height: 32px;
+    }
+
+    .mb_80 {
+        margin-bottom: 50px;
+    }
+
+    .mb_60 {
+        margin-bottom: 30px;
+    }
+
+    .mb_40 {
+    margin-bottom: 30px;
+}
+
+    .fea_mac_img {
+        margin-bottom: 14px;
+    }
+
+    .counter_item img {
+        margin-bottom: 25px;
+    }
+    .industry_section {
+        padding: 40px 20px;
+    }
+
+    .industry_item_wrapper .title_24 {
+        font-size: 32px;
+        line-height: 36px;
+    }
+
+    .industry_grid {
+        gap: 20px;
+    }
+
+    .industry_item_wrapper {
+        height: 290px;
+    }
+
+    .process_item {
+        padding: 35px 24px;
+    }
+
+    .process_item_step {
+        padding: 10px 38px;
+    }
+
+    .process_item_icon {
+        margin-bottom: 14px;
+        width: 90px;
+    }
+
+    .insights_wrapper .row, .service_Scope_card .row, .download_cards_main .row {
+    --bs-gutter-x: 30px;
+    --bs-gutter-y: 30px;
+}
+
+.industry_item_wrapper:last-child svg
+{
+  width: 60px;
+}
+
+.industry_item_wrapper:last-child .title_24 {
+    margin-top: 10px;
+}
+
+.industry_item_wrapper:hover .title_24 {
+    font-size: 18px;
+    line-height: 26px;
+}
+
+.insight_item_content hr {
+    margin: 16px 0;
+}
+
+}
+
+/*=========================                  =========================
+===========================                  =========================
+===========================      1441        ===========================
+===========================                  ===========================*/
+
+@media (max-width: 1441px) {
+
+    .title_24 {
+        font-size: 22px;
+    }
+    .mb_60 {
+        margin-bottom: 25px;
+    }
+
+    .nav_links li {
+        margin: 0 14px;
+    }
+
+    .nav_links li a {
+        font-size: 14px;
+    }
+
+    .header_logo {
+        width: 140px;
+    }
+
+    .com_btn {
+        padding: 8px 24px;
+        font-size: 14px;
+    }
+
+    @keyframes criss-cross-left {
+        0% {
+            left: -30px;
+            width: 10px;
+            height: 10px;
+        }
+        40% {
+            left: 50%;
+            width: 20px;
+            height: 20px;
+        }
+        100% {
+            left: 50%;
+            width: 500px;
+            height: 500px;
+        }
+    }
+
+    @keyframes criss-cross-right {
+        0% {
+            right: -30px;
+            width: 10px;
+            height: 10px;
+        }
+        40% {
+            right: 50%;
+            width: 20px;
+            height: 20px;
+        }
+        100% {
+            right: 50%;
+            width: 500px;
+            height: 500px;
+        }
+    }
+
+    header {
+        padding-top: 15px;
+    }
+
+        .industry_item_wrapper {
+        height: 260px;
+    }
+
+        .industry_item_wrapper .title_24 {
+        font-size: 28px;
+        line-height: 32px;
+    }
+
+}
+
+/*=========================                  =========================
+===========================                  =========================
+===========================      1281        ===========================
+===========================                  ===========================*/
+@media (max-width: 1281px) {
+    .title_80 {
+        font-size: 52px;
+    }
+
+    .title_60 {
+        font-size: 42px;
+    }
+
+    .title_42 {
+        font-size: 30px;
+    }
+
+    .title_24 {
+        font-size: 20px;
+    }
+}
+/*=========================                  =========================
+===========================                  =========================
+===========================      992px       ===========================
+===========================                  ===========================*/
+
+@media (max-width: 992px) {
+    .title_80 {
+        font-size: 44px;
+    }
+
+    .title_60 {
+        font-size: 36px;
+    }
+
+    .title_42 {
+        font-size: 26px;
+    }
+
+    .title_24 {
+        font-size: 18px;
+        line-height: 28px;
+    }
+
+    .mt_100 {
+        margin-top: 60px;
+    }
+
+    .mb_100 {
+        margin-bottom: 60px;
+    }
+}
+/*=========================                  =========================
+===========================                  =========================
+===========================      768px       ===========================
+===========================                  ===========================*/
+
+@media (max-width: 767px) {
+    body {
+        font-size: 14px;
+        line-height: 22px;
+    }
+
+    .title_80 {
+        font-size: 36px;
+    }
+
+    .title_60 {
+        font-size: 28px;
+    }
+
+    .title_42 {
+        font-size: 22px;
+    }
+
+    .title_24 {
+        font-size: 16px;
+        line-height: 26px;
+    }
+
+    .com_btn {
+        padding: 10px 22px;
+        font-size: 14px;
+    }
+
+    .mt_100 {
+        margin-top: 40px;
+    }
+
+    .mb_100 {
+        margin-bottom: 40px;
+    }
+}
+
+/*=========================                  =========================
+===========================                  =========================
+===========================      480px       ===========================
+===========================                  ===========================*/
+
+@media (max-width: 480px) {
+    .title_80 {
+        font-size: 30px;
+    }
+
+    .title_60 {
+        font-size: 24px;
+    }
+
+    .title_42 {
+        font-size: 20px;
+    }
+
+    .title_24 {
+        font-size: 15px;
+    }
+}
