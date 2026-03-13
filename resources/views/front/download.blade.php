@@ -14,7 +14,7 @@
             <div class="contact_circle">
 
                 <!-- circular text image -->
-                <img src="{{ asset('public/images/innder-header-jump.svg') }}" class="circle_text_img">
+                <img src="{{ asset('public/front/images/innder-header-jump.svg') }}" class="circle_text_img">
 
                 <svg class="arrow_img" width="18" height="23" viewBox="0 0 18 23" fill="none"
                     xmlns="http://www.w3.org/2000/svg">
@@ -49,7 +49,7 @@
             <!-- Filters -->
             <div class="filter_box">
 
-                <select>
+                <!-- <select>
                     <option>All Categories</option>
                     <option>Category 1</option>
                     <option>Category 2</option>
@@ -59,7 +59,7 @@
                     <option>All Machine Types</option>
                     <option>Type 1</option>
                     <option>Type 2</option>
-                </select>
+                </select> -->
 
                 <select>
                     <option>All Industries</option>
@@ -75,7 +75,7 @@
             <div class="row">
                 <div class="col-lg-4">
                     <div class="download_cards">
-                        <img class=" img-fluid mb_40" src="images/pdf-img.png" alt="images">
+                        <img class=" img-fluid mb_40" src="{{ asset('public/front/images/pdf-img.png') }}" alt="images">
                         <h4 class="title_24 text-105">Roller Conveyor Shot Blasting Machine</h4>
                         <hr>
                         <p class="mb-0">Detailed technical specifications, standard configurations, and optional
@@ -97,7 +97,7 @@
                 </div>
                  <div class="col-lg-4">
                     <div class="download_cards">
-                        <img class=" img-fluid mb_40" src="images/pdf-img.png" alt="images">
+                        <img class=" img-fluid mb_40" src="{{ asset('public/front/images/pdf-img.png') }}" alt="images">
                         <h4 class="title_24 text-105">Roller Conveyor Shot Blasting Machine</h4>
                         <hr>
                         <p class="mb-0">Detailed technical specifications, standard configurations, and optional
@@ -120,7 +120,7 @@
 
                   <div class="col-lg-4">
                     <div class="download_cards">
-                        <img class=" img-fluid mb_40" src="images/pdf-img.png" alt="images">
+                        <img class=" img-fluid mb_40" src="{{ asset('public/front/images/pdf-img.png') }}" alt="images">
                         <h4 class="title_24 text-105">Roller Conveyor Shot Blasting Machine</h4>
                         <hr>
                         <p class="mb-0">Detailed technical specifications, standard configurations, and optional
@@ -143,7 +143,7 @@
 
                   <div class="col-lg-4">
                     <div class="download_cards">
-                        <img class=" img-fluid mb_40" src="images/pdf-img.png" alt="images">
+                        <img class=" img-fluid mb_40" src="{{ asset('public/front/images/pdf-img.png') }}" alt="images">
                         <h4 class="title_24 text-105">Roller Conveyor Shot Blasting Machine</h4>
                         <hr>
                         <p class="mb-0">Detailed technical specifications, standard configurations, and optional
@@ -166,7 +166,7 @@
 
                   <div class="col-lg-4">
                     <div class="download_cards">
-                        <img class=" img-fluid mb_40" src="images/pdf-img.png" alt="images">
+                        <img class=" img-fluid mb_40" src="{{ asset('public/front/images/pdf-img.png') }}" alt="images">
                         <h4 class="title_24 text-105">Roller Conveyor Shot Blasting Machine</h4>
                         <hr>
                         <p class="mb-0">Detailed technical specifications, standard configurations, and optional
@@ -189,7 +189,7 @@
 
                   <div class="col-lg-4">
                     <div class="download_cards">
-                        <img class=" img-fluid mb_40" src="images/pdf-img.png" alt="images">
+                        <img class=" img-fluid mb_40" src="{{ asset('public/front/images/pdf-img.png') }}" alt="images">
                         <h4 class="title_24 text-105">Roller Conveyor Shot Blasting Machine</h4>
                         <hr>
                         <p class="mb-0">Detailed technical specifications, standard configurations, and optional

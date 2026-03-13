@@ -43,6 +43,7 @@ use App\Http\Controllers\CaptchaController;
     Route::get('downloads', [dashboardController::class,'download'])->name('downloads');
     Route::get('/faqs', [dashboardController::class, 'faq'])->name('faqs');
     Route::get('/installation', [dashboardController::class, 'installation'])->name('installation');
+    Route::get('/downloads', [dashboardController::class, 'download'])->name('downloads');
 
 Route::get('login', [dashboardController::class, 'login'])->name('login');
 Auth::routes();

@@ -13,6 +13,7 @@ use App\Models\Product;
 use App\Models\Category;
 use App\Models\Blog;
 use App\Models\Faq;
+use App\Models\Certificate;
 use App\Mail\SendContactMailToUser;
 use App\Mail\SendContactMailToAdmin; 
 
@@ -68,7 +69,22 @@ class dashboardController extends Controller
     {
         $metatitle = "";
         $metadescription = "";
-        return view('front.download', compact('metatitle', 'metadescription'));
+
+        $certificate = Certificate::whereNull('deleted_at')
+                        ->orderBy('id', 'desc')
+                        ->get();
+
+        $categories = Certificate::whereNull('deleted_at')
+                        ->select('cat_title')
+                        ->distinct()
+                        ->pluck('cat_title');
+
+        return view('front.download', compact(
+            'metatitle',
+            'metadescription',
+            'certificate',
+            'categories'
+        ));
     }
     public function faq()
     {
