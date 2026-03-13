@@ -11,7 +11,7 @@
 
                     <img src="{{ asset('public/front/images/logo.svg') }}" class="footer_logo">
 
-                    <p>Precision Surface<br>Preparation Technology.</p>
+                    <p class="mb-0">Precision Surface<br>Preparation Technology.</p>
 
                 </div>
 

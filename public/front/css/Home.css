@@ -139,6 +139,7 @@
 .counter_item img {
   margin-bottom: 40px;
   mix-blend-mode: multiply;
+  object-fit: contain;
 }
 
 /* Industry Section Styles */

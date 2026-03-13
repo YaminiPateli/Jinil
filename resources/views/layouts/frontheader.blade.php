@@ -68,7 +68,7 @@
                     <ul class="mx-auto nav_links">
                         <li><a href="#" data-text="About Us"><span>About Us</span> </a></li>
 
-                        <li><a href="#" data-text="Products">
+                        <li class="has-dropdown"><a href="#" data-text="Products">
                                 <span>Products</span>
                                 <span>
                                     <svg width="11" height="7" viewBox="0 0 11 7" fill="none"
@@ -78,9 +78,15 @@
                                     </svg>
                                 </span>
                             </a>
+
+                             <ul class="dropdown-menu">
+                                <li><a href="#">link</a></li>
+                                <li><a href="#">link</a></li>
+                            </ul>
+
                         </li>
 
-                        <li><a href="#" data-text="Services">
+                        <li class="has-dropdown"><a href="#" data-text="Services">
                                 <span>Services</span>
                                 <span>
                                     <svg width="11" height="7" viewBox="0 0 11 7" fill="none"
@@ -90,10 +96,15 @@
                                     </svg>
                                 </span>
                             </a>
+
+                             <ul class="dropdown-menu">
+                                <li><a href="#">link</a></li>
+                                <li><a href="#">link</a></li>
+                            </ul>
                         </li>
                         <!-- <li><a href="#" data-text="Case Studies">
                                 <span>Case Studies</span></a></li> -->
-                        <li>
+                        <li class="has-dropdown">
                             <a href="#" data-text="Resources">
                                 <span>Resources</span>
                                 <span>
@@ -104,19 +115,18 @@
                                     </svg>
                                 </span>
                             </a>
+
+                            <ul class="dropdown-menu">
+                                <li><a href="#">link</a></li>
+                                <li><a href="#">link</a></li>
+                            </ul>
                         </li>
                         <li>
                             <a href="#" data-text="Contact Us">
                                 <span>Contact Us</span>
-                                <span>
-                                    <svg width="11" height="7" viewBox="0 0 11 7" fill="none"
-                                        xmlns="http://www.w3.org/2000/svg">
-                                        <path d="M10.5 0.5L5.5 5.73809L0.5 0.5" stroke="#58595B" stroke-linecap="round"
-                                            stroke-linejoin="round" />
-                                    </svg>
-                                </span>
                             </a>
                         </li>
+
                     </ul>
 
                     <div class="navbar_right">

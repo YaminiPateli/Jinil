@@ -67,4 +67,5 @@
 
 .download_cards .com_btn:hover svg path {
  stroke: var(--white);
+ fill: var(--white);
 }

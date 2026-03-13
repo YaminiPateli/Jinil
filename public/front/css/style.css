@@ -63,6 +63,13 @@ a {
   font-weight: 600;
 }
 
+.title_34 {
+  color: var(--black-111);
+  font-size: 34px;
+  font-weight: 500;
+  line-height: 34px;
+}
+
 .title_24 {
   color: var(--black-111);
   font-size: 24px;

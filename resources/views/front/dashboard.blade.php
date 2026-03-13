@@ -2663,7 +2663,7 @@
     <div class="container">
 
         <div class="d-flex justify-content-center mb_40">
-            <img class="img-fluid" src="{{ asset('public/front/images/India-leading.gif')}}" alt="gif">
+            <img class="img-fluid gif_video" src="{{ asset('public/front/images/India-leading.gif')}}" alt="gif">
         </div>
         <div class="sec_hed_top mb_40">
             <p>For precision surface preparation solutions</p>
@@ -2876,22 +2876,22 @@
     <div class="container">
         <div class="counter">
             <div class="counter_item">
-                <img src="{{ asset('public/front/images/counter1.png')}}" alt="image">
+                <img class="img-fluid" src="{{ asset('public/front/images/counter1.png')}}" alt="image">
                 <h2 class="title_60"><span class="count" data-target="500">0</span>+</h2>
                 <p>Machines Delivered</p>
             </div>
             <div class="counter_item">
-                <img src="{{ asset('public/front/images/counter2.png')}}" alt="image">
+                <img class="img-fluid" src="{{ asset('public/front/images/counter2.png')}}" alt="image">
                 <h2 class="title_60"><span class="count" data-target="30">0</span>+</h2>
                 <p class="mb-0">Years Combined Expertise</p>
             </div>
             <div class="counter_item">
-                <img src="{{ asset('public/front/images/counter3.png')}}" alt="image">
+                <img class="img-fluid" src="{{ asset('public/front/images/counter3.png')}}" alt="image">
                 <h2 class="title_60"><span class="count" data-target="25">0</span>+</h2>
                 <p class="mb-0">Industries Served</p>
             </div>
             <div class="counter_item">
-                <img src="{{ asset('public/front/images/counter4.png')}}" alt="image">
+                <img class="img-fluid" src="{{ asset('public/front/images/counter4.png')}}" alt="image">
                 <h2 class="title_60"><span class="count" data-target="24">0</span>/7</h2>
                 <p class="mb-0">Support Available</p>
             </div>

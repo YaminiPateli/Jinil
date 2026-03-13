@@ -52,7 +52,7 @@
   margin-top: 24px;
 }
 
-.md_info h2 {
+.md_info h3 {
   font-size: 34px;
   color: var(--black-111);
   margin: 0;
@@ -81,6 +81,7 @@
     height: 270px;
     width: 270px;
     background-repeat: no-repeat;
+    background-size: contain;
     left: 0px;
     bottom: 0;
      mix-blend-mode: luminosity;

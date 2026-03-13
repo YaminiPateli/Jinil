@@ -65,7 +65,7 @@
                         <div class="counter_item">
                             <img src="{{ asset('public/front/images/counter1.png') }}" alt="image">
                             <h2 class="title_42"><span class="count" data-target="500">0</span>+</h2>
-                            <p>Machines Delivered</p>
+                            <p class="mb-0">Machines Delivered</p>
                         </div>
                         <div class="counter_item">
                             <img src="{{ asset('public/front/images/counter2.png') }}" alt="image">
@@ -243,7 +243,7 @@
 <section class="mt_100">
     <div class="container">
         <div class="d-flex justify-content-center">
-            <img class="img-fluid" src="{{ asset('public/front/images/India-leading.gif') }}" alt="gif">
+            <img class="img-fluid gif_video" src="{{ asset('public/front/images/India-leading.gif') }}" alt="gif">
         </div>
     </div>
 </section>
@@ -305,7 +305,7 @@
 
         <div class="row">
             <div class="col-lg-6 pe-lg-5">
-                <h4>Founder. Engineer. Industry Leader.</h4>
+                <h4 class="title_34">Founder. Engineer. Industry Leader.</h4>
                 <p>With decades of experience in industrial machinery and surface preparation technologies, Mr. Prithvi
                     Dodla has been instrumental in shaping Jinil Engineering into a trusted name in the shot blasting
                     industry. His hands-on engineering approach and focus on process optimization have driven the
@@ -345,11 +345,7 @@
                                     </svg></span>
 
                                 <p>
-                                    “At Jinil Engineering, our goal is to deliver practical, high-performance
-                                    surface preparation solutions that create measurable value for our customers.
-                                    By combining strong engineering fundamentals with continuous innovation,
-                                    we aim to support manufacturers in achieving consistent quality, efficiency,
-                                    and sustainable growth.”
+                                    “At Jinil, our goal is to deliver practical, high-performance surface preparation systems that create measurable value for manufacturers.  We help industries achieve consistent quality, operational efficiency, and sustainable growth”
                                 </p>
 
                             </div>
@@ -361,7 +357,7 @@
 
                         <div class="md_info">
 
-                            <h2>Managing Director</h2>
+                            <h3>Managing Director</h3>
 
                             <p>Jinil Spinning Pvt. Ltd.</p>
 
@@ -424,8 +420,8 @@
         <div class="inve_Pro mt_80">
             <div class="row justify-content-between">
                 <div class="col-lg-5">
-                    <p>For precision surface preparation solutions</p>
-                    <h2 class="title_60">Our Values</h2>
+                    <p class="mb-2">For precision surface preparation solutions</p>
+                    <h2 class="title_60 mb-4">Our Values</h2>
                     <p class="title_24 text-585 ">Lorem ipsum dolor sit amet consectetur. Faucibus ac urna elementum arcu
                         lobortis egestas. Lorem
                         ipsum dolor sit amet consectetur. Faucibus ac urna elementum arcu lobortis egestas.Lorem ipsum

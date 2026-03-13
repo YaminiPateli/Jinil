@@ -63,8 +63,8 @@
     }
 
     .mb_40 {
-    margin-bottom: 30px;
-}
+        margin-bottom: 30px;
+    }
 
     .fea_mac_img {
         margin-bottom: 14px;
@@ -91,7 +91,7 @@
     }
 
     .process_item {
-        padding: 35px 24px;
+        padding: 50px 24px;
     }
 
     .process_item_step {
@@ -99,32 +99,140 @@
     }
 
     .process_item_icon {
-        margin-bottom: 14px;
-        width: 90px;
+        width: 100px;
+        height: 100px;
     }
 
-    .insights_wrapper .row, .service_Scope_card .row, .download_cards_main .row {
-    --bs-gutter-x: 30px;
-    --bs-gutter-y: 30px;
+    .insights_wrapper .row,
+    .service_Scope_card .row,
+    .download_cards_main .row {
+        --bs-gutter-x: 30px;
+        --bs-gutter-y: 30px;
+    }
+
+    .industry_item_wrapper:last-child svg {
+        width: 60px;
+    }
+
+    .industry_item_wrapper:last-child .title_24 {
+        margin-top: 10px;
+    }
+
+    .industry_item_wrapper:hover .title_24 {
+        font-size: 18px;
+        line-height: 26px;
+    }
+
+    .insight_item_content hr {
+        margin: 16px 0;
+    }
+
+    .navi_page {
+        margin: 50px 0;
+    }
+
+    .md_quote SVG {
+        width: 50px;
+        height: 50px;
+    }
+
+    .md_quote {
+        padding: 40px 24px;
+    }
+
+    .md_info h3 {
+        font-size: 28px;
+    }
+
+    .md_info p {
+        font-size: 18px;
+    }
+
+    .contact_circle {
+        width: 140px;
+        height: 140px;
+    }
+
+    .blog_det_consu::before {
+        height: 240px;
+        width: 240px;
+    }
+
+    .blog_det_consu .com_btn {
+        margin-top: 20px;
+    }
+
+    .blog_det_consu {
+        padding: 40px 30px;
+    }
+
+    .form-group input,
+    .form-group select,
+    .form-group textarea {
+        padding: 12px 24px;
+        font-size: 16px;
+    }
+
+    .contact_form .row {
+        --bs-gutter-x: 30px;
+        --bs-gutter-y: 30px;
+    }
+
+    .form-group label {
+        font-size: 16px;
+    }
+
+    .search_box {
+        padding: 12px 17px;
+        font-size: 16px;
+    }
+
+    .filter_box select {
+        padding: 13px 24px;
+        font-size: 16px;
+    }
+
+    .search_box svg {
+        width: 20px;
+    }
+
+    .search_filter_wrapper {
+        gap: 40px;
+    }
+
+    .faq_question {
+        padding: 20px 20px;
+    }
+
+    .mb_60 {
+        margin-bottom: 50px;
+    }
+
+    .faq_item.active .faq_answer {
+        padding: 20px 20px;
+    }
+
+    .footer_logo {
+    width: 270px;
 }
 
-.industry_item_wrapper:last-child svg
-{
-  width: 60px;
+.footer_quick {
+    padding-left: 100px;
+    margin-left: 100px;
 }
 
-.industry_item_wrapper:last-child .title_24 {
-    margin-top: 10px;
+.footer_quick ul {
+    gap: 50px;
 }
 
-.industry_item_wrapper:hover .title_24 {
-    font-size: 18px;
-    line-height: 26px;
+.footer_quick h4 {
+    margin-bottom: 14px;
 }
 
-.insight_item_content hr {
-    margin: 16px 0;
+.footer_col {
+    padding: 0 60px;
 }
+
 
 }
 
@@ -134,10 +242,23 @@
 ===========================                  ===========================*/
 
 @media (max-width: 1441px) {
+    .mb_40 {
+        margin-bottom: 20px;
+    }
+    .process_item_icon {
+        width: 70px;
+        height: 70px;
+    }
 
     .title_24 {
-        font-size: 22px;
+        font-size: 20px;
+        line-height: 28px;
     }
+
+    .title_34 {
+        font-size: 24px;
+    }
+
     .mb_60 {
         margin-bottom: 25px;
     }
@@ -199,14 +320,165 @@
         padding-top: 15px;
     }
 
-        .industry_item_wrapper {
+    .industry_item_wrapper {
         height: 260px;
     }
 
-        .industry_item_wrapper .title_24 {
+    .industry_item_wrapper .title_24 {
         font-size: 28px;
         line-height: 32px;
     }
+
+    .gif_video {
+        width: 350px;
+    }
+
+    .counter_item img {
+        width: 150px;
+        height: 150px;
+        margin-bottom: 20px;
+    }
+
+    .ins_counter img {
+        width: 90px;
+        height: 90px;
+    }
+
+    .navi_page_child .title_24 {
+        margin-bottom: 2px;
+        font-size: 16px;
+    }
+
+    .contact_circle {
+        width: 120px;
+        height: 120px;
+    }
+
+    .md_quote SVG {
+        width: 40px;
+        height: 40px;
+    }
+
+    .md_img img {
+        width: 240px;
+    }
+
+    .engineered_about::after {
+        width: 200px;
+        height: 200px;
+    }
+
+    .engineered_right_child {
+        gap: 50px;
+    }
+    .inve_Pro_card hr {
+        margin: 25px 0;
+    }
+
+    .engineered_right {
+        gap: 40px;
+    }
+
+    .engineered_right img {
+        width: 30px;
+    }
+
+    .mt_80 {
+        margin-top: 50px;
+    }
+
+    .title_80 {
+        font-size: 50px;
+    }
+
+    .blog_det_consu::before {
+        height: 200px;
+        width: 200px;
+    }
+
+    .blog_det_consu {
+        padding: 30px 30px;
+    }
+
+    .blog_det_consu p {
+        font-size: 16px;
+    }
+
+    .inve_Pro_card hr {
+        margin: 20px 0;
+    }
+
+    .con_map p {
+        font-size: 16px;
+    }
+
+    .contact_form .row {
+        --bs-gutter-x: 25px;
+        --bs-gutter-y: 25px;
+    }
+
+    .search_box {
+        padding: 10px 17px;
+    }
+
+    .filter_box select {
+        padding: 11px 24px;
+        font-size: 16px;
+    }
+
+    .mb_80 {
+        margin-bottom: 40px;
+    }
+
+    .download_cards hr {
+        margin: 15px 0;
+    }
+
+    .download_cards {
+        padding: 30px 35px;
+    }
+
+    .download_cards img {
+        width: 65px;
+    }
+
+    .faq_question {
+        padding: 14px 20px;
+    }
+
+    .faq_tabs {
+        gap: 15px;
+    }
+
+        .footer_logo {
+        width: 230px;
+    }
+
+    .footer_logo_area p {
+    font-size: 16px;
+}
+
+    .footer_quick {
+        padding-left: 70px;
+        margin-left: 70px;
+    }
+
+        .footer_quick ul {
+        gap: 45px;
+    }
+
+    .footer_quick ul li::after {
+    width: 8px;
+    height: 8px;
+    }
+
+    .footer_col {
+    padding: 0 35px;
+}
+
+.footer_bottom {
+    padding: 14px;
+}
 
 }
 
@@ -215,12 +487,30 @@
 ===========================      1281        ===========================
 ===========================                  ===========================*/
 @media (max-width: 1281px) {
+    body {
+        font-size: 14px;
+        line-height: 22px;
+    }
+
+    .md_quote SVG {
+        width: 35px;
+        height: 35px;
+    }
+
+    .md_info h3 {
+        font-size: 22px;
+    }
+
+    .md_info p {
+        font-size: 16px;
+    }
+
     .title_80 {
         font-size: 52px;
     }
 
     .title_60 {
-        font-size: 42px;
+        font-size: 32px;
     }
 
     .title_42 {
@@ -228,8 +518,98 @@
     }
 
     .title_24 {
-        font-size: 20px;
+        font-size: 18px;
+        line-height: 26px;
     }
+
+    .process_item_icon {
+        width: 60px;
+        height: 60px;
+    }
+
+    .industry_item_wrapper {
+        height: 230px;
+    }
+
+    .industry_item_wrapper:hover .title_24 {
+        font-size: 14px;
+        line-height: 24px;
+    }
+
+    .industry_item_wrapper:last-child svg {
+        width: 50px;
+    }
+
+    .process_item_step {
+        padding: 4px 25px;
+        top: -18px;
+    }
+
+    .contact_circle {
+        width: 100px;
+        height: 100px;
+    }
+
+    .navi_page {
+        margin: 40px 0;
+    }
+
+    .title_80 {
+        font-size: 42px;
+    }
+
+    .blog_det_consu::before {
+        height: 160px;
+        width: 160px;
+    }
+
+    .inve_Pro_card hr {
+        margin: 20px 0;
+    }
+
+    .con_map p {
+        font-size: 14px;
+    }
+
+    .form-group input,
+    .form-group select,
+    .form-group textarea {
+        padding: 10px 20px;
+        font-size: 14px;
+    }
+
+    .form-group label {
+        font-size: 14px;
+    }
+
+    .search_box {
+        font-size: 14px;
+    }
+
+    .filter_box select {
+        font-size: 14px;
+    }
+
+    .download_cards {
+        padding: 25px 30px;
+    }
+
+    .download_cards img {
+        width: 55px;
+    }
+
+    .download_cards .com_btn svg {
+        width: 16px;
+    }
+
+    .navi_page_child .title_24 {
+        font-size: 14px;
+    }
+
+        .footer_col {
+    padding: 0 35px;
+}
+
 }
 /*=========================                  =========================
 ===========================                  =========================
