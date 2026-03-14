@@ -66,7 +66,7 @@ $category = DB::table('category')
             <nav class="navbar navbar-expand-lg">
                 <div class="navbar_left">
                     <!-- Logo -->
-                    <a href="index.php">
+                    <a href="{{ url('/') }}">
                         <img class="header_logo" src="{{ asset('public/front/images/logo.svg')}}" alt="Logo">
                     </a>
                 </div>
@@ -137,8 +137,8 @@ $category = DB::table('category')
                             </a>
 
                             <ul class="dropdown-menu">
-                                <li><a href="#">link</a></li>
-                                <li><a href="#">link</a></li>
+                                <li><a href="{{ route('downloads') }}">Downloads</a></li>
+                                <li><a href="{{ route('blogs') }}">Blogs</a></li>
                             </ul>
                         </li>
                         <li>

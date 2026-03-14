@@ -5,7 +5,7 @@
     <div class="container-fluid">
         <div class="navi_page_child">
             <div>
-                <p class="title_24"><a href="./" class="text-585">Home</a> / Contact Us</p>
+                <p class="title_24"><a href="{{ url('/') }}" class="text-585">Home</a> / Contact Us</p>
                 <h2 class="title_60">Get in Touch</h2>
                 <p class="mb-0">Get in touch with our engineering team to discuss your shot blasting, surface
                     preparation, or custom machine requirements. We’re here to support your project from concept to

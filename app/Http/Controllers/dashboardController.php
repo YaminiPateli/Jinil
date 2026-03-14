@@ -85,7 +85,6 @@ class dashboardController extends Controller
                         ->select('cat_title')
                         ->distinct()
                         ->pluck('cat_title');
-
         return view('front.download', compact(
             'metatitle',
             'metadescription',
