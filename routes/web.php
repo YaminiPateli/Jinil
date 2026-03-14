@@ -39,6 +39,7 @@ use Illuminate\Support\Facades\DB;
     Route::get('/about-us', [dashboardController::class, 'about'])->name('about');
     Route::get('/contact', [dashboardController::class, 'contact'])->name('contact');
     Route::post('contact-us-store', [dashboardController::class, 'contactstore'])->name('contact.store');
+    Route::post('/installationstore', [dashboardController::class, 'installationstore'])->name('installationstore');
     Route::get('blogs', [dashboardController::class,'blogs'])->name('blogs');
     Route::get('blogs/{url}', [dashboardController::class, 'blogsdetail'])->name('blogdetail');
     Route::get('products/{url}', [dashboardController::class, 'product'])->name('productlist');
@@ -48,7 +49,6 @@ use Illuminate\Support\Facades\DB;
     Route::get('/after-sales-support', [dashboardController::class, 'aftersales'])->name('aftersales');
     Route::get('/downloads', [dashboardController::class, 'download'])->name('downloads');
     Route::get('/industries/{url}', [dashboardController::class, 'industry'])->name('industry');
-    // Route::get('/services/{url}', [dashboardController::class, 'service'])->name('service');
     Route::get('/get-cities/{id}', function ($id) {
 
         $cities = DB::table('cities')
