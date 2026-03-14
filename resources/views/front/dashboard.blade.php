@@ -2742,7 +2742,7 @@
                     <div class="fea_mac_content">
                         <div class="fea_mac_content_inner">
                             <h3 class="title_24">Batch Type Blast Room with Dust Recovery</h3>
-                            <a href="#" class="com_btn mt-2">Enquire Now</a>
+                            <a href="#" class="com_btn mt-2"  data-bs-toggle="modal" data-bs-target="#staticBackdrop">Enquire Now</a>
                             <!-- <span class="fea_mac_content_inner_btn">Cabinet Type Shot Blasting</span> -->
                         </div>
                         <!-- <hr>

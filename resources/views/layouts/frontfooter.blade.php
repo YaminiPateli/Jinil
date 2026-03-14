@@ -236,6 +236,9 @@ AOS.init();
 <script src="{{ asset('public/front/js/main.js') }}"></script>
 <script src="{{ asset('public/front/js/animation.js') }}"></script>
 
+
+@include('layouts.Inquiry-modal')
+
 </body>
 
 </html>

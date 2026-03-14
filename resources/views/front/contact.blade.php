@@ -144,12 +144,15 @@ $b = rand(1,9);
                         </div>
 
                         <div class="col-lg-3 form-group ">
-                            <label>
-                                What is <span id="capA">{{ $a }}</span> + <span id="capB">{{ $b }}</span> ?
-                            </label>
+                          
                             <div style="display:flex;gap:6px;">
                                 <input type="number" id="simple_captcha" name="simple_captcha" placeholder="Enter answer"
                                     oninput="this.value=this.value.replace(/[^0-9]/g,'')">
+
+                                      <label>
+                                What is <span id="capA">{{ $a }}</span> + <span id="capB">{{ $b }}</span> ?
+                            </label>
+
                                 <button type="button" id="refreshCaptcha" style="border:0;background:#eee;padding:5px 8px;border-radius:5px;">↻</button>
                             </div>
                             <input type="hidden" name="captcha_sum" id="captcha_sum" value="{{ $a + $b }}">
