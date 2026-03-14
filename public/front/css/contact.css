@@ -64,3 +64,8 @@
 .form-group .com_btn:hover {
     color: var(--white);
 }
+
+.iti--allow-dropdown
+{
+    width: 100%;
+}

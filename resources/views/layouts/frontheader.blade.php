@@ -32,6 +32,7 @@
         crossorigin="anonymous" referrerpolicy="no-referrer" />
     <!--Aos animation-->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" />
+    
     <!-- style css start -->
     <link rel="stylesheet" href="{{ asset('public/front/css/style.css')}}">
     <link rel="stylesheet" href="{{ asset('public/front/css/header.css')}}">

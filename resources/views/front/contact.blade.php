@@ -1,4 +1,5 @@
 @include('layouts.frontheader')
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/intl-tel-input@18.2.1/build/css/intlTelInput.css">
 
 <section class="navi_page">
     <div class="container-fluid">
@@ -79,7 +80,7 @@ $b = rand(1,9);
     <div class="container-fluid">
         <div class="row">
             <div class="col-lg-4 pe-lg-5">
-                <h2 class="title_80 fw-medium text-111">Need Technical Assistance?</h2>
+                <h2 class="title_80 fw-medium text-111"  style="mix-blend-mode: normal;">Need Technical Assistance?</h2>
                 <p>Our experienced engineers can help you select the right shot blasting solution based on your application,
                     material type, and production capacity.</p>
             </div>
@@ -101,8 +102,8 @@ $b = rand(1,9);
                         </div>
 
                         <div class="col-lg-6 form-group">
-                            <input type="tel" id="phone" name="phone" placeholder=" " >
-                            <label>Phone Number<span class="text-danger">*</span>:</label>
+                            <input type="tel" id="phone" name="phone" placeholder=" Phone Number *" >
+                            <!-- <label class="phone_number">Phone Number<span class="text-danger">*</span>:</label> -->
                             <div id="full_phone-error" class="text-danger"></div>
 
                             <input type="hidden" name="country" id="contact_country">
@@ -142,8 +143,8 @@ $b = rand(1,9);
                             <div id="message-error" class="text-danger"></div>
                         </div>
 
-                        <div class="mb-2">
-                            <label style="font-size:13px;">
+                        <div class="col-lg-3 form-group ">
+                            <label>
                                 What is <span id="capA">{{ $a }}</span> + <span id="capB">{{ $b }}</span> ?
                             </label>
                             <div style="display:flex;gap:6px;">
@@ -166,7 +167,6 @@ $b = rand(1,9);
     </div>
 </section>
 
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/intl-tel-input@18.2.1/build/css/intlTelInput.css">
 <script src="https://cdn.jsdelivr.net/npm/intl-tel-input@18.2.1/build/js/intlTelInput.min.js"></script>
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 
