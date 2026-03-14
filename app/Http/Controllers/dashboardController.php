@@ -16,6 +16,7 @@ use App\Models\Faq;
 use App\Models\IndCategory;
 use App\Models\Industry;
 use App\Models\Certificate;
+use App\Models\ServiceRequest;
 use App\Mail\SendContactMailToUser;
 use App\Mail\SendContactMailToAdmin; 
 
@@ -239,6 +240,67 @@ class dashboardController extends Controller
             ]);
         }
     }
+ public function installationstore(Request $request)
+{
+    $validator = \Validator::make($request->all(), [
+        'name'           => 'required|string|max:255',
+        'company_name'   => 'required|string|max:255',
+        'full_phone'     => 'required|string',
+        'email'          => 'required|email',
+        'state'          => 'required|string',
+        'city'           => 'required|string',
+        'message'        => 'nullable|string',
+        'simple_captcha' => 'required|integer',
+        'captcha_sum'    => 'required|integer',
+    ]);
+
+    if ($validator->fails()) {
+        return response()->json([
+            'status' => 'error',
+            'errors' => $validator->errors()
+        ], 422);
+    }
+
+    $validated = $validator->validated();
+
+    if ($validated['simple_captcha'] != $validated['captcha_sum']) {
+        return response()->json([
+            'status' => 'error',
+            'errors' => ['simple_captcha' => ['Captcha answer is incorrect.']]
+        ], 422);
+    }
+
+    if (!preg_match('/^\+\d{7,15}$/', $validated['full_phone'])) {
+        return response()->json([
+            'status' => 'error',
+            'errors' => ['full_phone' => ['Please enter a valid phone number.']]
+        ], 422);
+    }
+
+    try {
+        \App\Models\ServiceRequest::create([
+            'name' => $validated['name'],
+            'company_name' => $validated['company_name'],
+            'contact' => $validated['full_phone'],
+            'email' => $validated['email'],
+            'state' => $validated['state'],
+            'city' => $validated['city'],
+            'message' => $validated['message'] ?? null,
+        ]);
+
+        return response()->json([
+            'status' => 'success',
+            'redirect' => route('thankyou')
+        ]);
+
+    } catch (\Exception $e) {
+        \Log::error('Service form error: '.$e->getMessage());
+        return response()->json([
+            'status' => 'error',
+            'message' => 'Something went wrong. Please try again later.'
+        ]);
+    }
+}
    
     /**
      * Show the form for creating a new resource.
