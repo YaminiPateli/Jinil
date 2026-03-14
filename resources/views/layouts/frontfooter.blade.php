@@ -11,8 +11,10 @@ $products = DB::table('product')
     ->get()
     ->groupBy('category_id');
 
-$indusries = DB::table('industry')
+$indusries = DB::table('indcategory')
+    ->select('indcategory','url')
     ->whereNull('deleted_at')
+    ->distinct()
     ->get();
 @endphp
     <div class="container-fluid">
@@ -91,7 +93,7 @@ $indusries = DB::table('industry')
                         @foreach($indusries as $industry)
                         <li>
                             <a href="{{ url('industries/'.$industry->url) }}">
-                                {{ $industry->title }}
+                                {{ $industry->indcategory }}
                             </a>
                         </li>
                         @endforeach
@@ -104,22 +106,9 @@ $indusries = DB::table('industry')
                     <h4 class="title_24">Services</h4>
 
                     <ul>
-                        <li>
-                            <a href="#">Installation & Commissioning</a>
-                        </li>
-                        
-                        <li>
-                            <a href="#">After-Sales Support</a>
-                        </li>
-
-                        
-                        <li>
-                            <a href="#">Machine Upgrades</a>
-                        </li>
-                        
-                        <li>
-                            <a href="#">AMC Services</a>
-                        </li>
+                        <li><a href="{{ route('installation') }}">Installation & Commissioning</a></li>
+                        <li><a href="{{ route('aftersales') }}">After-Sales Support</a></li>
+                        <li><a href="{{ route('machineupgrades') }}">Machine Upgrades</a></li>
                     </ul>
 
                 </div>

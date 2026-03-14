@@ -117,8 +117,9 @@ $category = DB::table('category')
                             </a>
 
                             <ul class="dropdown-menu">
-                                <li><a href="#">link</a></li>
-                                <li><a href="#">link</a></li>
+                                <li><a href="{{ route('installation') }}">Installation & Commissioning</a></li>
+                                <li><a href="{{ route('aftersales') }}">After-Sales Support</a></li>
+                                <li><a href="{{ route('machineupgrades') }}">Machine Upgrades</a></li>
                             </ul>
                         </li>
                         <!-- <li><a href="#" data-text="Case Studies">
