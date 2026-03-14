@@ -20,6 +20,7 @@ use App\Http\Controllers\admin\CertificateController;
 use App\Http\Controllers\admin\FaqController;
 use App\Http\Controllers\admin\ServiceCategoryController;
 use App\Http\Controllers\CaptchaController;
+use Illuminate\Support\Facades\DB;
 
 /*
 |--------------------------------------------------------------------------
@@ -35,8 +36,8 @@ use App\Http\Controllers\CaptchaController;
     //Front route
     Route::get('/', [dashboardController::class, 'index']);
 
-    Route::get('/contact', [dashboardController::class, 'contact'])->name('contact');
     Route::get('/about-us', [dashboardController::class, 'about'])->name('about');
+    Route::get('/contact', [dashboardController::class, 'contact'])->name('contact');
     Route::post('contact-us-store', [dashboardController::class, 'contactstore'])->name('contact.store');
     Route::get('blogs', [dashboardController::class,'blogs'])->name('blogs');
     Route::get('blogs/{url}', [dashboardController::class, 'blogsdetail'])->name('blogdetail');
@@ -48,7 +49,19 @@ use App\Http\Controllers\CaptchaController;
     Route::get('/downloads', [dashboardController::class, 'download'])->name('downloads');
     Route::get('/industries/{url}', [dashboardController::class, 'industry'])->name('industry');
     // Route::get('/services/{url}', [dashboardController::class, 'service'])->name('service');
+    Route::get('/get-cities/{id}', function ($id) {
 
+        $cities = DB::table('cities')
+            ->where('state_id', $id)
+            ->select('name')
+            ->get();
+
+        return response()->json($cities);
+
+    });
+    Route::get('/thank-you', function(){
+        return view('front.thankyou');
+    })->name('thankyou');
 
 Route::get('login', [dashboardController::class, 'login'])->name('login');
 Auth::routes();

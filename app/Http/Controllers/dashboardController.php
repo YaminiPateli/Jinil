@@ -48,8 +48,11 @@ class dashboardController extends Controller
     {   
         $metatitle = "";
         $metadescription = "";
-        return view('front.contact', compact('metatitle', 'metadescription'));
+        $countries = DB::table('countries')->select('id','name')->get();
+        $states = DB::table('states')->select('id','name')->get();
+        return view('front.contact', compact('metatitle', 'metadescription', 'countries', 'states'));
     }
+
     public function blogs()
     {
         $metatitle = "";
@@ -164,81 +167,76 @@ class dashboardController extends Controller
     }
     public function contactstore(Request $request)
     {
-        // Validation
         $validated = $request->validate([
-            'name'          => 'required|string|max:255',
-            'company_name'  => 'required|string|max:255',
-            'contact' => 'required|numeric|digits_between:10,15',
-            'email'         => 'required|email|max:255',
-            'message'       => 'nullable|string|max:1000',
+            'name'           => 'required|string|max:255',
+            'company_name'   => 'required|string|max:255',
+            'full_phone'     => 'required|string',
+            'email'          => 'required|email',
+            'state'          => 'required|string',
+            'city'           => 'required|string',
+            'message'        => 'nullable|string',
+            'simple_captcha' => 'required|integer',
+            'captcha_sum'    => 'required|integer',
         ]);
 
-        // Phone format validation
-        if (!preg_match('/^\+\d{7,15}$/', $contact)) {
-            return back()
-                ->withErrors(['contactnumber' => 'Please enter a valid phone number.'])
-                ->withInput();
+        if ($validated['simple_captcha'] != $validated['captcha_sum']) {
+            return response()->json([
+                'status' => 'error',
+                'errors' => ['simple_captcha' => 'Captcha answer is incorrect.']
+            ]);
         }
 
-        // Save contact to DB (optional)
-        $contact = Contact::create([
-            'name'         => $validated['name'],
-            'company_name' => $validated['company_name'],
-            'contact'      => $validated['contact'],
-            'email'        => $validated['email'],
-            'message'      => $validated['message'] ?? null,
-        ]);
-
-        // Prepare data for Google Sheets
-        $contactData = [
-            'form_type'    => 'Contact Form',
-            'name'         => $validated['name'],
-            'company_name' => $validated['company_name'],
-            'contact'      => $validated['contact'],
-            'email'        => $validated['email'],
-            'message'      => $validated['message'] ?? '',
-            'date'         => now()->format('Y-m-d H:i:s'),
-        ];
-
-        // Google Apps Script URL
-        $sheetUrl = 'https://script.google.com/macros/s/AKfycbx2vKHdWFK0b-rhRBRHg_80Sd5j3atmdbQpwyPipR_g-TahDHT3XxOD2J3lbaGlzkuN/exec'; // <--- Replace with your deployed script URL
+        if (!preg_match('/^\+\d{7,15}$/', $validated['full_phone'])) {
+            return response()->json([
+                'status' => 'error',
+                'errors' => ['full_phone' => 'Please enter a valid phone number.']
+            ]);
+        }
 
         try {
-            // Send POST request to Google Sheets
-            $response = Http::timeout(30)
+            $contact = Contact::create([
+                'name'         => $validated['name'],
+                'company_name' => $validated['company_name'],
+                'contact'      => $validated['full_phone'],
+                'email'        => $validated['email'],
+                'state'        => $validated['state'],
+                'city'         => $validated['city'],
+                'message'      => $validated['message'] ?? null,
+            ]);
+
+            // Google Sheets and emails (optional)
+            $contactData = [
+                'form_type'    => 'Contact Form',
+                'name'         => $validated['name'],
+                'company_name' => $validated['company_name'],
+                'contact'      => $validated['full_phone'],
+                'email'        => $validated['email'],
+                'state'        => $validated['state'],
+                'city'         => $validated['city'],
+                'message'      => $validated['message'] ?? '',
+                'date'         => now()->format('Y-m-d H:i:s'),
+            ];
+
+            // Google Apps Script URL
+            $sheetUrl = 'https://script.google.com/macros/s/YOUR_SCRIPT_ID/exec';
+            Http::timeout(30)
                 ->withHeaders(['Content-Type' => 'application/json'])
                 ->post($sheetUrl, $contactData);
 
-            if ($response->successful()) {
-                $responseData = $response->json();
-                if (isset($responseData['status']) && $responseData['status'] === 'success') {
-                    Log::info('Data successfully sent to Google Sheets', [
-                        'email' => $validated['email'],
-                        'response' => $responseData
-                    ]);
-                } else {
-                    Log::warning('Google Sheets returned an error', [
-                        'response' => $responseData,
-                        'email' => $validated['email']
-                    ]);
-                }
-            } else {
-                Log::error('Google Sheets API request failed', [
-                    'status' => $response->status(),
-                    'body'   => $response->body(),
-                    'email'  => $validated['email']
-                ]);
-            }
-
-            // Send Mail (optional)
             Mail::to($validated['email'])->send(new SendContactMailToUser($contactData));
             Mail::to('webdeveloper10.intelliworkz@gmail.com')->send(new SendContactMailToAdmin($contactData));
 
-            return redirect()->route('thankyou')->with('success', 'Your message has been sent successfully.');
+            return response()->json([
+                'status' => 'success',
+                'redirect' => route('thankyou') // redirect URL
+            ]);
 
         } catch (\Exception $e) {
-            Log::error('Error sending data to Google Sheets or email: ' . $e->getMessage());
-            return back()->with('error', 'Something went wrong. Please try again later.');
+            \Log::error('Contact form error: '.$e->getMessage());
+            return response()->json([
+                'status' => 'error',
+                'message' => 'Something went wrong. Please try again later.'
+            ]);
         }
     }
    
