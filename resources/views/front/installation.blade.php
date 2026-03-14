@@ -53,7 +53,7 @@
                         <div class="counter_item">
                             <img src="{{ asset('public/front/images/counter1.png') }}" alt="image">
                             <h2 class="title_42"><span class="count" data-target="500">500</span>+</h2>
-                            <p>Machines Installed & Commissioned</p>
+                            <p class="mb-0">Machines Installed & Commissioned</p>
                         </div>
                         <div class="counter_item">
                             <img src="{{ asset('public/front/images/counter2.png') }}" alt="image">
@@ -240,7 +240,7 @@
     <div class="container-fluid">
         <div class="row">
             <div class="col-lg-4 pe-lg-5">
-                <p>Comprehensive Installation Services</p>
+                <p class="mb-0">Comprehensive Installation Services</p>
                 <h2 class="title_60 mb_30">Our Shot Blasting Installation Service Scope</h2>
                 <p class="title_24">From pre-installation assessment to final system handover, Jinil manages every stage of shot blasting machine installation and commissioning with engineering precision, structured planning, and production-focused execution.</p>
             </div>
@@ -345,10 +345,10 @@
 
 <section class="mt_100 mb_100">
     <div class="container">
-        <div class="sec_hed_top mb_60">
+        <div class="sec_hed_top mb_80">
             <p class="mb-0">Structured Installation & Commissioning Workflow</p>
             <h2 class="title_60">Our Proven Installation Process in 4 Stages</h2>
-            <p>Our installation and commissioning methodology ensures every shot blasting machine and industrial surface preparation system is deployed with precision, efficiency, and performance validation.</p>
+            <span class="d-block">Our installation and commissioning methodology ensures every shot blasting machine and industrial surface preparation system is deployed with precision, efficiency, and performance validation.</span>
         </div>
 
         <div class="row gy-4 gy-md-0">

@@ -1,6 +1,14 @@
 @include('layouts.frontheader')
- <section>
+ <section class="d-none d-lg-block">
     <img class=" img-fluid" src="{{ asset('public/front/images/jinl-banner.png')}}">
+ </section>
+
+ <section class="d-lg-none hero_phon">
+    <div class="hero_slider">
+        <img class="img-fluid" src="{{ asset('public/front/images/hero-phone_1.png')}}">
+        <img class="img-fluid" src="{{ asset('public/front/images/hero-phone_2.png')}}">
+        <img class="img-fluid" src="{{ asset('public/front/images/hero-phone_3.jpg')}}">
+    </div>
  </section>
 
 <section class="after_sequence d-none">
@@ -2732,7 +2740,7 @@
                     </div>
                     <div class="fea_mac_content">
                         <div class="fea_mac_content_inner">
-                            <h3 class="title_24">{{ $product->name }}</h3>
+                            <h3 class="title_24">Batch Type Blast Room with Dust Recovery</h3>
                             <a href="#" class="com_btn mt-2">Enquire Now</a>
                             <!-- <span class="fea_mac_content_inner_btn">Cabinet Type Shot Blasting</span> -->
                         </div>

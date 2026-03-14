@@ -52,7 +52,7 @@
                         <div class="counter_item">
                             <img src="{{ asset('public/front/images/counter1.png') }}" alt="image">
                             <h2 class="title_42"><span class="count" data-target="99.2">99.2</span>%</h2>
-                            <p> Average Equipment Uptime</p>
+                            <p class="mb-0"> Average Equipment Uptime</p>
                         </div>
                         <div class="counter_item">
                             <img src="{{ asset('public/front/images/counter2.png') }}" alt="image">
@@ -232,7 +232,7 @@
 <section class="mt_100 mb_100">
     <div class="container">
         <div class="d-flex justify-content-center">
-            <img class="img-fluid" src="{{ asset('public/front/images/India-leading.gif') }}" alt="gif">
+            <img class="img-fluid gif_video" src="{{ asset('public/front/images/India-leading.gif') }}" alt="gif">
         </div>
     </div>
 </section>
@@ -308,7 +308,7 @@
         <div class="sec_hed_top">
             <p>Strategic After-Sales Reliability Framework</p>
             <h2 class="title_60">After-Sales Support That Protects Performance & Capital Investment</h2>   
-            <p>Jinil’s structured after-sales support programs are designed to enhance equipment reliability, stabilize operational efficiency, and maximize return on investment across the lifecycle of your shot blasting machines and surface preparation systems.</p> 
+            <span class="d-block">Jinil’s structured after-sales support programs are designed to enhance equipment reliability, stabilize operational efficiency, and maximize return on investment across the lifecycle of your shot blasting machines and surface preparation systems.</span> 
         </div>
 
         <div class="inve_Pro mt_80">

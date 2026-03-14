@@ -32,6 +32,7 @@
         crossorigin="anonymous" referrerpolicy="no-referrer" />
     <!--Aos animation-->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" />
+    
     <!-- style css start -->
     <link rel="stylesheet" href="{{ asset('public/front/css/style.css')}}">
     <link rel="stylesheet" href="{{ asset('public/front/css/header.css')}}">
@@ -69,8 +70,11 @@ $category = DB::table('category')
                         <img class="header_logo" src="{{ asset('public/front/images/logo.svg')}}" alt="Logo">
                     </a>
                 </div>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavbar">
+                <button class="navbar-toggler menu-toggle" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#mainNavbar">
+
                     <span class="navbar-toggler-icon"></span>
+
                 </button>
                 <div class="collapse navbar-collapse justify-content-between" id="mainNavbar">
                     <ul class="mx-auto nav_links">
@@ -112,7 +116,7 @@ $category = DB::table('category')
                                 </span>
                             </a>
 
-                             <ul class="dropdown-menu">
+                            <ul class="dropdown-menu">
                                 <li><a href="#">link</a></li>
                                 <li><a href="#">link</a></li>
                             </ul>

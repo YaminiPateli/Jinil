@@ -197,8 +197,11 @@ $indusries = DB::table('industry')
 
 </footer>
 
+
+
 <!-- jquery js start -->
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
 
 <!-- bootstrap js start -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
@@ -223,6 +226,9 @@ AOS.init();
 <!-- main js start -->
 <script src="{{ asset('public/front/js/main.js') }}"></script>
 <script src="{{ asset('public/front/js/animation.js') }}"></script>
+
+
+@include('layouts.Inquiry-modal')
 
 </body>
 

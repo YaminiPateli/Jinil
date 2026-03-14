@@ -34,7 +34,7 @@
 <section class="mb_100">
     <div class="container-fluid">
 
-        <div class="row">
+        <div class="row gy-4 gy-lg-0">
             @foreach($blogs as $blog)
             <div class="col-md-4">
                 <div class="insight_item">

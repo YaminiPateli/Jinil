@@ -1,4 +1,5 @@
 @include('layouts.frontheader')
+<!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/intl-tel-input@18.2.1/build/css/intlTelInput.css"> -->
 
 <section class="navi_page">
     <div class="container-fluid">
@@ -79,7 +80,7 @@ $b = rand(1,9);
     <div class="container-fluid">
         <div class="row">
             <div class="col-lg-4 pe-lg-5">
-                <h2 class="title_80 fw-medium text-111">Need Technical Assistance?</h2>
+                <h2 class="title_80 fw-medium text-111"  style="mix-blend-mode: normal;">Need Technical Assistance?</h2>
                 <p>Our experienced engineers can help you select the right shot blasting solution based on your application,
                     material type, and production capacity.</p>
             </div>
@@ -91,19 +92,19 @@ $b = rand(1,9);
                         <div class="col-lg-6 form-group">
                             <input type="text" name="name" placeholder=" " >
                             <label>Full Name<span class="text-danger">*</span>:</label>
-                            <div id="name-error" class="text-danger"></div>
+                            <span id="name-error" class="text-danger"></span>
                         </div>
 
                         <div class="col-lg-6 form-group">
                             <input type="text" name="company_name" placeholder=" " >
                             <label>Company Name<span class="text-danger">*</span>:</label>
-                            <div id="company_name-error" class="text-danger"></div>
+                            <span id="company_name-error" class="text-danger"></span>
                         </div>
 
                         <div class="col-lg-6 form-group">
-                            <input type="tel" id="phone" name="phone" placeholder=" " >
-                            <label>Phone Number<span class="text-danger">*</span>:</label>
-                            <div id="full_phone-error" class="text-danger"></div>
+                            <input type="tel" id="phone" name="phone" placeholder=" Phone Number *" >
+                            <!-- <label class="phone_number">Phone Number<span class="text-danger">*</span>:</label> -->
+                            <span id="full_phone-error" class="text-danger"></span>
 
                             <input type="hidden" name="country" id="contact_country">
                             <input type="hidden" name="phonecode" id="contact_phonecode">
@@ -114,7 +115,7 @@ $b = rand(1,9);
                         <div class="col-lg-6 form-group">
                             <input type="email" name="email" placeholder=" " >
                             <label>Email Address<span class="text-danger">*</span>:</label>
-                            <div id="email-error" class="text-danger"></div>
+                            <span id="email-error" class="text-danger"></span>
                         </div>
 
                         <div class="col-lg-6 form-group">
@@ -125,7 +126,7 @@ $b = rand(1,9);
                                 @endforeach
                             </select>
                             <label>State<span class="text-danger">*</span>:</label>
-                            <div id="state-error" class="text-danger"></div>
+                            <span id="state-error" class="text-danger"></span>
                         </div>
 
                         <div class="col-lg-6 form-group">
@@ -133,29 +134,32 @@ $b = rand(1,9);
                                 <option value="">Select City</option>
                             </select>
                             <label>City<span class="text-danger">*</span>:</label>
-                            <div id="city-error" class="text-danger"></div>
+                            <span id="city-error" class="text-danger"></span>
                         </div>
 
                         <div class="col-lg-12 form-group">
                             <textarea rows="1" name="message" placeholder=" "></textarea>
                             <label>Requirement :</label>
-                            <div id="message-error" class="text-danger"></div>
+                            <span id="message-error" class="text-danger"></span>
                         </div>
 
-                        <div class="mb-2">
-                            <label style="font-size:13px;">
-                                What is <span id="capA">{{ $a }}</span> + <span id="capB">{{ $b }}</span> ?
-                            </label>
+                        <div class="col-lg-3 form-group ">
+                          
                             <div style="display:flex;gap:6px;">
                                 <input type="number" id="simple_captcha" name="simple_captcha" placeholder="Enter answer"
                                     oninput="this.value=this.value.replace(/[^0-9]/g,'')">
+
+                                      <label>
+                                What is <span id="capA">{{ $a }}</span> + <span id="capB">{{ $b }}</span> ?
+                            </label>
+
                                 <button type="button" id="refreshCaptcha" style="border:0;background:#eee;padding:5px 8px;border-radius:5px;">↻</button>
                             </div>
                             <input type="hidden" name="captcha_sum" id="captcha_sum" value="{{ $a + $b }}">
-                            <div id="simple_captcha-error" class="text-danger"></div>
+                            <span id="simple_captcha-error" class="text-danger"></span>
                         </div>
 
-                        <div class="col-lg-12 form-group">
+                        <div class="col-lg-6 form-group" style="align-self: anchor-center;">
                             <button type="submit" class="com_btn">Request a Quote</button>
                         </div>
                     </div>
@@ -165,10 +169,9 @@ $b = rand(1,9);
         </div>
     </div>
 </section>
-
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/intl-tel-input@18.2.1/build/css/intlTelInput.css">
+<!-- 
 <script src="https://cdn.jsdelivr.net/npm/intl-tel-input@18.2.1/build/js/intlTelInput.min.js"></script>
-<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script> -->
 
 <script>
     // State -> City

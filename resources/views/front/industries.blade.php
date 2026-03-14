@@ -4,7 +4,8 @@
 
         <div class="navi_page_child">
             <div>
-                <p class="title_24"><a href="{{ url('/') }}" class="text-585">Home</a> / <a href="#">Industries</a> {{ $category->indcategory }}</p>
+                <p class="title_24"><a href="{{ url('/') }}" class="text-585">Home</a> / <a href="#">Industries</a>
+                    {{ $category->indcategory }}</p>
                 <h2 class="title_60">{{ $category->indcategory }}</h2>
                 <p class="mb-0">{!! $category->cat_description !!}</p>
             </div>
@@ -31,45 +32,41 @@
 </section>
 
 <section class="mt_80">
-<div class="container-fluid">
-    <div class="industries_details">
+    <div class="container-fluid">
+        <div class="industries_details">
 
-        @foreach($industries as $key => $industry)
+            @foreach($industries as $key => $industry)
 
-        @if($key % 2 == 0)
+            @if($key % 2 == 0)
 
-        <div>
-            <img class="img-fluid"
-            src="{{ asset('public/industryImage/'.$industry->image) }}"
-            alt="images">
+            <div>
+                <img class="img-fluid" src="{{ asset('public/industryImage/'.$industry->image) }}" alt="images">
+            </div>
+
+            <div>
+                <h2 class="title_60 text-111 mb-3">{{ $industry->title }}</h2>
+                <p class="mb-0">{!! $industry->description !!}</p>
+                <a href="#" class="com_btn mt_40">Enquire Now</a>
+            </div>
+
+            @else
+
+            <div>
+                <h2 class="title_60 text-111 mb-3">{{ $industry->title }}</h2>
+                <p class="mb-0">{!! $industry->description !!}</p>
+                <a href="#" class="com_btn mt_40">Enquire Now</a>
+            </div>
+
+            <div>
+                <img class="w-100" src="{{ asset('public/industryImage/'.$industry->image) }}" alt="images">
+            </div>
+
+            @endif
+
+            @endforeach
+
         </div>
-
-        <div>
-            <h2 class="title_60 text-111 mb-3">{{ $industry->title }}</h2>
-            <p class="mb-0">{!! $industry->description !!}</p>
-            <a href="#" class="com_btn mt_40">Enquire Now</a>
-        </div>
-
-        @else
-
-        <div>
-            <h2 class="title_60 text-111 mb-3">{{ $industry->title }}</h2>
-            <p class="mb-0">{!! $industry->description !!}</p>
-            <a href="#" class="com_btn mt_40">Enquire Now</a>
-        </div>
-
-        <div>
-            <img class="w-100"
-            src="{{ asset('public/industryImage/'.$industry->image) }}"
-            alt="images">
-        </div>
-
-    @endif
-
-    @endforeach
-
     </div>
-</div>
 </section>
 
 <section class="mt_100 mb_100">
@@ -111,49 +108,57 @@
             <div class="industry_detals_grid">
                 <div class="industry_item_wrapper mx-3">
                     <div class="industry_item"
-                        style="background-image: url('{{ asset('public/front/images/industries2.jpg') }}'); mix-blend-mode: lighten;"> </div>
+                        style="background-image: url('{{ asset('public/front/images/industries2.jpg') }}'); mix-blend-mode: lighten;">
+                    </div>
 
                     <h3 class="title_24">Fabrication</h3>
                 </div>
 
                 <div class="industry_item_wrapper mx-3">
-                    <div class="industry_item" style="background-image: url('{{ asset('public/front/images/industries3.jpg') }}')"> </div>
+                    <div class="industry_item"
+                        style="background-image: url('{{ asset('public/front/images/industries3.jpg') }}')"> </div>
 
                     <h3 class="title_24">Foundry</h3>
                 </div>
 
                 <div class="industry_item_wrapper mx-3">
-                    <div class="industry_item" style="background-image: url('{{ asset('public/front/images/industries4.jpg') }}')"> </div>
+                    <div class="industry_item"
+                        style="background-image: url('{{ asset('public/front/images/industries4.jpg') }}')"> </div>
 
                     <h3 class="title_24">Steel Plants</h3>
                 </div>
 
                 <div class="industry_item_wrapper mx-3">
-                    <div class="industry_item" style="background-image: url('{{ asset('public/front/images/industries5.jpg') }}')"> </div>
+                    <div class="industry_item"
+                        style="background-image: url('{{ asset('public/front/images/industries5.jpg') }}')"> </div>
 
                     <h3 class="title_24">Wire coil</h3>
                 </div>
 
                 <div class="industry_item_wrapper mx-3">
-                    <div class="industry_item" style="background-image: url('{{ asset('public/front/images/industries6.jpg') }}')"> </div>
+                    <div class="industry_item"
+                        style="background-image: url('{{ asset('public/front/images/industries6.jpg') }}')"> </div>
 
                     <h3 class="title_24">Workshops</h3>
                 </div>
 
                 <div class="industry_item_wrapper mx-3">
-                    <div class="industry_item" style="background-image: url('{{ asset('public/front/images/industries7.jpg') }}')"> </div>
+                    <div class="industry_item"
+                        style="background-image: url('{{ asset('public/front/images/industries7.jpg') }}')"> </div>
 
                     <h3 class="title_24">Defense</h3>
                 </div>
 
                 <div class="industry_item_wrapper mx-3">
-                    <div class="industry_item" style="background-image: url('{{ asset('public/front/images/industries8.jpg') }}')"> </div>
+                    <div class="industry_item"
+                        style="background-image: url('{{ asset('public/front/images/industries8.jpg') }}')"> </div>
 
                     <h3 class="title_24">Oil & gas</h3>
                 </div>
 
                 <div class="industry_item_wrapper mx-3">
-                    <div class="industry_item" style="background-image: url('{{ asset('public/front/images/industries1.jpg') }}')"> </div>
+                    <div class="industry_item"
+                        style="background-image: url('{{ asset('public/front/images/industries1.jpg') }}')"> </div>
 
                     <h3 class="title_24">Rail & Heavy Equipment</h3>
                 </div>

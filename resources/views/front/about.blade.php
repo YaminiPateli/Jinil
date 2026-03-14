@@ -101,14 +101,14 @@
         </div>
 
         <div class="row justify-content-between">
-            <div class="col-lg-3">
+            <div class="col-lg-3 mb-3 mb-lg-0">
                 <p class="title_24">Precision engineering demands precision installation. Our expert team ensures every
                     component is perfectly positioned for peak performance.</p>
             </div>
 
             <div class="col-lg-8">
                 <div class="row">
-                    <div class="col-lg-4">
+                    <div class="col-lg-4 mb-3 mb-lg-0">
                         <div class="blast">
                             <svg class="process_item_icon mb_30" width="80" height="80" viewBox="0 0 80 80" fill="none"
                                 xmlns="http://www.w3.org/2000/svg">
@@ -144,7 +144,7 @@
 
                         </div>
                     </div>
-                    <div class="col-lg-4">
+                    <div class="col-lg-4 mb-3 mb-lg-0">
                         <div class="blast">
                             <svg class="process_item_icon mb_30" width="80" height="80" viewBox="0 0 80 80" fill="none"
                                 xmlns="http://www.w3.org/2000/svg">
@@ -201,7 +201,7 @@
 
                         </div>
                     </div>
-                    <div class="col-lg-4">
+                    <div class="col-lg-4 mb-3 mb-lg-0">
                         <div class="blast">
                             <svg class="process_item_icon mb_30" width="80" height="80" viewBox="0 0 80 80" fill="none"
                                 xmlns="http://www.w3.org/2000/svg">
@@ -256,28 +256,28 @@
         </div>
 
         <div class="row justify-content-between">
-            <div class="col-lg-3">
+            <div class="col-lg-3  mb-3 mb-lg-0">
                 <p class="title_24 mb-0">With three decades of experience in shot blasting technology, Jinil delivers
                     installation services that set the industry standard for quality and reliability.</p>
             </div>
 
             <div class="col-lg-8">
                 <div class="row">
-                    <div class="col-lg-4">
+                    <div class="col-lg-4 mb-3 mb-lg-0">
                         <div class="blast">
                             <h4 class="title_24">Our Edge</h4>
                             <p class="mb-0">Factory-trained, OEM-certified specialists ensure precise installation using
                                 genuine components and calibrated tools for optimal performance.</p>
                         </div>
                     </div>
-                    <div class="col-lg-4">
+                    <div class="col-lg-4 mb-3 mb-lg-0">
                         <div class="blast">
                             <h4 class="title_24">Seamless Management</h4>
                             <p class="mb-0">We take full ownership—from planning and site layout to trial runs and
                                 handover. Our structured approach ensures timely execution and predictable outcomes.</p>
                         </div>
                     </div>
-                    <div class="col-lg-4">
+                    <div class="col-lg-4 mb-3 mb-lg-0">
                         <div class="blast">
                             <h4 class="title_24">Support & Warranty</h4>
                             <p class="mb-0">All installations include comprehensive warranty coverage, plus ongoing
@@ -419,7 +419,7 @@
 
         <div class="inve_Pro mt_80">
             <div class="row justify-content-between">
-                <div class="col-lg-5">
+                <div class="col-lg-5 mb-3 mb-lg-0">
                     <p class="mb-2">For precision surface preparation solutions</p>
                     <h2 class="title_60 mb-4">Our Values</h2>
                     <p class="title_24 text-585 ">Lorem ipsum dolor sit amet consectetur. Faucibus ac urna elementum arcu
@@ -429,7 +429,7 @@
                 </div>
 
                 <div class="col-lg-6">
-                    <div class="inve_Pro_card">
+                    <div class="inve_Pro_card mb-4 mb-lg-0">
                         <img class="img-fluid" src="{{ asset('public/front/images/Minimized-Downtime.png') }}" alt="Minimized Downtime">
                         <h4 class="title_24">Minimized Downtime</h4>
                         <p>Rapid response protocols and genuine spare parts availability reduce equipment downtime from
@@ -437,7 +437,7 @@
                         <hr>
                     </div>
 
-                    <div class="inve_Pro_card">
+                    <div class="inve_Pro_card mb-4 mb-lg-0">
                         <img class="img-fluid" src="{{ asset('public/front/images/Minimized-Downtime.png') }}" alt="Minimized Downtime">
                         <h4 class="title_24">Minimized Downtime</h4>
                         <p>Rapid response protocols and genuine spare parts availability reduce equipment downtime from
@@ -445,7 +445,7 @@
                         <hr>
                     </div>
 
-                    <div class="inve_Pro_card">
+                    <div class="inve_Pro_card mb-4 mb-lg-0">
                         <img class="img-fluid" src="{{ asset('public/front/images/Minimized-Downtime.png') }}" alt="Minimized Downtime">
                         <h4 class="title_24">Minimized Downtime</h4>
                         <p>Rapid response protocols and genuine spare parts availability reduce equipment downtime from

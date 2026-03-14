@@ -25,9 +25,9 @@
 
 .form-group label {
     position: absolute;
-    left: 2.5em;
-    top: 50%;
-    transform: translateY(-50%);
+    left: 2.4em;
+    top: 1em;
+    /* transform: translateY(-50%); */
     padding: 0 5px;
     pointer-events: none;
     transition: 0.3s ease;
@@ -51,7 +51,7 @@
     select:focus
     + label,
 .form-group select:not(:placeholder-shown) + label {
-    top: 0px;
+    top: -12px;
     left: 1.5em;
     color: var(--blue);
 }
@@ -63,4 +63,9 @@
 
 .form-group .com_btn:hover {
     color: var(--white);
+}
+
+.iti--allow-dropdown
+{
+    width: 100%;
 }
