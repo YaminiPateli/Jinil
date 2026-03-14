@@ -85,7 +85,7 @@
             </div>
 
             <div class="col-md-5">
-                <img class=" img-fluid" src="{{ asset('public/front/images/mu/mu-0.svg') }}" alt="images">
+                <img class=" img-fluid" src="{{ asset('public/front/images/mu/mu-0.png') }}" alt="images">
             </div>
         </div>
     </div>
@@ -311,7 +311,7 @@
             <div class="row">
                 <div class="col-lg-6">
                     <div class="inve_Pro_card">
-                        <img class="img-fluid" src="images/mu/mu-5" alt="Minimized Downtime">
+                        <img class="img-fluid" src="{{ asset('public/front/images/mu/mu-5.svg') }}" alt="Minimized Downtime">
                         <h4 class="title_24">Superior ROI Compared to Replacement</h4>
                         <p>Upgrade investments typically range between 30–50% of new equipment costs while delivering comparable performance gains. Faster payback cycles and reduced capital exposure improve project economics and preserve working capital.</p>
                         <hr>
@@ -320,7 +320,7 @@
 
                 <div class="col-lg-6">
                     <div class="inve_Pro_card">
-                        <img class="img-fluid" src="images/mu/mu-6" alt="Minimized Downtime">
+                        <img class="img-fluid" src="{{ asset('public/front/images/mu/mu-6.svg') }}" alt="Minimized Downtime">
                         <h4 class="title_24">Minimal Production Disruption</h4>
                         <p>Retrofit installations are scheduled during planned maintenance windows to reduce operational impact. Pre-engineered components and structured execution significantly shorten installation timelines compared to full system replacement.</p>
                         <hr>
@@ -329,7 +329,7 @@
 
                 <div class="col-lg-6">
                     <div class="inve_Pro_card">
-                        <img class="img-fluid" src="images/mu/mu-7" alt="Minimized Downtime">
+                        <img class="img-fluid" src="{{ asset('public/front/images/mu/mu-7.svg') }}" alt="Minimized Downtime">
                         <h4 class="title_24">Immediate Performance Improvements</h4>
                         <p>Modern blast wheels, optimized turbine assemblies, upgraded dust collection systems, and advanced control integration provide measurable gains in throughput, blast consistency, and energy efficiency immediately after commissioning.</p>
                         <hr>
@@ -338,7 +338,7 @@
 
                 <div class="col-lg-6">
                     <div class="inve_Pro_card">
-                        <img class="img-fluid" src="images/mu/mu-8" alt="Minimized Downtime">
+                        <img class="img-fluid" src="{{ asset('public/front/images/mu/mu-8.svg') }}" alt="Minimized Downtime">
                         <h4 class="title_24">Future-Ready Automation & Integration</h4>
                         <p>PLC modernization and Industry 4.0 compatible controls enable remote monitoring, production data tracking, predictive maintenance capabilities, and seamless integration with plant automation systems.</p>
                         <hr>

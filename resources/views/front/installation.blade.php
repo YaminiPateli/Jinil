@@ -5,7 +5,7 @@
 
         <div class="navi_page_child">
             <div>
-                <p class="title_24"><a href="{{ url('/') }}" class="text-585">Home</a> / <a href="./blogs.php"
+                <p class="title_24"><a href="{{ url('/') }}" class="text-585">Home</a> / <a href="javascript::void(o)"
                         class="text-585">Services</a> / Installation & Commissioning</p>
                 <h2 class="title_60">Installation & Commissioning Services</h2>
                 <p class="mb-0">Jinil provides expert installation and commissioning services for shot blasting machines and industrial surface preparation systems, ensuring every system is configured for optimal performance, safety compliance, and long-term operational reliability.

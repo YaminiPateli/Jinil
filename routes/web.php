@@ -45,7 +45,7 @@ use Illuminate\Support\Facades\DB;
     Route::get('products/{url}', [dashboardController::class, 'product'])->name('productlist');
     Route::get('downloads', [dashboardController::class,'download'])->name('downloads');
     Route::get('/faqs', [dashboardController::class, 'faq'])->name('faqs');
-    Route::get('/installation', [dashboardController::class, 'installation'])->name('installation');
+    Route::get('/installation-and-commissioning', [dashboardController::class, 'installation'])->name('installation');
     Route::get('/after-sales-support', [dashboardController::class, 'aftersales'])->name('aftersales');
     Route::get('/downloads', [dashboardController::class, 'download'])->name('downloads');
     Route::get('/machine-upgrades', [dashboardController::class, 'machineupgrades'])->name('machineupgrades');

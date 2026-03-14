@@ -38,7 +38,7 @@
         </div>
 
         <div class="row gy-5">
-            @foreach($productlist as $product)
+            @foreach($productlist->whereNotNull('front_image') as $product)
             <div class="col-md-4">
                 <div class="fea_mac">
                     <div class="fea_mac_img">
