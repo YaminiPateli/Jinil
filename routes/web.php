@@ -18,6 +18,7 @@ use App\Http\Controllers\admin\ClientelController;
 use App\Http\Controllers\admin\CaseStudyController;
 use App\Http\Controllers\admin\CertificateController;
 use App\Http\Controllers\admin\FaqController;
+use App\Http\Controllers\admin\ServiceCategoryController;
 use App\Http\Controllers\CaptchaController;
 
 /*
@@ -43,9 +44,10 @@ use App\Http\Controllers\CaptchaController;
     Route::get('downloads', [dashboardController::class,'download'])->name('downloads');
     Route::get('/faqs', [dashboardController::class, 'faq'])->name('faqs');
     Route::get('/installation', [dashboardController::class, 'installation'])->name('installation');
+    Route::get('/after-sales-support', [dashboardController::class, 'aftersales'])->name('aftersales');
     Route::get('/downloads', [dashboardController::class, 'download'])->name('downloads');
     Route::get('/industries/{url}', [dashboardController::class, 'industry'])->name('industry');
-    Route::get('/service/{url}', [dashboardController::class, 'service'])->name('service');
+    // Route::get('/services/{url}', [dashboardController::class, 'service'])->name('service');
 
 
 Route::get('login', [dashboardController::class, 'login'])->name('login');

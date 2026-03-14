@@ -5,7 +5,7 @@
 
         <div class="navi_page_child">
             <div>
-                <p class="title_24"><a href="./" class="text-585">Home</a> / <a href="./blogs.php"
+                <p class="title_24"><a href="{{ url('/') }}" class="text-585">Home</a> / <a href="./blogs.php"
                         class="text-585">Services</a> / Installation & Commissioning</p>
                 <h2 class="title_60">Installation & Commissioning Services</h2>
                 <p class="mb-0">Jinil Engineering provides expert installation and commissioning services to ensure

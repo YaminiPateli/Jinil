@@ -25,7 +25,7 @@
                         <select name="category_id" class="form-control">
                             <option value="">-- Select Category --</option>
                             @foreach($categories as $cat)
-                                <option value="{{ $cat->id }}">{{ $cat->category }}</option>
+                                <option value="{{ $cat->id }}">{{ $cat->servicecategory }}</option>
                             @endforeach
                         </select>
                     </div>

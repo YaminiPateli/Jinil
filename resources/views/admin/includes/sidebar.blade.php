@@ -91,6 +91,20 @@
                     <span>Certificate</span>
                 </a>
             </li>
+            <li>
+                <a class="m-link {{ Request::routeIs('servicecategory.*') ? 'active' : '' }}"
+                   href="{{ route('servicecategory.index') }}">
+                    <i class="icofont-certificate fs-5"></i>
+                    <span>Service Category</span>
+                </a>
+            </li>
+            <li>
+                <a class="m-link {{ Request::routeIs('service.*') ? 'active' : '' }}"
+                   href="{{ route('service.index') }}">
+                    <i class="icofont-certificate fs-5"></i>
+                    <span>Service</span>
+                </a>
+            </li>
 
             <!-- FAQ -->
             <li>
