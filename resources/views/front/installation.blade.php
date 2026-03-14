@@ -57,22 +57,22 @@
                     <div class="counter ins_counter">
                         <div class="counter_item">
                             <img src="{{ asset('public/front/images/counter1.png') }}" alt="image">
-                            <h2 class="title_42"><span class="count" data-target="500">0</span>+</h2>
-                            <p>Machines Delivered</p>
+                            <h3 class="title_42"><span class="count" data-target="500">0</span>+</h3>
+                            <p class="mb-0">Machines Delivered</p>
                         </div>
                         <div class="counter_item">
                             <img src="{{ asset('public/front/images/counter2.png') }}" alt="image">
-                            <h2 class="title_42"><span class="count" data-target="30">0</span>+</h2>
+                            <h3 class="title_42"><span class="count" data-target="30">0</span>+</h3>
                             <p class="mb-0">Years Combined Expertise</p>
                         </div>
                         <div class="counter_item">
                             <img src="{{ asset('public/front/images/counter3.png') }}" alt="image">
-                            <h2 class="title_42"><span class="count" data-target="25">0</span>+</h2>
+                            <h3 class="title_42"><span class="count" data-target="25">0</span>+</h3>
                             <p class="mb-0">Industries Served</p>
                         </div>
                         <div class="counter_item">
                             <img src="{{ asset('public/front/images/counter4.png') }}" alt="image">
-                            <h2 class="title_42"><span class="count" data-target="24">0</span>/7</h2>
+                            <h3 class="title_42"><span class="count" data-target="24">0</span>/7</h3>
                             <p class="mb-0">Support Available</p>
                         </div>
                     </div>
@@ -238,7 +238,7 @@
 <section class="mt_100 mb_100">
     <div class="container">
         <div class="d-flex justify-content-center">
-            <img class="img-fluid" src="{{ asset('public/front/images/India-leading.gif') }}" alt="gif">
+            <img class="img-fluid gif_video" src="{{ asset('public/front/images/India-leading.gif') }}" alt="gif">
         </div>
     </div>
 </section>
@@ -260,7 +260,7 @@
                         <div class="service_Scope">
                             <h3 class="title_42 mb-3">01</h3>
                             <p class="title_24 mb-2">Site Evaluation & Layout Planning</p>
-                            <p>Comprehensive assessment of your facility, including floor load analysis, utility
+                            <p class="mb-0">Comprehensive assessment of your facility, including floor load analysis, utility
                                 availability,
                                 ventilation requirements, and optimal machine positioning for workflow efficiency.</p>
                         </div>
@@ -270,7 +270,7 @@
                         <div class="service_Scope">
                             <h3 class="title_42 mb-3">02</h3>
                             <p class="title_24 mb-2">Machine Installation & Alignment</p>
-                            <p>Precision installation using laser alignment tools and calibrated equipment. Every
+                            <p class="mb-0">Precision installation using laser alignment tools and calibrated equipment. Every
                                 component is positioned to manufacturer specifications for optimal operation</p>
                         </div>
                     </div>
@@ -279,7 +279,7 @@
                         <div class="service_Scope">
                             <h3 class="title_42 mb-3">03</h3>
                             <p class="title_24 mb-2">Electrical & Control Panel Integration</p>
-                            <p>Complete electrical connections, PLC programming, and integration with your existing
+                            <p class="mb-0">Complete electrical connections, PLC programming, and integration with your existing
                                 plant systems. Full testing of all control circuits and safety interlocks.</p>
                         </div>
                     </div>
@@ -288,7 +288,7 @@
                         <div class="service_Scope">
                             <h3 class="title_42 mb-3">04</h3>
                             <p class="title_24 mb-2">Trial Runs & Performance Testing</p>
-                            <p>Extensive testing protocols to verify equipment performance meets or exceeds
+                            <p class="mb-0">Extensive testing protocols to verify equipment performance meets or exceeds
                                 specifications. Documentation of all test results and performance metrics.</p>
                         </div>
                     </div>
@@ -297,7 +297,7 @@
                         <div class="service_Scope">
                             <h3 class="title_42 mb-3">05</h3>
                             <p class="title_24 mb-2">Operator Training & Handover</p>
-                            <p>Comprehensive training programs for your operators and maintenance staff. Detailed
+                            <p class="mb-0">Comprehensive training programs for your operators and maintenance staff. Detailed
                                 documentation and ongoing support resources provided.</p>
                         </div>
                     </div>
@@ -305,7 +305,7 @@
                         <div class="service_Scope">
                             <h3 class="title_42 mb-3">06</h3>
                             <p class="title_24 mb-2">Safety & Compliance Checks</p>
-                            <p>Complete safety audit and compliance verification. All safety systems tested and
+                            <p class="mb-0">Complete safety audit and compliance verification. All safety systems tested and
                                 certified. Documentation prepared for regulatory inspections.</p>
                         </div>
                     </div>
