@@ -1,5 +1,5 @@
 @include('layouts.frontheader')
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/intl-tel-input@18.2.1/build/css/intlTelInput.css">
+<!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/intl-tel-input@18.2.1/build/css/intlTelInput.css"> -->
 
 <section class="navi_page">
     <div class="container-fluid">
@@ -169,9 +169,9 @@ $b = rand(1,9);
         </div>
     </div>
 </section>
-
+<!-- 
 <script src="https://cdn.jsdelivr.net/npm/intl-tel-input@18.2.1/build/js/intlTelInput.min.js"></script>
-<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script> -->
 
 <script>
     // State -> City

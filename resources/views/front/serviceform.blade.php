@@ -1,4 +1,4 @@
-@include('layouts.frontheader')
+
 
 @php
 use Illuminate\Support\Facades\DB;
