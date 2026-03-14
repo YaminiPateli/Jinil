@@ -128,7 +128,7 @@
                         </div>
 
                         <div class="col-lg-6 form-group">
-                            <select name="country">
+                            <select name="state">
                                 <option value="Afghanistan">Afghanistan</option>
                                 <option value="Afghanistan">Afghanistan</option>
                                 <option value="Afghanistan">Afghanistan</option>
