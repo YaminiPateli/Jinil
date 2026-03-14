@@ -2717,12 +2717,11 @@
         </div>
 
         <div class="row gy-5">
+            @foreach($productlist->whereNotNull('front_image') as $product)
             <div class="col-md-4">
                 <div class="fea_mac">
                     <div class="fea_mac_img">
-                        <img class="img-fluid" src="{{ asset('public/front/images/fea_mac1.png')}}"
-                            alt="Featured Machine 1">
-
+                        <img class="img-fluid" src="{{ asset('public/Product/front_image/'.$product->front_image) }}" alt="{{ $product->name }}">
                         <!-- <a href="#" class="fea_mac_icon">
                             <svg width="19" height="19" viewBox="0 0 19 19" fill="none"
                                 xmlns="http://www.w3.org/2000/svg">
@@ -2733,7 +2732,7 @@
                     </div>
                     <div class="fea_mac_content">
                         <div class="fea_mac_content_inner">
-                            <h3 class="title_24">Batch Type Blast Room with Dust Recovery</h3>
+                            <h3 class="title_24">{{ $product->name }}</h3>
                             <a href="#" class="com_btn mt-2">Enquire Now</a>
                             <!-- <span class="fea_mac_content_inner_btn">Cabinet Type Shot Blasting</span> -->
                         </div>
@@ -2742,132 +2741,7 @@
                     </div>
                 </div>
             </div>
-
-            <div class="col-md-4">
-                <div class="fea_mac">
-                    <div class="fea_mac_img">
-                        <img class="img-fluid" src="{{ asset('public/front/images/fea_mac2.png')}}"
-                            alt="Featured Machine 1">
-                        <!-- <a href="#" class="fea_mac_icon">
-                            <svg width="19" height="19" viewBox="0 0 19 19" fill="none"
-                                xmlns="http://www.w3.org/2000/svg">
-                                <path d="M0.5 18.5L18.5 0.5M18.5 0.5H6.5M18.5 0.5V12.5" stroke="#111111"
-                                    stroke-linecap="round" stroke-linejoin="round" />
-                            </svg>
-                        </a> -->
-                    </div>
-                    <div class="fea_mac_content">
-                        <div class="fea_mac_content_inner">
-                            <h3 class="title_24">Batch Type Blast Room with Dust Recovery</h3>
-                            <a href="#" class="com_btn mt-2">Enquire Now</a>
-                            <!-- <span class="fea_mac_content_inner_btn">Cabinet Type Shot Blasting</span> -->
-                        </div>
-                        <!-- <hr>
-                        <p>For batch processing of small to medium components</p> -->
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-md-4">
-                <div class="fea_mac">
-                    <div class="fea_mac_img">
-                        <img class="img-fluid" src="{{ asset('public/front/images/fea_mac3.png')}}"
-                            alt="Featured Machine 1">
-                        <!-- <a href="#" class="fea_mac_icon">
-                            <svg width="19" height="19" viewBox="0 0 19 19" fill="none"
-                                xmlns="http://www.w3.org/2000/svg">
-                                <path d="M0.5 18.5L18.5 0.5M18.5 0.5H6.5M18.5 0.5V12.5" stroke="#111111"
-                                    stroke-linecap="round" stroke-linejoin="round" />
-                            </svg>
-                        </a> -->
-                    </div>
-                    <div class="fea_mac_content">
-                        <div class="fea_mac_content_inner">
-                            <h3 class="title_24">Batch Type Blast Room with Dust Recovery</h3>
-                            <a href="#" class="com_btn mt-2">Enquire Now</a>
-                            <!-- <span class="fea_mac_content_inner_btn">Cabinet Type Shot Blasting</span> -->
-                        </div>
-                        <!-- <hr>
-                        <p>For batch processing of small to medium components</p> -->
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-md-4">
-                <div class="fea_mac">
-                    <div class="fea_mac_img">
-                        <img class="img-fluid" src="{{ asset('public/front/images/fea_mac3.png')}}"
-                            alt="Featured Machine 1">
-                        <!-- <a href="#" class="fea_mac_icon">
-                            <svg width="19" height="19" viewBox="0 0 19 19" fill="none"
-                                xmlns="http://www.w3.org/2000/svg">
-                                <path d="M0.5 18.5L18.5 0.5M18.5 0.5H6.5M18.5 0.5V12.5" stroke="#111111"
-                                    stroke-linecap="round" stroke-linejoin="round" />
-                            </svg>
-                        </a> -->
-                    </div>
-                    <div class="fea_mac_content">
-                        <div class="fea_mac_content_inner">
-                            <h3 class="title_24">Batch Type Blast Room with Dust Recovery</h3>
-                            <a href="#" class="com_btn mt-2">Enquire Now</a>
-                            <!-- <span class="fea_mac_content_inner_btn">Cabinet Type Shot Blasting</span> -->
-                        </div>
-                        <!-- <hr>
-                        <p>For batch processing of small to medium components</p> -->
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-md-4">
-                <div class="fea_mac">
-                    <div class="fea_mac_img">
-                        <img class="img-fluid" src="{{ asset('public/front/images/fea_mac2.png')}}"
-                            alt="Featured Machine 1">
-                        <!-- <a href="#" class="fea_mac_icon">
-                            <svg width="19" height="19" viewBox="0 0 19 19" fill="none"
-                                xmlns="http://www.w3.org/2000/svg">
-                                <path d="M0.5 18.5L18.5 0.5M18.5 0.5H6.5M18.5 0.5V12.5" stroke="#111111"
-                                    stroke-linecap="round" stroke-linejoin="round" />
-                            </svg>
-                        </a> -->
-                    </div>
-                    <div class="fea_mac_content">
-                        <div class="fea_mac_content_inner">
-                            <h3 class="title_24">Batch Type Blast Room with Dust Recovery</h3>
-                            <a href="#" class="com_btn mt-2">Enquire Now</a>
-                            <!-- <span class="fea_mac_content_inner_btn">Cabinet Type Shot Blasting</span> -->
-                        </div>
-                        <!-- <hr>
-                        <p>For batch processing of small to medium components</p> -->
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-md-4">
-                <div class="fea_mac">
-                    <div class="fea_mac_img">
-                        <img class="img-fluid" src="{{ asset('public/front/images/fea_mac1.png')}}"
-                            alt="Featured Machine 1">
-                        <!-- <a href="#" class="fea_mac_icon">
-                            <svg width="19" height="19" viewBox="0 0 19 19" fill="none"
-                                xmlns="http://www.w3.org/2000/svg">
-                                <path d="M0.5 18.5L18.5 0.5M18.5 0.5H6.5M18.5 0.5V12.5" stroke="#111111"
-                                    stroke-linecap="round" stroke-linejoin="round" />
-                            </svg>
-                        </a> -->
-                    </div>
-                    <div class="fea_mac_content">
-                        <div class="fea_mac_content_inner">
-                            <h3 class="title_24">Batch Type Blast Room with Dust Recovery</h3>
-                            <a href="#" class="com_btn mt-2">Enquire Now</a>
-                            <!-- <span class="fea_mac_content_inner_btn">Cabinet Type Shot Blasting</span> -->
-                        </div>
-                        <!-- <hr>
-                        <p>For batch processing of small to medium components</p> -->
-                    </div>
-                </div>
-            </div>
-
+            @endforeach
         </div>
     </div>
 </section>

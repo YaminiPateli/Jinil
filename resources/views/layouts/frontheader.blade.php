@@ -52,6 +52,14 @@
 </head>
 
 <body class="{{ request()->is('/') ? 'home_body' : 'inner_body' }}">
+@php
+use Illuminate\Support\Facades\DB;
+
+$category = DB::table('category')
+            ->select('id','category','url')
+            ->whereNull('deleted_at')
+            ->get();
+@endphp
     <header class="sticky-header">
         <div class="container-fluid">
             <nav class="navbar navbar-expand-lg">
@@ -66,7 +74,7 @@
                 </button>
                 <div class="collapse navbar-collapse justify-content-between" id="mainNavbar">
                     <ul class="mx-auto nav_links">
-                        <li><a href="#" data-text="About Us"><span>About Us</span> </a></li>
+                        <li><a href="{{ route('about') }}" data-text="About Us"><span>About Us</span> </a></li>
 
                         <li class="has-dropdown"><a href="#" data-text="Products">
                                 <span>Products</span>
@@ -80,9 +88,16 @@
                             </a>
 
                              <ul class="dropdown-menu">
-                                <li><a href="#">link</a></li>
-                                <li><a href="#">link</a></li>
-                            </ul>
+                                @foreach($category as $val)
+
+                                <li>
+                                    <a href="{{ url('products/'.$val->url) }}">
+                                    {{ $val->category }}
+                                    </a>
+                                </li>
+
+                                @endforeach
+                             </ul>
 
                         </li>
 
@@ -122,7 +137,7 @@
                             </ul>
                         </li>
                         <li>
-                            <a href="#" data-text="Contact Us">
+                            <a href="{{ route('contact') }}" data-text="Contact Us">
                                 <span>Contact Us</span>
                             </a>
                         </li>

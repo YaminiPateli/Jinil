@@ -1,5 +1,20 @@
 <footer class="site_footer">
+@php
+use Illuminate\Support\Facades\DB;
 
+$categories = DB::table('category')
+    ->whereNull('deleted_at')
+    ->get();
+
+$products = DB::table('product')
+    ->whereNull('deleted_at')
+    ->get()
+    ->groupBy('category_id');
+
+$indusries = DB::table('industry')
+    ->whereNull('deleted_at')
+    ->get();
+@endphp
     <div class="container-fluid">
         <div class="site_footer_child">
 
@@ -20,12 +35,12 @@
                     <h4 class="title_24">Quick Links</h4>
 
                     <ul>
-                        <li><a href="#">Home</a></li>
-                        <li><a href="#">About Us</a></li>
-                        <li><a href="#">Blog</a></li>
-                        <li><a href="#">Downloads</a></li>
-                        <li><a href="#">FAQs</a></li>
-                        <li><a href="#">Contact Us</a></li>
+                        <li><a href="{{ url('/') }}">Home</a></li>
+                        <li><a href="{{ route('about') }}">About Us</a></li>
+                        <li><a href="{{ route('blogs') }}">Blog</a></li>
+                        <li><a href="{{ route('downloads') }}">Downloads</a></li>
+                        <li><a href="{{ route('faqs') }}">FAQs</a></li>
+                        <li><a href="{{ route('contact') }}">Contact Us</a></li>
                     </ul>
 
                 </div>
@@ -39,72 +54,48 @@
 
             <div class="footer_grid">
 
+                @foreach($categories as $cat)
+
                 <div class="footer_col">
 
-                    <h4 class="title_24">Air Operation Blasting Machine</h4>
+                    <h4 class="title_24">{{ $cat->category }}</h4>
 
                     <ul>
-                        <li>
-                            <a href="#">Portable blaster pot</a>
-                        </li>
-                         <li>
-                            <a href="#">Suction type cabinet</a>
-                        </li>
-                         <li>
-                            <a href="#">Custom -Built Shot Blasting Machines</a>
-                        </li>
+
+                        @if(isset($products[$cat->id]))
+
+                            @foreach($products[$cat->id] as $product)
+
+                            <li>
+                                <a href="javascript::void(0)">
+                                    {{ $product->name }}
+                                </a>
+                            </li>
+
+                            @endforeach
+
+                        @endif
+
                     </ul>
 
                 </div>
 
-
-                <div class="footer_col">
-
-                    <h4 class="title_24">Airless Shot Blasting Machines</h4>
-
-                    <ul>
-                        <li>
-                            <a href="#">Hanger Type Machine</a>
-                        </li>
-                        <li>
-                            <a href="#">Special Purpose machine</a>
-                        </li>
-                        <li>
-                            <a href="#">Table Type Machine</a>
-                        </li>
-                        <li>
-                            <a href="#">Tumbler Type Machine</a>
-                        </li>
-                        <li>
-                            <a href="#">Tunnel Type Machine</a>
-                        </li>
-                        <li>
-                            <a href="#">Custom -Built Shot Blasting Machines</a>
-                        </li>
-                    </ul>
-
-                </div>
+                @endforeach
 
 
                 <div class="footer_col">
 
                     <h4 class="title_24">Industries</h4>
 
-                    <ul>
-                        <li><a href="#">Forging</a></li>
-                        <li><a href="#">Foundry</a></li>
-                        <li><a href="#">Defense</a></li>
-                        <li><a href="#">Aerospace</a></li>
-                        <li><a href="#">Rail & Heavy Equipment</a></li>
-                        <li><a href="#">Fabrication</a></li>
-                        <li><a href="#">Wire coil</a></li>
-                        <li><a href="#">Automotive</a></li>
-                        <li><a href="#">Oil & gas</a></li>
-                        <li><a href="#">Steel plant</a></li>
-                        <li><a href="#">PEB</a></li>
-
+                     <ul>
+                        @foreach($indusries as $industry)
+                        <li>
+                            <a href="{{ url('industries/'.$industry->url) }}">
+                                {{ $industry->title }}
+                            </a>
+                        </li>
+                        @endforeach
                     </ul>
-
                 </div>
 
 

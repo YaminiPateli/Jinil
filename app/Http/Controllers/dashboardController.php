@@ -35,8 +35,9 @@ class dashboardController extends Controller
         return view('admin.admin');
     }
     public function index()
-    {  
-        return view('front.dashboard');
+    {   
+        $productlist = Product::whereNull('deleted_at')->get();
+        return view('front.dashboard', compact('productlist'));
     }
     public function about()
     {   
