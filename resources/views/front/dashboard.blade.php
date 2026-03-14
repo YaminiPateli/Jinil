@@ -2530,7 +2530,7 @@
 
             <div class="col-lg-8">
                 <div class="row">
-                    <div class="col-lg-4">
+                    <div class="col-lg-4 mb-4 mb-lg-0">
                         <div class="blast">
                             <svg class="process_item_icon mb_30" width="80" height="80" viewBox="0 0 80 80" fill="none"
                                 xmlns="http://www.w3.org/2000/svg">
@@ -2565,7 +2565,7 @@
 
                         </div>
                     </div>
-                    <div class="col-lg-4">
+                    <div class="col-lg-4 mb-4 mb-lg-0">
                         <div class="blast">
                             <svg class="process_item_icon mb_30" width="80" height="80" viewBox="0 0 80 80" fill="none"
                                 xmlns="http://www.w3.org/2000/svg">
@@ -2621,7 +2621,7 @@
 
                         </div>
                     </div>
-                    <div class="col-lg-4">
+                    <div class="col-lg-4 mb-4 mb-lg-0">
                         <div class="blast">
                             <svg class="process_item_icon mb_30" width="80" height="80" viewBox="0 0 80 80" fill="none"
                                 xmlns="http://www.w3.org/2000/svg">
@@ -2679,7 +2679,7 @@
 
             <div class="col-lg-8">
                 <div class="row">
-                    <div class="col-lg-4">
+                    <div class="col-lg-4  mb-4 mb-lg-0">
                         <div class="blast">
                             <h4 class="title_24">Certified Quality</h4>
                             <p class="mb-0">All systems are manufactured in compliance with internationally recognized
@@ -2687,7 +2687,7 @@
                                 standards to ensure consistency, safety, and durability.</p>
                         </div>
                     </div>
-                    <div class="col-lg-4">
+                    <div class="col-lg-4  mb-4 mb-lg-0">
                         <div class="blast">
                             <h4 class="title_24">Pan-India Service Network</h4>
                             <p class="mb-0">Rapid response support across all major industrial hubs, ensuring minimal
@@ -2695,7 +2695,7 @@
                                 dependable after-sales service.</p>
                         </div>
                     </div>
-                    <div class="col-lg-4">
+                    <div class="col-lg-4  mb-4 mb-lg-0">
                         <div class="blast">
                             <h4 class="title_24">Custom Engineering Solutions</h4>
                             <p class="mb-0">Every system is engineered around your production needs — from component
@@ -2878,7 +2878,7 @@
             <div class="counter_item">
                 <img class="img-fluid" src="{{ asset('public/front/images/counter1.png')}}" alt="image">
                 <h2 class="title_60"><span class="count" data-target="500">0</span>+</h2>
-                <p>Machines Delivered</p>
+                <p class="mb-0">Machines Delivered</p>
             </div>
             <div class="counter_item">
                 <img class="img-fluid" src="{{ asset('public/front/images/counter2.png')}}" alt="image">
@@ -2991,7 +2991,7 @@
             <h2 class="title_60">Our Process in 4 Steps</h2>
         </div>
 
-        <div class="row gy-4 gy-md-0">
+        <div class="row gy-5 gy-md-0">
             <div class="col-md-3">
                 <div class="process_item">
 
@@ -3221,7 +3221,7 @@ document.querySelector("#icon").addEventListener("mouseleave", () => {
                 <h2 class="title_60">Insights from the Surface Preparation Industry</h2>
             </div>
 
-            <div class="col-md-5 text-end">
+            <div class="col-md-5 text-lg-end">
                 <a href="#" class="com_btn com_btn_2">View all</a>
             </div>
 

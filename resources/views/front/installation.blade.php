@@ -67,6 +67,7 @@
                         </div>
                         <div class="counter_item">
                             <img src="{{ asset('public/front/images/counter4.png') }}" alt="image">
+
                             <h2 class="title_42"><span class="count" data-target="24">24</span>/7</h2>
                             <p class="mb-0">Technical Support Availability</p>
                         </div>
@@ -230,7 +231,7 @@
 <section class="mt_100 mb_100">
     <div class="container">
         <div class="d-flex justify-content-center">
-            <img class="img-fluid" src="{{ asset('public/front/images/India-leading.gif') }}" alt="gif">
+            <img class="img-fluid gif_video" src="{{ asset('public/front/images/India-leading.gif') }}" alt="gif">
         </div>
     </div>
 </section>
@@ -250,7 +251,7 @@
                         <div class="service_Scope">
                             <h3 class="title_42 mb-3">01</h3>
                             <p class="title_24 mb-2">Site Evaluation & Layout Optimization</p>
-                            <p>We conduct detailed facility assessments, including floor load analysis, utility mapping, ventilation requirements, and workflow alignment. Proper layout planning ensures stable equipment positioning, safe operation, and optimized production efficiency.</p>
+                            <p class="mb-0">We conduct detailed facility assessments, including floor load analysis, utility mapping, ventilation requirements, and workflow alignment. Proper layout planning ensures stable equipment positioning, safe operation, and optimized production efficiency.</p>
                         </div>
                     </div>
 
@@ -258,7 +259,7 @@
                         <div class="service_Scope">
                             <h3 class="title_42 mb-3">02</h3>
                             <p class="title_24 mb-2">Precision Machine Installation & Alignment</p>
-                            <p>Using calibrated tools and laser alignment systems, we install and position all mechanical components according to manufacturer specifications. Accurate alignment ensures smooth operation, reduced vibration, and long-term equipment stability.</p>
+                            <p class="mb-0">Using calibrated tools and laser alignment systems, we install and position all mechanical components according to manufacturer specifications. Accurate alignment ensures smooth operation, reduced vibration, and long-term equipment stability.</p>
                         </div>
                     </div>
 
@@ -266,7 +267,7 @@
                         <div class="service_Scope">
                             <h3 class="title_42 mb-3">03</h3>
                             <p class="title_24 mb-2">Electrical & PLC Control Integration</p>
-                            <p>Our team handles complete electrical connections, PLC configuration, control panel integration, and system synchronization with existing plant operations. All circuits and safety interlocks are thoroughly tested before activation.
+                            <p  class="mb-0">Our team handles complete electrical connections, PLC configuration, control panel integration, and system synchronization with existing plant operations. All circuits and safety interlocks are thoroughly tested before activation.
                             </p>
                         </div>
                     </div>
@@ -274,8 +275,9 @@
                     <div class="col-lg-4">
                         <div class="service_Scope">
                             <h3 class="title_42 mb-3">04</h3>
+
                             <p class="title_24 mb-2">Trial Runs & Performance Verification</p>
-                            <p>We perform controlled test runs under real operating conditions to validate blasting coverage, abrasive flow consistency, conveyor movement, and dust collection efficiency. Performance metrics are documented and fine-tuned for production readiness.</p>
+                            <p class="mb-0">We perform controlled test runs under real operating conditions to validate blasting coverage, abrasive flow consistency, conveyor movement, and dust collection efficiency. Performance metrics are documented and fine-tuned for production readiness.</p>
                         </div>
                     </div>
 
@@ -283,14 +285,15 @@
                         <div class="service_Scope">
                             <h3 class="title_42 mb-3">05</h3>
                             <p class="title_24 mb-2">Operator Training & Technical Handover</p>
-                            <p>Structured training sessions are conducted for operators and maintenance teams. We provide detailed documentation, safety protocols, and operational guidelines to ensure confident and efficient system handling.</p>
+                            <p class="mb-0">Structured training sessions are conducted for operators and maintenance teams. We provide detailed documentation, safety protocols, and operational guidelines to ensure confident and efficient system handling.</p>
                         </div>
                     </div>
                     <div class="col-lg-4">
                         <div class="service_Scope">
                             <h3 class="title_42 mb-3">06</h3>
+
                             <p class="title_24 mb-2"> Safety Audits & Compliance Validation</p>
-                            <p>All safety systems are inspected and verified against industrial standards. We conduct comprehensive compliance checks, documentation review, and final validation before system commissioning approval.</p>
+                            <p class="mb-0">All safety systems are inspected and verified against industrial standards. We conduct comprehensive compliance checks, documentation review, and final validation before system commissioning approval.</p>
                         </div>
                     </div>
 
