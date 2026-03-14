@@ -48,6 +48,7 @@ use Illuminate\Support\Facades\DB;
     Route::get('/installation', [dashboardController::class, 'installation'])->name('installation');
     Route::get('/after-sales-support', [dashboardController::class, 'aftersales'])->name('aftersales');
     Route::get('/downloads', [dashboardController::class, 'download'])->name('downloads');
+    Route::get('/machine-upgrades', [dashboardController::class, 'machineupgrades'])->name('machineupgrades');
     Route::get('/industries/{url}', [dashboardController::class, 'industry'])->name('industry');
     Route::get('/get-cities/{id}', function ($id) {
 
