@@ -7,10 +7,10 @@
             <div>
                 <p class="title_24"><a href="{{ url('/') }}" class="text-585">Home</a> / <a href="./blogs.php"
                         class="text-585">Services</a> / After-Sales Support</p>
-                <h2 class="title_60">Installation & Commissioning Services</h2>
-                <p class="mb-0">Jinil Engineering provides expert installation and commissioning services to ensure
-                    every shot blasting system is configured for optimal performance, safety, and durability. Our
-                    structured approach minimizes downtime while delivering consistent, production-ready results.</p>
+                <h2 class="title_60">After-Sales Support for Shot Blasting Systems</h2>
+                <p class="mb-0">Jinil provides comprehensive after-sales support for shot blasting machines and industrial surface preparation systems, ensuring consistent performance, reduced downtime, and long-term operational reliability.</p>
+                <p class="mb-0">From preventive maintenance and spare parts supply to troubleshooting and technical upgrades, our engineering team supports your equipment throughout its operational lifecycle.
+                    </p>
             </div>
 
             <div class="contact_circle">
@@ -40,19 +40,11 @@
         <div class="row">
             <div class="col-md-7 pe-lg-5">
                 <div>
-                    <h4 class="mb-4 title_24">Engineered for Continuous Operation</h4>
-                    <p>Shot blasting equipment operates in demanding industrial environments where unplanned downtime
-                        directly impacts production schedules and operational costs. Jinil's after-sales support is
-                        structured around minimizing equipment downtime and maximizing operational efficiency through
-                        proactive technical assistance. Our support infrastructure combines factory-trained technicians,
-                        genuine OEM spare parts inventory, and remote diagnostic capabilities to deliver rapid response
-                        times. Whether addressing routine wear part replacement or emergency breakdown situations, our
-                        team maintains the technical expertise and parts availability to restore equipment to full
-                        operational status.</p>
-                    <p>Beyond reactive support, our Annual Maintenance Contract programs provide structured preventive
-                        care that extends equipment lifecycle and maintains consistent performance parameters. This
-                        approach transforms after-sales support from a cost center into a strategic partnership that
-                        protects capital investment and ensures predictable operating expenses.</p>
+                    <h4 class="mb-4 title_24">Engineered for Continuous Operation & Maximum Uptime</h4>
+                    <p>Industrial shot blasting machines operate in high-demand environments where unplanned downtime directly impacts productivity and operating costs. Jinil’s after-sales support is structured to minimize equipment downtime and sustain consistent surface preparation performance.</p>
+                    <p>Our technical support framework combines factory-trained engineers, genuine OEM spare parts availability, and remote diagnostic capabilities to ensure rapid response and efficient fault resolution. Whether managing routine wear component replacement or addressing unexpected breakdowns, we restore systems quickly and safely to full operational capacity.
+                    </p>
+                    <p>Through structured preventive maintenance programs and Annual Maintenance Contracts (AMC), we extend equipment lifecycle, stabilize performance parameters, and reduce long-term operational risk, transforming after-sales service into a strategic reliability partnership.</p>
                 </div>
 
                 <div class="mt_60">
@@ -60,24 +52,24 @@
                         <div class="counter_item">
                             <img src="{{ asset('public/front/images/counter1.png') }}" alt="image">
                             <h2 class="title_42"><span class="count" data-target="99.2">99.2</span>%</h2>
-                            <p>Average Equipment Uptime</p>
+                            <p> Average Equipment Uptime</p>
                         </div>
                         <div class="counter_item">
                             <img src="{{ asset('public/front/images/counter2.png') }}" alt="image">
                             <h2 class="title_42">
                                 < <span class="count" data-target="4"> 4 </span> hrs
                             </h2>
-                            <p class="mb-0">Response Time</p>
+                            <p class="mb-0">Average Technical Response Time</p>
                         </div>
                         <div class="counter_item">
                             <img src="{{ asset('public/front/images/counter3.png') }}" alt="image">
                             <h2 class="title_42"><span class="count" data-target="100">100</span>%</h2>
-                            <p class="mb-0">OEM Genuine Parts</p>
+                            <p class="mb-0"> OEM Genuine Spare Parts</p>
                         </div>
                         <div class="counter_item">
                             <img src="{{ asset('public/front/images/counter4.png') }}" alt="image">
                             <h2 class="title_42"><span class="count" data-target="50">50</span>+</h2>
-                            <p class="mb-0">Expert Engineers</p>
+                            <p class="mb-0">Specialized Service Engineers</p>
                         </div>
                     </div>
                 </div>
@@ -85,7 +77,7 @@
             </div>
 
             <div class="col-md-5">
-                <img class=" img-fluid" src="{{ asset('public/front/images/installation.png') }}" alt="images">
+                <img class=" img-fluid" src="{{ asset('public/front/images/aftersales.png') }}" alt="images">
             </div>
         </div>
     </div>
@@ -95,14 +87,13 @@
 <section class="mt_100">
     <div class="container">
         <div class="sec_hed_top mb_40">
-            <p>OEM Expertise, Lifetime Support</p>
-            <h2 class="title_60">Why OEM Support Matters</h2>
+            <p>Authorized OEM Support for Shot Blasting Systems</p>
+            <h2 class="title_60">Why Genuine OEM After-Sales Support Makes the Difference</h2>
         </div>
 
         <div class="row justify-content-between">
             <div class="col-lg-3">
-                <p class="title_24">As the original equipment manufacturer, we offer certified support, fast response,
-                    and genuine spare parts to keep your equipment performing at its best throughout its lifecycle.</p>
+                <p class="title_24">As the original manufacturer of your shot blasting machines and industrial surface preparation systems, Jinil delivers certified technical support, rapid response service, and guaranteed OEM spare parts to maintain peak equipment performance throughout its lifecycle.</p>
             </div>
 
             <div class="col-lg-8">
@@ -136,8 +127,8 @@
                             </svg>
 
 
-                            <h4 class="title_24">Genuine Parts & Standards</h4>
-                            <p>Original spare parts supported by documented service procedures and quality controls.</p>
+                            <h4 class="title_24">Genuine OEM Parts & Quality Assurance</h4>
+                            <p>We supply original, specification-approved spare parts supported by documented service procedures and strict quality control standards, ensuring compatibility, durability, and consistent surface preparation performance.</p>
 
                         </div>
                     </div>
@@ -192,9 +183,8 @@
                                     fill="#105293" />
                             </svg>
 
-                            <h4 class="title_24">OEM Engineers</h4>
-                            <p>Factory-trained technicians with in-depth knowledge of the equipment we design and
-                                manufacture.</p>
+                            <h4 class="title_24">Factory-Trained OEM Engineers</h4>
+                            <p>Our service engineers are trained on the exact shot blasting systems we design and manufacture. Their in-depth technical knowledge enables accurate diagnostics, faster resolution, and performance optimization under real production conditions.</p>
 
                         </div>
                     </div>
@@ -229,8 +219,8 @@
                             </svg>
 
 
-                            <h4 class="title_24">Fast Response</h4>
-                            <p>Critical service issues addressed within 2 hours, with defined resolution timelines.</p>
+                            <h4 class="title_24">Rapid Technical Response</h4>
+                            <p>Critical service requirements are prioritized with structured response protocols and defined resolution timelines. Our support framework minimizes downtime and protects production continuity.</p>
                         </div>
                     </div>
                 </div>
@@ -251,11 +241,10 @@
     <div class="container-fluid">
         <div class="row">
             <div class="col-lg-4 pe-lg-5">
-                <p>For precision Comprehensive Services</p>
-                <h2 class="title_60 mb_30">Our Installation Service Scope</h2>
-                <p class="title_24">From initial site assessment to final handover, we manage every aspect of your
-                    equipment
-                    installation with engineering precision.</p>
+                <p>Comprehensive After-Sales Support Portfolio</p>
+                <h2 class="title_60 mb_30">Our Shot Blasting After-Sales Service Scope</h2>
+                <p class="title_24">Jinil’s after-sales support framework is engineered to maximize equipment uptime, stabilize performance, and extend the operational lifecycle of industrial shot blasting machines and surface preparation systems.
+                </p>
             </div>
 
             <div class="col-lg-8 service_Scope_card">
@@ -263,54 +252,47 @@
                     <div class="col-lg-4">
                         <div class="service_Scope">
                             <h3 class="title_42 mb-3">01</h3>
-                            <p class="title_24 mb-2">Site Evaluation & Layout Planning</p>
-                            <p>Comprehensive assessment of your facility, including floor load analysis, utility
-                                availability,
-                                ventilation requirements, and optimal machine positioning for workflow efficiency.</p>
+                            <p class="title_24 mb-2">Technical Support (On-Site & Remote Diagnostics)</p>
+                            <p>Our factory-trained service engineers provide structured troubleshooting support through remote monitoring, real-time diagnostics, and direct on-site intervention. Rapid issue identification and corrective action minimize production disruption and restore operational continuity.</p>
                         </div>
                     </div>
 
                     <div class="col-lg-4">
                         <div class="service_Scope">
                             <h3 class="title_42 mb-3">02</h3>
-                            <p class="title_24 mb-2">Machine Installation & Alignment</p>
-                            <p>Precision installation using laser alignment tools and calibrated equipment. Every
-                                component is positioned to manufacturer specifications for optimal operation</p>
+                            <p class="title_24 mb-2">OEM Spare Parts Supply & Replacement</p>
+                            <p>We maintain a comprehensive inventory of genuine OEM spare parts with expedited dispatch capabilities. All components meet original manufacturing specifications, ensuring compatibility, performance stability, and long-term system reliability.</p>
                         </div>
                     </div>
 
                     <div class="col-lg-4">
                         <div class="service_Scope">
                             <h3 class="title_42 mb-3">03</h3>
-                            <p class="title_24 mb-2">Electrical & Control Panel Integration</p>
-                            <p>Complete electrical connections, PLC programming, and integration with your existing
-                                plant systems. Full testing of all control circuits and safety interlocks.</p>
+                            <p class="title_24 mb-2">Annual Maintenance Contracts (AMC)</p>
+                            <p>Structured preventive maintenance programs include scheduled inspections, wear component monitoring, calibration checks, and performance validation. AMC plans reduce unexpected failures and ensure predictable maintenance costs.</p>
                         </div>
                     </div>
 
                     <div class="col-lg-4">
                         <div class="service_Scope">
                             <h3 class="title_42 mb-3">04</h3>
-                            <p class="title_24 mb-2">Trial Runs & Performance Testing</p>
-                            <p>Extensive testing protocols to verify equipment performance meets or exceeds
-                                specifications. Documentation of all test results and performance metrics.</p>
+                            <p class="title_24 mb-2">Operational Performance Troubleshooting</p>
+                            <p>Advanced process analysis identifies blast pattern inconsistencies, abrasive consumption inefficiencies, and system performance deviations. Root cause evaluation enables corrective engineering actions that restore optimal surface preparation quality.</p>
                         </div>
                     </div>
 
                     <div class="col-lg-4">
                         <div class="service_Scope">
                             <h3 class="title_42 mb-3">05</h3>
-                            <p class="title_24 mb-2">Operator Training & Handover</p>
-                            <p>Comprehensive training programs for your operators and maintenance staff. Detailed
-                                documentation and ongoing support resources provided.</p>
+                            <p class="title_24 mb-2">Emergency Support Services (24/7 Response)</p>
+                            <p>Dedicated technical hotlines and rapid-response protocols are activated for critical breakdown scenarios. Emergency spare parts dispatch and priority engineering support minimize downtime during urgent production situations.</p>
                         </div>
                     </div>
                     <div class="col-lg-4">
                         <div class="service_Scope">
                             <h3 class="title_42 mb-3">06</h3>
-                            <p class="title_24 mb-2">Safety & Compliance Checks</p>
-                            <p>Complete safety audit and compliance verification. All safety systems tested and
-                                certified. Documentation prepared for regulatory inspections.</p>
+                            <p class="title_24 mb-2">Breakdown Assistance & Recovery</p>
+                            <p>Priority deployment of certified engineers equipped with diagnostic tools and replacement components ensures fast restoration of equipment functionality, protecting production schedules and reducing operational loss.</p>
                         </div>
                     </div>
 
@@ -324,8 +306,9 @@
 <section class="mt_100 mb_100">
     <div class="container">
         <div class="sec_hed_top">
-            <p>A Trusted Partner for Precision Installation & Commissioning</p>
-            <h2 class="title_60">Why Choose Jinil for Installation</h2>
+            <p>Strategic After-Sales Reliability Framework</p>
+            <h2 class="title_60">After-Sales Support That Protects Performance & Capital Investment</h2>   
+            <p>Jinil’s structured after-sales support programs are designed to enhance equipment reliability, stabilize operational efficiency, and maximize return on investment across the lifecycle of your shot blasting machines and surface preparation systems.</p> 
         </div>
 
         <div class="inve_Pro mt_80">
@@ -342,35 +325,99 @@
 
                 <div class="col-lg-6">
                     <div class="inve_Pro_card">
-                        <img class="img-fluid" src="{{ asset('public/front/images/Minimized-Downtime.png') }}" alt="Minimized Downtime">
-                        <h4 class="title_24">Minimized Downtime</h4>
-                        <p>Rapid response protocols and genuine spare parts availability reduce equipment downtime from
-                            days to hours, protecting production schedules and delivery commitments.</p>
+                        <img class="img-fluid" src="{{ asset('public/front/images/Minimized-Downtime.png') }}" alt="Consistent Surface Preparation Performance">
+                        <h4 class="title_24">Consistent Surface Preparation Performance</h4>
+                        <p>Factory-trained engineers and original specification components maintain stable blast quality, controlled abrasive flow, and optimized operational parameters throughout the equipment lifecycle.</p>
                         <hr>
                     </div>
                 </div>
 
                 <div class="col-lg-6">
                     <div class="inve_Pro_card">
-                        <img class="img-fluid" src="{{ asset('public/front/images/Minimized-Downtime.png') }}" alt="Minimized Downtime">
-                        <h4 class="title_24">Minimized Downtime</h4>
-                        <p>Rapid response protocols and genuine spare parts availability reduce equipment downtime from
-                            days to hours, protecting production schedules and delivery commitments.</p>
+                        <img class="img-fluid" src="{{ asset('public/front/images/Minimized-Downtime.png') }}" alt="Predictable Operating Costs">
+                        <h4 class="title_24">Predictable Operating Costs</h4>
+                        <p>Annual Maintenance Contracts (AMC) convert variable repair expenses into structured maintenance budgets, enabling accurate financial planning and reducing unexpected capital outflows.</p>
                         <hr>
                     </div>
                 </div>
 
                 <div class="col-lg-6">
                     <div class="inve_Pro_card">
-                        <img class="img-fluid" src="{{ asset('public/front/images/Minimized-Downtime.png') }}" alt="Minimized Downtime">
-                        <h4 class="title_24">Minimized Downtime</h4>
-                        <p>Rapid response protocols and genuine spare parts availability reduce equipment downtime from
-                            days to hours, protecting production schedules and delivery commitments.</p>
+                        <img class="img-fluid" src="{{ asset('public/front/images/Minimized-Downtime.png') }}" alt="Extended Equipment Lifecycle">
+                        <h4 class="title_24">Extended Equipment Lifecycle</h4>
+                        <p>Preventive maintenance, performance monitoring, and genuine component replacement prevent cascading failures and premature wear, maximizing equipment lifespan and deferring replacement investments.</p>
                         <hr>
                     </div>
                 </div>
             </div>
         </div>
+    </div>
+</section>
+
+<section class="mt_100 mb_100 init_pro_contact">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-lg-4 pe-lg-5">
+                <h2 class="title_80 fw-medium text-111 text-white" style="mix-blend-mode: normal;">Initiate your Project</h2>
+                <p class="text-white">Our experienced engineers can help you select the right shot blasting solution
+                    based on your
+                    application,
+                    material type, and production capacity.</p>
+            </div>
+
+            <div class="col-lg-8">
+                <form class="contact_form">
+                    <div class="row">
+                        <div class="col-lg-6 form-group">
+                            <input type="text" placeholder="Full Name*: ">
+                        </div>
+
+                        <div class="col-lg-6 form-group">
+                            <input type="text" placeholder="Company Name*: ">
+                        </div>
+
+                        <div class="col-lg-6 form-group">
+                            <input type="tel" placeholder="Phone Number*: ">
+                        </div>
+
+                        <div class="col-lg-6 form-group">
+                            <input type="email" placeholder="Email Address*: ">
+                        </div>
+
+                        <div class="col-lg-6 form-group">
+                            <select name="country">
+                                <option value="" hidden>City*:</option>
+                                <option value="Afghanistan">Afghanistan</option>
+                                <option value="Afghanistan">Afghanistan</option>
+                                <option value="Afghanistan">Afghanistan</option>
+                                <option value="Afghanistan">Afghanistan</option>
+                            </select>
+                        </div>
+
+                        <div class="col-lg-6 form-group">
+                            <select name="country">
+                                <option value="" hidden>State*:</option>
+                                <option value="Afghanistan">Afghanistan</option>
+                                <option value="Afghanistan">Afghanistan</option>
+                                <option value="Afghanistan">Afghanistan</option>
+                                <option value="Afghanistan">Afghanistan</option>
+                                <option value="Afghanistan">Afghanistan</option>
+                            </select>
+                        </div>
+
+                        <div class="col-lg-12 form-group">
+                            <textarea rows="1" name="message" placeholder="Requirement : "></textarea>
+                        </div>
+
+                        <div class="col-lg-12 form-group">
+                            <button class="com_btn">Request Consultation</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+
+        </div>
+    </div>
     </div>
 </section>
 
