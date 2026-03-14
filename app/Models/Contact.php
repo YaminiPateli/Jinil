@@ -17,5 +17,7 @@ class Contact extends Model
         'contact',
         'email',
         'message',
+        'state',
+        'city',
     ];
 }
