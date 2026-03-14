@@ -102,7 +102,7 @@
                 <h2 class="title_60">Insights from the Surface Preparation Industry</h2>
             </div>
 
-            <div class="col-md-5 text-end">
+            <div class="col-md-5 text-lg-end">
                 <a href="{{ route('blogs') }}" class="com_btn com_btn_2">View all</a>
             </div>
 

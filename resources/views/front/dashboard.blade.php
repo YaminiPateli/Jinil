@@ -1,6 +1,14 @@
 @include('layouts.frontheader')
- <section>
+ <section class="d-none d-lg-block">
     <img class=" img-fluid" src="{{ asset('public/front/images/jinl-banner.png')}}">
+ </section>
+
+ <section class="d-lg-none hero_phon">
+    <div class="hero_slider">
+        <img class="img-fluid" src="{{ asset('public/front/images/hero-phone_1.png')}}">
+        <img class="img-fluid" src="{{ asset('public/front/images/hero-phone_2.png')}}">
+        <img class="img-fluid" src="{{ asset('public/front/images/hero-phone_3.jpg')}}">
+    </div>
  </section>
 
 <section class="after_sequence d-none">

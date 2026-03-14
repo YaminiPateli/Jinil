@@ -11,13 +11,9 @@ window.addEventListener("scroll", function () {
 });
 
 // ================= HAMBURGER MENU =================
-const hamburger = document.querySelector(".hamburger");
-if (hamburger) {
-    hamburger.addEventListener("click", function () {
-        this.classList.toggle("active");
-    });
-}
-
+document.querySelector(".menu-toggle").addEventListener("click", function () {
+    this.classList.toggle("active");
+});
 // ================= SLICK SLIDERS =================
 $(document).ready(function () {
     if ($(".desire_slider").length) {
@@ -53,6 +49,17 @@ $(document).ready(function () {
             dots: true,
             autoplay: true,
             autoplaySpeed: 2500,
+        });
+    }
+
+      if ($(".hero_slider").length) {
+        $(".hero_slider").slick({
+            slidesToShow: 1,
+            arrows: false,
+            dots: false,
+            autoplay: true,
+            fade:true,
+            autoplaySpeed: 3500,
         });
     }
 

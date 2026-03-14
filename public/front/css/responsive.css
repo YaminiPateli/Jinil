@@ -485,6 +485,17 @@
     .footer_bottom {
         padding: 14px;
     }
+
+    .service_Scope {
+        padding: 20px;
+    }
+
+    .insights_wrapper .row,
+    .service_Scope_card .row,
+    .download_cards_main .row {
+        --bs-gutter-x: 25px;
+        --bs-gutter-y: 25px;
+    }
 }
 
 /*=========================                  =========================
@@ -682,7 +693,7 @@
     }
 
     .counter {
-        flex-wrap: wrap;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
         gap: 20px;
     }
 
@@ -731,15 +742,18 @@
     }
 
     .footer_logo {
-        width: 200px;
+        width: 150px;
     }
 
     .footer_logo_area {
-        flex-direction: column;
         justify-content: center;
-        gap: 10px;
+        gap: 15px;
         width: 100%;
-        margin-bottom: 20px;
+        margin-bottom: 24px;
+    }
+
+    .footer_logo_area p {
+        font-size: 14px;
     }
 
     .footer_quick {
@@ -773,12 +787,12 @@
 
     .footer_grid {
         grid-template-columns: 1fr;
-        row-gap: 15px;
+        row-gap: 20px;
     }
 
     .footer_col {
         border-right: none;
-        border-bottom: 1px solid #333;
+        border-bottom: 1px solid #a2b9cf;
         padding-bottom: 12px;
     }
 
@@ -789,6 +803,100 @@
 
     .footer_col:last-child {
         border: none;
+    }
+
+    header .navbar {
+        padding: 10px;
+    }
+
+    .nav_links li {
+        margin: 10px 14px;
+        padding: 5px 0;
+        display: block;
+    }
+
+    .nav_links {
+        margin: 20px 0;
+    }
+
+    .has-dropdown .dropdown-menu {
+        position: static;
+        min-width: 100%;
+        border: none;
+    }
+
+    .title_80 {
+        font-size: 38px;
+    }
+
+    .blog_det_consu br {
+        display: none;
+    }
+
+    .blog_det_consu::before {
+        position: absolute;
+        /* z-index: -1; */
+    }
+
+    .contact_circle {
+        display: none;
+    }
+
+    .navi_page_child div:first-child {
+        width: 100%;
+    }
+
+    .blog_det_consu p {
+        position: relative;
+        z-index: 1;
+    }
+
+    .navi_page {
+        margin: 20px 0;
+    }
+
+    .title_34 {
+        font-size: 24px;
+        line-height: 28px;
+    }
+
+    header {
+        padding-top: 0;
+    }
+
+    header .container-fluid {
+        padding: 0;
+    }
+
+    .md_quote {
+        padding: 24px 24px;
+    }
+
+    .md_info {
+        margin-top: 32px;
+        text-align: center;
+    }
+
+    .md_wrapper {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .engineered_right img {
+        display: none;
+    }
+
+    .engineered_about::after {
+        content: none;
+    }
+
+    .engineered_about {
+        padding: 40px 20px;
+    }
+
+        .engineered_right_child {
+        gap: 20px;
+        margin-top: 24px;
     }
 }
 

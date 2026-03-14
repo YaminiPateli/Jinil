@@ -61,8 +61,11 @@
                         <img class="header_logo" src="{{ asset('public/front/images/logo.svg')}}" alt="Logo">
                     </a>
                 </div>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavbar">
+                <button class="navbar-toggler menu-toggle" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#mainNavbar">
+
                     <span class="navbar-toggler-icon"></span>
+
                 </button>
                 <div class="collapse navbar-collapse justify-content-between" id="mainNavbar">
                     <ul class="mx-auto nav_links">
@@ -79,7 +82,7 @@
                                 </span>
                             </a>
 
-                             <ul class="dropdown-menu">
+                            <ul class="dropdown-menu">
                                 <li><a href="#">link</a></li>
                                 <li><a href="#">link</a></li>
                             </ul>
@@ -97,7 +100,7 @@
                                 </span>
                             </a>
 
-                             <ul class="dropdown-menu">
+                            <ul class="dropdown-menu">
                                 <li><a href="#">link</a></li>
                                 <li><a href="#">link</a></li>
                             </ul>
