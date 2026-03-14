@@ -5,12 +5,13 @@
 
         <div class="navi_page_child">
             <div>
-                <p class="title_24"><a href="./" class="text-585">Home</a> / <a href="./blogs.php"
+                <p class="title_24"><a href="{{ url('/') }}" class="text-585">Home</a> / <a href="./blogs.php"
                         class="text-585">Services</a> / Installation & Commissioning</p>
                 <h2 class="title_60">Installation & Commissioning Services</h2>
-                <p class="mb-0">Jinil Engineering provides expert installation and commissioning services to ensure
-                    every shot blasting system is configured for optimal performance, safety, and durability. Our
-                    structured approach minimizes downtime while delivering consistent, production-ready results.</p>
+                <p class="mb-0">Jinil provides expert installation and commissioning services for shot blasting machines and industrial surface preparation systems, ensuring every system is configured for optimal performance, safety compliance, and long-term operational reliability.
+                </p>
+                <p class="mb-0">Our structured, engineering-led approach minimizes production downtime while delivering stable, production-ready performance from day one.
+                </p>
             </div>
 
             <div class="contact_circle">
@@ -40,40 +41,35 @@
         <div class="row">
             <div class="col-md-7 pe-lg-5">
                 <div>
-                    <h4 class="mb-4 title_24">Engineered system setup, precision calibration, and controlled
-                        commissioning for dependable industrial performance.</h4>
-                    <p>Jinil’s Installation & Commissioning services ensure that every shot blasting system is deployed
-                        with absolute accuracy and operational readiness. Our engineering team oversees the complete
-                        process—from detailed site evaluation and layout optimization to mechanical installation,
-                        electrical integration, and control system configuration.</p>
-                    <p>Each machine is commissioned under real production conditions, allowing critical parameters such
-                        as blasting coverage, abrasive flow, conveyor speed, and dust extraction efficiency to be
-                        verified and fine-tuned. This structured commissioning approach ensures consistent surface
-                        quality, safe operation, reduced startup risk, and dependable long-term performance in demanding
-                        industrial environments.</p>
+                    <h4 class="mb-4 title_24">Professional Shot Blasting Machine Installation & Commissioning</h4>
+                    <p>Jinil delivers expert installation and commissioning services for shot blasting machines and industrial surface preparation systems, ensuring every system is deployed with precision, safety compliance, and production-ready stability.</p>
+                    <p>Our engineering team manages the complete execution process from detailed site evaluation and foundation alignment to mechanical assembly, electrical integration, PLC configuration, and system calibration. Every installation is structured to minimize disruption to existing production workflows.</p>
+                    <p>During commissioning, systems are tested under real operating conditions to validate blasting coverage, abrasive flow control, conveyor synchronization, and dust collection efficiency. Critical performance parameters are fine-tuned to ensure consistent surface finish, safe operation, and optimized production throughput.</p>
+                    <p>Through a disciplined, engineering-led commissioning methodology, we reduce startup risk, shorten stabilization time, and deliver dependable long-term industrial performance.</p>
                 </div>
 
                 <div class="mt_60">
                     <div class="counter ins_counter">
                         <div class="counter_item">
                             <img src="{{ asset('public/front/images/counter1.png') }}" alt="image">
-                            <h3 class="title_42"><span class="count" data-target="500">0</span>+</h3>
-                            <p class="mb-0">Machines Delivered</p>
+                            <h2 class="title_42"><span class="count" data-target="500">500</span>+</h2>
+                            <p>Machines Installed & Commissioned</p>
                         </div>
                         <div class="counter_item">
                             <img src="{{ asset('public/front/images/counter2.png') }}" alt="image">
-                            <h3 class="title_42"><span class="count" data-target="30">0</span>+</h3>
-                            <p class="mb-0">Years Combined Expertise</p>
+                            <h2 class="title_42"><span class="count" data-target="30">30</span>+</h2>
+                            <p class="mb-0">Years of Combined Engineering Expertise</p>
                         </div>
                         <div class="counter_item">
                             <img src="{{ asset('public/front/images/counter3.png') }}" alt="image">
-                            <h3 class="title_42"><span class="count" data-target="25">0</span>+</h3>
+                            <h2 class="title_42"><span class="count" data-target="25">25</span>+</h2>
                             <p class="mb-0">Industries Served</p>
                         </div>
                         <div class="counter_item">
                             <img src="{{ asset('public/front/images/counter4.png') }}" alt="image">
-                            <h3 class="title_42"><span class="count" data-target="24">0</span>/7</h3>
-                            <p class="mb-0">Support Available</p>
+
+                            <h2 class="title_42"><span class="count" data-target="24">24</span>/7</h2>
+                            <p class="mb-0">Technical Support Availability</p>
                         </div>
                     </div>
                 </div>
@@ -91,14 +87,13 @@
 <section class="mt_100">
     <div class="container">
         <div class="sec_hed_top mb_40">
-            <p>The Jinil Advantage</p>
-            <h2 class="title_60">Why Professional Installation Matters</h2>
+            <p>The Jinil Installation Advantage</p>
+            <h2 class="title_60">Why Professional Shot Blasting System Installation Matters</h2>
         </div>
 
         <div class="row justify-content-between">
             <div class="col-lg-3">
-                <p class="title_24">Precision engineering demands precision installation. Our expert team ensures every
-                    component is perfectly positioned for peak performance.</p>
+                <p class="title_24">Precision-engineered equipment requires precision installation. Our experienced technical team ensures every shot blasting machine and surface preparation system is aligned, calibrated, and configured for stable, long-term industrial performance.</p>
             </div>
 
             <div class="col-lg-8">
@@ -133,9 +128,9 @@
                                     fill="#105293" />
                             </svg>
 
-                            <h4 class="title_24">Optimal Performance</h4>
-                            <p>Proper installation ensures your equipment operates at maximum efficiency, delivering
-                                consistent results and reducing energy consumption.</p>
+                            <h4 class="title_24">Optimal Production Performance</h4>
+                            <p>Accurate installation and system calibration ensure your shot blasting equipment operates at peak efficiency. Proper alignment, abrasive control setup, and parameter tuning deliver consistent surface finish while reducing energy loss and production variability.
+                            </p>
 
                         </div>
                     </div>
@@ -190,9 +185,8 @@
                                     fill="#105293" />
                             </svg>
 
-                            <h4 class="title_24">Extended Equipment Life</h4>
-                            <p>Professional alignment and calibration prevent premature wear, protecting your investment
-                                and minimizing costly downtime.</p>
+                            <h4 class="title_24">Extended Equipment Lifecycle</h4>
+                            <p>Professional mechanical alignment and controlled commissioning prevent premature wear on turbines, conveyors, liners, and dust collection systems. This protects your capital investment and minimizes unplanned downtime.</p>
 
                         </div>
                     </div>
@@ -224,9 +218,8 @@
                             </svg>
 
 
-                            <h4 class="title_24">Safety Compliance</h4>
-                            <p>Our certified technicians ensure all installations meet international safety standards
-                                and local regulatory requirements.</p>
+                            <h4 class="title_24">Safety & Regulatory Compliance</h4>
+                            <p>Our certified technicians ensure every installation meets industrial safety standards and operational compliance requirements. From electrical integration to dust extraction systems, we prioritize safe, stable, and regulation-ready operation.</p>
                         </div>
                     </div>
                 </div>
@@ -247,11 +240,9 @@
     <div class="container-fluid">
         <div class="row">
             <div class="col-lg-4 pe-lg-5">
-                <p>For precision Comprehensive Services</p>
-                <h2 class="title_60 mb_30">Our Installation Service Scope</h2>
-                <p class="title_24">From initial site assessment to final handover, we manage every aspect of your
-                    equipment
-                    installation with engineering precision.</p>
+                <p>Comprehensive Installation Services</p>
+                <h2 class="title_60 mb_30">Our Shot Blasting Installation Service Scope</h2>
+                <p class="title_24">From pre-installation assessment to final system handover, Jinil manages every stage of shot blasting machine installation and commissioning with engineering precision, structured planning, and production-focused execution.</p>
             </div>
 
             <div class="col-lg-8 service_Scope_card">
@@ -259,54 +250,50 @@
                     <div class="col-lg-4">
                         <div class="service_Scope">
                             <h3 class="title_42 mb-3">01</h3>
-                            <p class="title_24 mb-2">Site Evaluation & Layout Planning</p>
-                            <p class="mb-0">Comprehensive assessment of your facility, including floor load analysis, utility
-                                availability,
-                                ventilation requirements, and optimal machine positioning for workflow efficiency.</p>
+                            <p class="title_24 mb-2">Site Evaluation & Layout Optimization</p>
+                            <p class="mb-0">We conduct detailed facility assessments, including floor load analysis, utility mapping, ventilation requirements, and workflow alignment. Proper layout planning ensures stable equipment positioning, safe operation, and optimized production efficiency.</p>
                         </div>
                     </div>
 
                     <div class="col-lg-4">
                         <div class="service_Scope">
                             <h3 class="title_42 mb-3">02</h3>
-                            <p class="title_24 mb-2">Machine Installation & Alignment</p>
-                            <p class="mb-0">Precision installation using laser alignment tools and calibrated equipment. Every
-                                component is positioned to manufacturer specifications for optimal operation</p>
+                            <p class="title_24 mb-2">Precision Machine Installation & Alignment</p>
+                            <p class="mb-0">Using calibrated tools and laser alignment systems, we install and position all mechanical components according to manufacturer specifications. Accurate alignment ensures smooth operation, reduced vibration, and long-term equipment stability.</p>
                         </div>
                     </div>
 
                     <div class="col-lg-4">
                         <div class="service_Scope">
                             <h3 class="title_42 mb-3">03</h3>
-                            <p class="title_24 mb-2">Electrical & Control Panel Integration</p>
-                            <p class="mb-0">Complete electrical connections, PLC programming, and integration with your existing
-                                plant systems. Full testing of all control circuits and safety interlocks.</p>
+                            <p class="title_24 mb-2">Electrical & PLC Control Integration</p>
+                            <p  class="mb-0">Our team handles complete electrical connections, PLC configuration, control panel integration, and system synchronization with existing plant operations. All circuits and safety interlocks are thoroughly tested before activation.
+                            </p>
                         </div>
                     </div>
 
                     <div class="col-lg-4">
                         <div class="service_Scope">
                             <h3 class="title_42 mb-3">04</h3>
-                            <p class="title_24 mb-2">Trial Runs & Performance Testing</p>
-                            <p class="mb-0">Extensive testing protocols to verify equipment performance meets or exceeds
-                                specifications. Documentation of all test results and performance metrics.</p>
+
+                            <p class="title_24 mb-2">Trial Runs & Performance Verification</p>
+                            <p class="mb-0">We perform controlled test runs under real operating conditions to validate blasting coverage, abrasive flow consistency, conveyor movement, and dust collection efficiency. Performance metrics are documented and fine-tuned for production readiness.</p>
                         </div>
                     </div>
 
                     <div class="col-lg-4">
                         <div class="service_Scope">
                             <h3 class="title_42 mb-3">05</h3>
-                            <p class="title_24 mb-2">Operator Training & Handover</p>
-                            <p class="mb-0">Comprehensive training programs for your operators and maintenance staff. Detailed
-                                documentation and ongoing support resources provided.</p>
+                            <p class="title_24 mb-2">Operator Training & Technical Handover</p>
+                            <p class="mb-0">Structured training sessions are conducted for operators and maintenance teams. We provide detailed documentation, safety protocols, and operational guidelines to ensure confident and efficient system handling.</p>
                         </div>
                     </div>
                     <div class="col-lg-4">
                         <div class="service_Scope">
                             <h3 class="title_42 mb-3">06</h3>
-                            <p class="title_24 mb-2">Safety & Compliance Checks</p>
-                            <p class="mb-0">Complete safety audit and compliance verification. All safety systems tested and
-                                certified. Documentation prepared for regulatory inspections.</p>
+
+                            <p class="title_24 mb-2"> Safety Audits & Compliance Validation</p>
+                            <p class="mb-0">All safety systems are inspected and verified against industrial standards. We conduct comprehensive compliance checks, documentation review, and final validation before system commissioning approval.</p>
                         </div>
                     </div>
 
@@ -320,37 +307,33 @@
 <section class="mt_100">
     <div class="container">
         <div class="sec_hed_top mb_40">
-            <p>A Trusted Partner for Precision Installation & Commissioning</p>
-            <h2 class="title_60">Why Choose Jinil for Installation</h2>
+            <p>Precision Installation & Commissioning for Industrial Systems</p>
+            <h2 class="title_60">Why Jinil Leads in Shot Blasting Installation Services</h2>
         </div>
 
         <div class="row justify-content-between">
             <div class="col-lg-3">
-                <p class="title_24 mb-0">With three decades of experience in shot blasting technology, Jinil delivers
-                    installation services that set the industry standard for quality and reliability.</p>
+                <p class="title_24 mb-0">With decades of engineering expertise in industrial shot blasting machines and surface preparation systems, Jinil delivers installation and commissioning services defined by precision execution, technical discipline, and dependable long-term performance.</p>
             </div>
 
             <div class="col-lg-8">
                 <div class="row">
                     <div class="col-lg-4">
                         <div class="blast">
-                            <h4 class="title_24">Our Edge</h4>
-                            <p class="mb-0">Factory-trained, OEM-certified specialists ensure precise installation using
-                                genuine components and calibrated tools for optimal performance.</p>
+                            <h4 class="title_24">Certified Technical Expertise</h4>
+                            <p class="mb-0">Our factory-trained specialists follow structured installation protocols aligned with OEM specifications. Using calibrated tools, laser alignment systems, and controlled commissioning procedures, we ensure every shot blasting system is production-ready from day one.</p>
                         </div>
                     </div>
                     <div class="col-lg-4">
                         <div class="blast">
-                            <h4 class="title_24">Seamless Management</h4>
-                            <p class="mb-0">We take full ownership—from planning and site layout to trial runs and
-                                handover. Our structured approach ensures timely execution and predictable outcomes.</p>
+                            <h4 class="title_24">End-to-End Project Ownership</h4>
+                            <p class="mb-0">From site coordination and layout planning to machine alignment, electrical integration, PLC configuration, and trial runs, we manage the complete installation lifecycle. This disciplined approach reduces startup risk, minimizes delays, and ensures predictable operational performance.</p>
                         </div>
                     </div>
                     <div class="col-lg-4">
                         <div class="blast">
-                            <h4 class="title_24">Support & Warranty</h4>
-                            <p class="mb-0">All installations include comprehensive warranty coverage, plus ongoing
-                                technical support and maintenance programs to keep operations efficient and hassle-free.
+                            <h4 class="title_24">Ongoing Support & Performance Assurance</h4>
+                            <p class="mb-0">Every installation is backed by structured technical support, warranty coverage, and performance validation guidance. We remain engaged beyond commissioning to ensure stable production throughput, optimized surface quality, and extended equipment lifecycle.
                             </p>
                         </div>
                     </div>
@@ -363,8 +346,9 @@
 <section class="mt_100 mb_100">
     <div class="container">
         <div class="sec_hed_top mb_60">
-            <p class="mb-0">we've streamlined the process</p>
-            <h2 class="title_60">Our Process in 4 Steps</h2>
+            <p class="mb-0">Structured Installation & Commissioning Workflow</p>
+            <h2 class="title_60">Our Proven Installation Process in 4 Stages</h2>
+            <p>Our installation and commissioning methodology ensures every shot blasting machine and industrial surface preparation system is deployed with precision, efficiency, and performance validation.</p>
         </div>
 
         <div class="row gy-4 gy-md-0">
@@ -416,8 +400,8 @@
                             fill="#105293"></path>
                     </svg>
 
-                    <h3 class="title_24">Planning</h3>
-                    <p class="mb-0">Detailed evaluation of your facility and installation requirements</p>
+                    <h3 class="title_24">Planning & Site Assessment</h3>
+                    <p class="mb-0">We conduct a detailed evaluation of your facility, including foundation readiness, utility connections, ventilation systems, material flow, and equipment positioning to ensure seamless integration into your production environment.</p>
                 </div>
             </div>
 
@@ -442,8 +426,8 @@
                             fill="#105293"></path>
                     </svg>
 
-                    <h3 class="title_24">Installation</h3>
-                    <p class="mb-0">Expert installation with laser-guided alignment and calibration</p>
+                    <h3 class="title_24">Precision Installation & Alignment</h3>
+                    <p class="mb-0">Mechanical assembly, structural positioning, and laser-guided alignment are executed according to engineering specifications to guarantee stable operation and long-term equipment durability.</p>
                 </div>
             </div>
 
@@ -509,8 +493,8 @@
                     </svg>
 
 
-                    <h3 class="title_24">Testing</h3>
-                    <p class="mb-0">Comprehensive testing protocols to verify optimal operation</p>
+                    <h3 class="title_24">System Testing & Performance Verification</h3>
+                    <p class="mb-0">Comprehensive trial runs validate blasting coverage, abrasive circulation, conveyor synchronization, electrical integration, and dust collection efficiency. All performance parameters are calibrated for optimal production output.</p>
                 </div>
             </div>
 
@@ -557,8 +541,10 @@
                     </svg>
 
 
-                    <h3 class="title_24">Handover</h3>
-                    <p class="mb-0">Complete operator training and documentation handover</p>
+                    <h3 class="title_24">Operator Training & Technical Handover</h3>
+                    <p class="mb-0">We provide structured operator training, safety guidance, maintenance instructions, and complete documentation to ensure confident system operation and sustained industrial performance.
+                    </p>
+                    <p class="mb-0">Typical installation timeline: 6–12 days, depending on machine type, system complexity, and plant readiness. Custom schedules are structured based on project scope and production requirements.</p>
                 </div>
             </div>
         </div>

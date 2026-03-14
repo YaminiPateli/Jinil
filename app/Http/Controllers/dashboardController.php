@@ -102,19 +102,26 @@ class dashboardController extends Controller
          $faqs = Faq::whereNull('deleted_at')->get();
         return view('front.installation',compact('metatitle', 'metadescription', 'faqs'));
     } 
-    public function service($url)
+    public function aftersales()
     {
-        $service = Service::where('url', $url)->firstOrFail();
+        $metatitle = "";
+        $metadescription = "";
+         $faqs = Faq::whereNull('deleted_at')->get();
+        return view('front.after-sales',compact('metatitle', 'metadescription', 'faqs'));
+    } 
+    // public function service($url)
+    // {
+    //     $service = Service::where('url', $url)->firstOrFail();
 
-        $metatitle       = $service->meta_title       ?? $service->title;
-        $metadescription = $service->meta_description ?? $service->short_description;
+    //     $metatitle       = $service->meta_title       ?? $service->title;
+    //     $metadescription = $service->meta_description ?? $service->short_description;
 
-        return view('front.service-detail', compact(
-            'service',
-            'metatitle',
-            'metadescription'
-        ));
-    }
+    //     return view('front.service-detail', compact(
+    //         'service',
+    //         'metatitle',
+    //         'metadescription'
+    //     ));
+    // }
     public function industry($url)
     {
         $category = IndCategory::whereNull('deleted_at')

@@ -12,14 +12,14 @@ class ServiceCategoryController extends Controller
     {
         $search = $request->get('search');
 
-        $category = ServiceCategory::whereNull('deleted_at')
+        $servicecategory = ServiceCategory::whereNull('deleted_at')
             ->when($search, function ($query) use ($search) {
-                $query->where('category', 'LIKE', "%$search%");
+                $query->where('servicecategory', 'LIKE', "%$search%");
             })
             ->orderBy('id','DESC')
             ->paginate(10);
 
-        return view('admin.servicecategory.servicecategory-list', compact('category','search'));
+        return view('admin.servicecategory.servicecategory-list', compact('servicecategory','search'));
     }
 
     public function create()
@@ -30,13 +30,13 @@ class ServiceCategoryController extends Controller
     public function store(Request $request)
     {
         $request->validate([
-            'category' => 'required',
+            'servicecategory' => 'required',
         ],[
-            'category.required' => 'Please enter a Category.',
+            'servicecategory.required' => 'Please enter a Category.',
         ]);
 
         ServiceCategory::create([
-            'category' => $request->category,
+            'servicecategory' => $request->servicecategory,
             'cat_description' => $request->cat_description,
             'url' => $request->url
         ]);
@@ -46,22 +46,22 @@ class ServiceCategoryController extends Controller
 
     public function edit($id)
     {
-        $category = ServiceCategory::findOrFail($id);
-        return view('admin.servicecategory.servicecategory-edit', compact('category'));
+        $servicecategory = ServiceCategory::findOrFail($id);
+        return view('admin.servicecategory.servicecategory-edit', compact('servicecategory'));
     }
 
     public function update(Request $request, $id)
     {
         $request->validate([
-            'category' => 'required',
+            'servicecategory' => 'required',
         ],[
-            'category.required' => 'Please enter a Category.',
+            'servicecategory.required' => 'Please enter a Category.',
         ]);
 
-        $category = ServiceCategory::findOrFail($id);
+        $servicecategory = ServiceCategory::findOrFail($id);
 
-        $category->update([
-            'category' => $request->category,
+        $servicecategory->update([
+            'servicecategory' => $request->servicecategory,
             'cat_description' => $request->cat_description,
             'url' => $request->url
         ]);
@@ -71,8 +71,8 @@ class ServiceCategoryController extends Controller
 
     public function destroy($id)
     {
-        $category = ServiceCategory::findOrFail($id);
-        $category->delete();
+        $servicecategory = ServiceCategory::findOrFail($id);
+        $servicecategory->delete();
 
         return redirect()->route('servicecategory.index')
             ->with('success','Category deleted successfully');

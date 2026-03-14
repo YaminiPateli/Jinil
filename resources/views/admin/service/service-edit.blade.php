@@ -20,18 +20,18 @@
 
                 <div class="row g-3">
 
-                    <!-- Same basic fields as add -->
-                    <div class="col-md-6">
-                        <label class="form-label">Category</label>
-                        <select name="category_id" class="form-control">
-                            <option value="">-- Select --</option>
-                            @foreach($categories as $cat)
-                                <option value="{{ $cat->id }}" {{ $service->category_id == $cat->id ? 'selected' : '' }}>
-                                    {{ $cat->category }}
-                                </option>
-                            @endforeach
-                        </select>
-                    </div>
+                        <!-- Same basic fields as add -->
+                        <div class="col-md-6">
+                            <label class="form-label">Category</label>
+                            <select name="category_id" class="form-control">
+                                <option value="">-- Select --</option>
+                                @foreach($categories as $cat)
+                                    <option value="{{ $cat->id }}" {{ $service->category_id == $cat->id ? 'selected' : '' }}>
+                                        {{ $cat->servicecategory }}
+                                    </option>
+                                @endforeach
+                            </select>
+                        </div>
 
                     <div class="col-md-6">
                         <label class="form-label">Title *</label>
