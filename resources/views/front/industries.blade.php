@@ -72,7 +72,7 @@
 <section class="mt_100 mb_100">
     <div class="container-fluid">
         <div class="industry_section">
-            <div class="d-flex justify-content-between mb_40">
+            <div class="row justify-content-between mb_40">
                 <div class="col-lg-10">
                     <h2 class="title_60 text-white">Similar Industries You May Like </h2>
                     <p class="mb-0 text-white">Lorem ipsum dolor sit amet consectetur. Orci malesuada dictum quam
@@ -84,7 +84,7 @@
                         gravida lorem aenean. Vitae sodales libero a scelerisque elementum pretium. Posuere ullamcorper
                         cursus ac nunc consequat pellentesque pellentesque.</p>
                 </div>
-                <div class="slider_arrow">
+                <div class="slider_arrow mt-4 mt-lg-0">
                     <svg class="prev_arrow" width="68" height="68" viewBox="0 0 68 68" fill="none"
                         xmlns="http://www.w3.org/2000/svg">
                         <rect x="68" y="68" width="68" height="68" rx="34" transform="rotate(180 68 68)"

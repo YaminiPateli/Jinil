@@ -30,7 +30,7 @@
 <section class="mb_100 con_map">
     <div class="container-fluid">
         <div class="row">
-            <div class="col-lg-6 pe-lg-5">
+            <div class="mb-4 mb-lg-0 col-lg-6 pe-lg-5">
                 <div class="inve_Pro_card">
                     <h4 class="title_24">Head Office</h4>
                     <p><a href="#">
@@ -143,7 +143,7 @@ $b = rand(1,9);
                             <span id="message-error" class="text-danger"></span>
                         </div>
 
-                        <div class="col-lg-3 form-group ">
+                        <div class="col-8 col-lg-3 form-group ">
                           
                             <div style="display:flex;gap:6px;">
                                 <input type="number" id="simple_captcha" name="simple_captcha" placeholder="Enter answer"

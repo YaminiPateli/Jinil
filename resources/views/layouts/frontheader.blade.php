@@ -31,7 +31,7 @@
         integrity="sha512-17EgCFERpgZKcm0j0fEq1YCJuyAWdz9KUtv1EjVuaOz8pDnh/0nZxmU6BBXwaaxqoi9PQXnRWqlcDB027hgv9A=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
     <!--Aos animation-->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" />
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" /> -->
     
     <!-- style css start -->
     <link rel="stylesheet" href="{{ asset('public/front/css/style.css')}}">
@@ -39,7 +39,7 @@
     <link rel="stylesheet" href="{{ asset('public/front/css/blogs-details.css')}}">
     <link rel="stylesheet" href="{{ asset('public/front/css/home.css')}}">
     <link rel="stylesheet" href="{{ asset('public/front/css/installation.css')}}">
-    <link rel="stylesheet" href="{{ asset('public/front/css/productdetails.css')}}">
+    <!-- <link rel="stylesheet" href="{{ asset('public/front/css/productdetails.css')}}"> -->
     <link rel="stylesheet" href="{{ asset('public/front/css/downloads.css')}}">
     <link rel="stylesheet" href="{{ asset('public/front/css/page-small.css')}}">
     <link rel="stylesheet" href="{{ asset('public/front/css/contact.css')}}">

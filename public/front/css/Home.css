@@ -175,6 +175,7 @@
     position: relative;
     cursor: pointer;
     overflow: hidden;
+    background: radial-gradient(561% 75% at 56% 52%, #1f3566 0%, #243f7a 50%, #1c2f5a 100%);
 }
 
 .industry_item {

@@ -73,13 +73,15 @@ $(document).ready(function () {
         });
     }
 
-    if ($(".industry_detals_grid").length) {
-        $(".industry_detals_grid").slick({
+    
+});
+
+   $(".industry_detals_grid").slick({
             slidesToShow: 5,
             slidesToScroll: 1,
             prevArrow: $(".prev_arrow"),
             nextArrow: $(".next_arrow"),
-            autoplay: true,
+            autoplay: false,
             dots: false,
             infinite: true,
             speed: 600,
@@ -105,8 +107,6 @@ $(document).ready(function () {
                 },
             ],
         });
-    }
-});
 
 // set CSS var to header height so fixed header does not overlap content
 (function () {
