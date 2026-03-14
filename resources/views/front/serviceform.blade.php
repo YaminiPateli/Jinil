@@ -143,36 +143,94 @@ $(function(){
         $('.text-danger').text('');
         $("#service_full_phone").val("+"+iti.getSelectedCountryData().dialCode+$('#service_phone').val());
 
-        $.ajax({
-            url: "{{ route('installationstore') }}",
-            type: "POST",
-            data: $(this).serialize(),
-            dataType: "json",
-            headers: { 'Accept': 'application/json' },
-            beforeSend: function(){
-                $('.com_btn').attr('disabled', true).text('Sending...');
-            },
-            success: function(res){
-                $('.com_btn').attr('disabled', false).text('Request Consultation');
-                if(res.status === 'success' && res.redirect){
-                    window.location.href = res.redirect;
-                }
-            },
-            error: function(xhr){
-                $('.com_btn').attr('disabled', false).text('Request Consultation');
-                if(xhr.status === 422){
-                    let errors = xhr.responseJSON.errors;
-                    $.each(errors, function(key, val){
-                        $('#'+key+'-error').text(val[0] || val);
-                    });
-                } else {
-                    alert('An unexpected error occurred.');
-                }
+$('#service_form').on('submit', function(e){
+    e.preventDefault();
+    $('.text-danger').text('');
+
+    let name = $('input[name="name"]').val().trim();
+    let company = $('input[name="company_name"]').val().trim();
+    let phone = $('#service_phone').val().trim();
+    let email = $('input[name="email"]').val().trim();
+    let state = $('#service_state').val();
+    let city = $('#service_city').val();
+    let captcha = $('#service_simple_captcha').val();
+
+    let hasError = false;
+
+    if(name === ''){
+        $('#name-error').text('Full name is required.');
+        hasError = true;
+    }
+
+    if(company === ''){
+        $('#company_name-error').text('Company name is required.');
+        hasError = true;
+    }
+
+    if(phone === ''){
+        $('#full_phone-error').text('Phone number is required.');
+        hasError = true;
+    }
+
+    if(email === ''){
+        $('#email-error').text('Email is required.');
+        hasError = true;
+    }
+
+    if(state === ''){
+        $('#state-error').text('State is required.');
+        hasError = true;
+    }
+
+    if(city === ''){
+        $('#city-error').text('City is required.');
+        hasError = true;
+    }
+
+    if(captcha === ''){
+        $('#simple_captcha-error').text('Captcha is required.');
+        hasError = true;
+    }
+
+    if(hasError) return;
+
+    let data = iti.getSelectedCountryData();
+    $("#service_full_phone").val("+"+data.dialCode+phone);
+
+    $.ajax({
+        url: "{{ route('installationstore') }}",
+        type: "POST",
+        data: $(this).serialize(),
+        dataType: "json",
+        headers: { 'Accept': 'application/json' },
+
+        beforeSend: function(){
+            $('.com_btn').attr('disabled', true).text('Sending...');
+        },
+
+        success: function(res){
+            $('.com_btn').attr('disabled', false).text('Request Consultation');
+
+            if(res.status === 'success'){
+                window.location.href = res.redirect;
             }
-        });
+        },
+
+        error: function(xhr){
+            $('.com_btn').attr('disabled', false).text('Request Consultation');
+
+            if(xhr.status === 422){
+                let errors = xhr.responseJSON.errors;
+
+                $.each(errors, function(key, val){
+                    $('#'+key+'-error').text(val[0]);
+                });
+            }
+        }
+    });
+
+});
     });
 
 });
 </script>
-
-@include('layouts.frontfooter')
